@@ -1,0 +1,323 @@
+---
+import Layout from '@src/layouts/Layout.astro';
+import Navbar from '@src/components/layout/Navbar.astro';
+import Footer from '@src/components/layout/Footer.astro';
+import SmartCaptureSection from '@src/components/sections/SmartCaptureSection.astro';
+import FeaturesSection from '@src/components/sections/FeaturesSection.astro';
+import ScreenshotGallery from '@src/components/sections/ScreenshotGallery.astro';
+import AudienceSection from '@src/components/sections/AudienceSection.astro';
+import CTASection from '@src/components/sections/CTASection.astro';
+
+const metaTitle = 'Many — Control de Gastos y Finanzas Personales | Many';
+const metaDesc = 'Many es el gestor de gastos 100% offline para Android. Captura automática de notificaciones bancarias, múltiples perfiles y reportes visuales. Sin cuentas, sin internet.';
+---
+
+<Layout title={metaTitle} description={metaDesc} brand="many">
+  <Navbar>
+    <a slot="brand" href="/app/many" class="flex items-center gap-2.5 text-sm sm:text-[15px] font-bold text-skin-primary">
+      <img src="/many-logo.webp" alt="" width="24" height="24" class="object-contain" />
+      Many
+    </a>
+    <a slot="cta" href="#download" class="px-4 sm:px-5 py-2 text-xs sm:text-sm font-bold bg-primary hover:bg-primary/90 text-white rounded-full transition-all shadow-glow hover:shadow-glow hover:-translate-y-0.5">
+      Descargar
+    </a>
+    <a slot="mobile" href="#download" class="block px-4 py-3 text-sm font-bold text-center bg-primary hover:bg-primary/90 text-white rounded-xl transition-colors">
+      Descargar
+    </a>
+  </Navbar>
+
+  <!-- Hero -->
+  <section class="relative min-h-screen flex items-center overflow-hidden px-4 sm:px-6 pt-24 pb-16 sm:pt-28 sm:pb-20">
+    <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+      <div class="glow w-[600px] h-[600px] sm:w-[700px] sm:h-[700px] bg-primary top-[-300px] right-[-200px]"></div>
+      <div class="glow w-[400px] h-[400px] sm:w-[500px] sm:h-[500px] bg-accent bottom-[-200px] left-[-100px] opacity-20"></div>
+      <div class="glow w-[250px] h-[250px] sm:w-[300px] sm:h-[300px] bg-secondary top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.08]"></div>
+    </div>
+    <div class="relative w-full max-w-content mx-auto grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
+      <div class="flex flex-col gap-5 sm:gap-6">
+        <div class="flex flex-wrap gap-2" role="list" aria-label="Características">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-primary/20 bg-primary/10 text-primary text-[11px] sm:text-xs font-semibold uppercase tracking-wide" role="listitem">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            100% Offline
+          </span>
+          <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-primary/20 bg-primary/10 text-primary text-[11px] sm:text-xs font-semibold uppercase tracking-wide" role="listitem">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Privacidad Total
+          </span>
+          <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-primary/20 bg-primary/10 text-primary text-[11px] sm:text-xs font-semibold uppercase tracking-wide" role="listitem">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            Sin Registro
+          </span>
+        </div>
+        <h1 class="text-[clamp(1.75rem,_5vw,_3.25rem)] font-extrabold leading-[1.1] tracking-tight">
+          <span class="text-gradient">Many</span>
+          <br />
+          Tus finanzas, <br />
+          sin internet.
+          <br />
+          Sin cuentas. Sin límites.
+        </h1>
+        <p class="text-sm sm:text-base text-skin-secondary max-w-lg leading-relaxed">
+          Many es el gestor de gastos personal que respeta tu privacidad.
+          Captura automática desde notificaciones bancarias, múltiples perfiles,
+          reportes visuales y nada de cuentas online. Todo queda en tu teléfono.
+        </p>
+        <a href="#download" class="inline-flex items-center gap-2.5 px-6 sm:px-7 py-3 sm:py-3.5 rounded-xl bg-primary hover:bg-primary/90 text-white text-sm sm:text-base font-bold transition-all shadow-glow hover:shadow-glow hover:-translate-y-0.5 w-fit">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="8 17 12 21 16 17"/><line x1="12" y1="12" x2="12" y2="21"/><polyline points="5 9 12 2 19 9"/></svg>
+          Descargar Many gratis
+        </a>
+      </div>
+
+      <!-- Screenshots -->
+      <div class="relative flex justify-center items-end gap-3 sm:gap-4 mt-8 lg:mt-0 hero-cards perspective-[800px]">
+        <div class="hero-card w-[160px] sm:w-[180px] lg:w-[200px] rounded-2xl overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.5)] border border-white/10 hidden sm:block cursor-pointer" style="transform: rotate(-6deg) translateY(1rem)" data-index="0" data-label="Panel principal modo claro" role="button" tabindex="0" aria-label="Ver captura: Panel principal modo claro">
+          <img src="/screenshots/2.webp" alt="Panel principal de Many modo claro" width="1125" height="2000" loading="lazy" class="w-full pointer-events-none" />
+        </div>
+        <div class="hero-card w-[180px] sm:w-[200px] lg:w-[230px] rounded-2xl overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.5)] border border-white/10 z-10 cursor-pointer" role="button" tabindex="0" data-index="1" data-label="Many lista para usar" aria-label="Ver captura: Many lista para usar">
+          <img src="/screenshots/1.webp" alt="Many lista para usar" width="1125" height="2000" loading="lazy" class="w-full pointer-events-none" />
+        </div>
+        <div class="hero-card w-[160px] sm:w-[180px] lg:w-[200px] rounded-2xl overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.5)] border border-white/10 hidden sm:block cursor-pointer" style="transform: rotate(6deg) translateY(1rem)" data-index="2" data-label="Reporte mensual con gráficos" role="button" tabindex="0" aria-label="Ver captura: Reporte mensual con gráficos">
+          <img src="/screenshots/4.webp" alt="Reporte mensual con gráficos de Many" width="1125" height="2000" loading="lazy" class="w-full pointer-events-none" />
+        </div>
+      </div>
+
+      <!-- Hero Lightbox -->
+      <div id="hero-lightbox" class="fixed inset-0 z-50 hidden" role="dialog" aria-modal="true" aria-label="Captura de Many">
+        <div id="hero-lightbox-backdrop" class="absolute inset-0 bg-black/90 backdrop-blur-sm"></div>
+        <button id="hero-lightbox-close" class="absolute top-4 right-4 z-10 w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors" aria-label="Cerrar">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+        <button id="hero-lightbox-prev" class="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white transition-all duration-200" aria-label="Anterior">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <button id="hero-lightbox-next" class="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white transition-all duration-200" aria-label="Siguiente">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+        <div id="hero-lightbox-image-container" class="flex items-center justify-center h-full px-12 sm:px-16 relative z-[1] hero-lightbox-card">
+          <div id="hero-lightbox-card-inner" class="relative rounded-2xl shadow-2xl">
+            <img id="hero-lightbox-img" src="" alt="" class="max-h-[85vh] w-auto object-contain rounded-2xl select-none" />
+            <div id="hero-lightbox-shine" class="absolute inset-0 rounded-2xl pointer-events-none opacity-0 transition-opacity duration-300"></div>
+          </div>
+        </div>
+        <p id="hero-lightbox-label" class="absolute bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 text-white/70 text-xs sm:text-sm font-medium text-center px-4"></p>
+      </div>
+    </div>
+  </section>
+
+  <SmartCaptureSection />
+  <FeaturesSection />
+  <ScreenshotGallery />
+  <AudienceSection />
+  <CTASection />
+
+  <Footer copyright="Many. Todos los derechos reservados.">
+    <a slot="brand" href="/app/many" class="flex items-center gap-2.5 text-sm font-bold text-skin-primary">
+      <img src="/many-logo.webp" alt="" width="16" height="16" class="object-contain" />
+      Many
+    </a>
+    <a slot="links" href="/app/privacidad/many" class="text-xs sm:text-sm text-skin-secondary hover:text-primary transition-colors">Privacidad</a>
+    <a slot="links" href="/app/terminos/many" class="text-xs sm:text-sm text-skin-secondary hover:text-primary transition-colors">Términos</a>
+    <a slot="links" href="mailto:contacto@emprendecoders.com" class="text-xs sm:text-sm text-skin-secondary hover:text-primary transition-colors">Contacto</a>
+  </Footer>
+</Layout>
+
+<style>
+  .hero-card {
+    transition: transform 0.25s ease-out;
+    backface-visibility: hidden;
+  }
+  .hero-card.tracking {
+    transition: none;
+  }
+  .hero-lightbox-card {
+    transition: transform 0.25s ease-out;
+    perspective: 1000px;
+  }
+  .hero-lightbox-card.tracking {
+    transition: none;
+  }
+  #hero-lightbox-card-inner {
+    transition: box-shadow 0.25s ease-out;
+    transform-style: preserve-3d;
+  }
+  #hero-lightbox-card-inner.tracking {
+    transition: none;
+  }
+  #hero-lightbox-shine {
+    background: linear-gradient(135deg, rgba(255,255,255,0.25) 0%, transparent 50%, rgba(255,255,255,0.05) 100%);
+  }
+  #hero-lightbox {
+    animation: hero-fade-in 0.2s ease-out;
+  }
+  #hero-lightbox-img {
+    animation: hero-scale-in 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  @keyframes hero-fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes hero-scale-in {
+    from { transform: scale(0.95); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+</style>
+
+<script>
+  import { observeReveal } from '@src/utils/observer';
+
+  document.addEventListener('DOMContentLoaded', () => {
+    observeReveal();
+    initHeroCards();
+  });
+
+  function initHeroCards() {
+    const cards = document.querySelectorAll('.hero-card');
+    const lightbox = document.getElementById('hero-lightbox');
+    const lightboxImg = document.getElementById('hero-lightbox-img');
+    const lightboxLabel = document.getElementById('hero-lightbox-label');
+    const closeBtn = document.getElementById('hero-lightbox-close');
+    const backdrop = document.getElementById('hero-lightbox-backdrop');
+    const prevBtn = document.getElementById('hero-lightbox-prev');
+    const nextBtn = document.getElementById('hero-lightbox-next');
+    const lightboxImageContainer = document.getElementById('hero-lightbox-image-container');
+    const lightboxCardInner = document.getElementById('hero-lightbox-card-inner');
+    const lightboxShine = document.getElementById('hero-lightbox-shine');
+
+    let currentIndex = 0;
+
+    function lockScroll() { document.body.style.overflow = 'hidden'; }
+    function unlockScroll() { document.body.style.overflow = ''; }
+
+    function openLightbox(index) {
+      const card = cards[index];
+      if (!card) return;
+      const img = card.querySelector('img');
+      currentIndex = index;
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+      lightboxLabel.textContent = card.dataset.label || '';
+      lightboxImg.style.animation = 'none';
+      lightbox.offsetHeight;
+      lightboxImg.style.animation = '';
+      lightbox.classList.remove('hidden');
+      lockScroll();
+    }
+
+    function closeLightbox() {
+      lightbox.classList.add('hidden');
+      lightboxImageContainer.style.transform = '';
+      lightboxImageContainer.classList.remove('tracking');
+      if (lightboxCardInner) {
+        lightboxCardInner.classList.remove('tracking');
+        lightboxCardInner.style.transform = '';
+      }
+      if (lightboxShine) lightboxShine.style.opacity = '0';
+      unlockScroll();
+    }
+
+    function prev() {
+      currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+      const card = cards[currentIndex];
+      const img = card.querySelector('img');
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+      lightboxLabel.textContent = card.dataset.label || '';
+      lightboxImg.style.animation = 'none';
+      lightbox.offsetHeight;
+      lightboxImg.style.animation = '';
+    }
+
+    function next() {
+      currentIndex = (currentIndex + 1) % cards.length;
+      const card = cards[currentIndex];
+      const img = card.querySelector('img');
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+      lightboxLabel.textContent = card.dataset.label || '';
+      lightboxImg.style.animation = 'none';
+      lightbox.offsetHeight;
+      lightboxImg.style.animation = '';
+    }
+
+    cards.forEach((card) => {
+      const baseTransform = card.style.transform || '';
+      const hasBase = !!card.style.transform;
+
+      card.addEventListener('mouseenter', () => {
+        if (window.innerWidth < 640) return;
+        card.classList.add('tracking');
+        card.style.transform = hasBase ? `${baseTransform} scale(1.08)` : 'scale(1.08)';
+      });
+
+      card.addEventListener('mousemove', (e) => {
+        if (window.innerWidth < 640) return;
+        const rect = card.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width - 0.5;
+        const y = (e.clientY - rect.top) / rect.height - 0.5;
+        const zoom = ' scale(1.08)';
+        card.style.transform = `perspective(800px) rotateX(${y * -16}deg) rotateY(${x * 16}deg) ${hasBase ? baseTransform + zoom : zoom.trim()}`;
+      });
+
+      card.addEventListener('mouseleave', () => {
+        card.classList.remove('tracking');
+        card.style.transform = hasBase ? baseTransform : 'none';
+      });
+
+      card.addEventListener('click', () => {
+        const index = parseInt(card.dataset.index);
+        openLightbox(index);
+      });
+
+      card.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          const index = parseInt(card.dataset.index);
+          openLightbox(index);
+        }
+      });
+    });
+
+    if (lightboxImageContainer && lightboxCardInner && lightboxShine) {
+      lightboxImageContainer.addEventListener('mouseenter', () => {
+        if (window.innerWidth < 640) return;
+        lightboxImageContainer.classList.add('tracking');
+        lightboxCardInner.classList.add('tracking');
+        lightboxShine.style.opacity = '1';
+      });
+
+      lightboxImageContainer.addEventListener('mousemove', (e) => {
+        if (window.innerWidth < 640) return;
+        const rect = lightboxImageContainer.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width - 0.5;
+        const y = (e.clientY - rect.top) / rect.height - 0.5;
+
+        const rotX = y * -30;
+        const rotY = x * 30;
+        lightboxCardInner.style.transform = `rotateX(${rotX}deg) rotateY(${rotY}deg) scale3d(1.02, 1.02, 1.02)`;
+
+        const shineX = 50 + x * 60;
+        const shineY = 50 + y * 60;
+        lightboxShine.style.background = `radial-gradient(circle at ${shineX}% ${shineY}%, rgba(255,255,255,0.15) 0%, transparent 60%)`;
+      });
+
+      lightboxImageContainer.addEventListener('mouseleave', () => {
+        lightboxImageContainer.classList.remove('tracking');
+        lightboxCardInner.classList.remove('tracking');
+        lightboxCardInner.style.transform = '';
+        lightboxShine.style.opacity = '0';
+      });
+    }
+
+    if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
+    if (backdrop) backdrop.addEventListener('click', closeLightbox);
+    if (prevBtn) prevBtn.addEventListener('click', prev);
+    if (nextBtn) nextBtn.addEventListener('click', next);
+
+    document.addEventListener('keydown', (e) => {
+      if (lightbox.classList.contains('hidden')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowRight') next();
+      if (e.key === 'ArrowLeft') prev();
+    });
+  }
+</script>

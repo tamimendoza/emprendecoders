@@ -1,0 +1,105 @@
+---
+import ScrollReveal from '@src/components/layout/ScrollReveal.astro';
+
+export interface Props {
+  class?: string;
+}
+
+const { class: className = '' } = Astro.props;
+
+const features = [
+  {
+    icon: 'layout-dashboard',
+    title: 'Panel principal',
+    desc: 'Balance, ingresos vs gastos del mes y últimos 5 movimientos de un vistazo.',
+    image: '/screenshots/2.webp',
+  },
+  {
+    icon: 'list',
+    title: 'Movimientos',
+    desc: 'Lista completa con filtros por tipo, fecha, categoría, monto y método de pago.',
+    image: '/screenshots/3.webp',
+  },
+  {
+    icon: 'bar-chart',
+    title: 'Reportes mensuales',
+    desc: 'Gráficos por categoría, evolución multi-mes y desglose por tarjeta con secciones expandibles.',
+    image: '/screenshots/4.webp',
+  },
+  {
+    icon: 'wallet',
+    title: 'Registro de gastos',
+    desc: 'Carga rápida con selección de categoría, método de pago y fecha. Soporte para ingreso y gasto.',
+    image: '/screenshots/7.webp',
+  },
+  {
+    icon: 'bell',
+    title: 'Captura automática',
+    desc: 'Many lee notificaciones bancarias y pre-completa el formulario. Solo confirmás o corregís.',
+    image: '/screenshots/8.webp',
+  },
+  {
+    icon: 'settings',
+    title: 'Personalización',
+    desc: 'Múltiples perfiles, tema claro/oscuro, moneda, formato de número e idioma.',
+    image: '/screenshots/5.webp',
+  },
+];
+
+const iconPaths: Record<string, string> = {
+  'layout-dashboard': '<rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/>',
+  'list': '<line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/>',
+  'bar-chart': '<line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/>',
+  'wallet': '<line x1="7" y1="10" x2="11" y2="10"/><line x1="15" y1="10" x2="17" y2="10"/><path d="M3 6h18v12H3z"/><path d="M3 10v2"/><path d="M21 10v2"/>',
+  'bell': '<path d="M22 17H2a3 3 0 0 0 3-3V9a7 7 0 0 1 14 0v5a3 3 0 0 0 3 3zm0 0v1a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3v-1"/>',
+  'settings': '<circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>',
+};
+---
+
+<section class="px-4 sm:px-6 py-16 sm:py-20 dark:bg-secondary bg-skin-surface text-skin-primary {className}" id="features">
+  <div class="mx-auto max-w-content">
+    <ScrollReveal>
+      <p class="text-xs font-semibold tracking-[0.08em] uppercase text-accent mb-3">
+        Funcionalidades
+      </p>
+    </ScrollReveal>
+    <ScrollReveal>
+      <h2 class="text-[clamp(1.5rem,_3.5vw,_2.25rem)] font-extrabold tracking-tight mb-3">
+        Todo lo que necesitás <span class="text-gradient">para controlar tus gastos</span>
+      </h2>
+    </ScrollReveal>
+    <ScrollReveal>
+      <p class="text-sm sm:text-base text-skin-secondary max-w-xl leading-relaxed mb-10 sm:mb-12">
+        Una app liviana, completa y diseñada para que nunca más pierdas el rastro de tu dinero.
+      </p>
+    </ScrollReveal>
+
+    <div class="flex flex-col gap-8 sm:gap-12">
+      {
+        features.map((f, i) => (
+          <ScrollReveal>
+            <div class="flex flex-col lg:flex-row items-center gap-6 sm:gap-8 lg:gap-12 p-5 sm:p-6 rounded-2xl border dark:border-white/5 border-black/5 dark:bg-white/[0.02] bg-black/[0.02] card-hover hover:border-accent/20 hover:bg-accent/[0.03] transition-all duration-300 hover:scale-[1.02] hover:shadow-elevated">
+              <div class={`w-full lg:w-1/2 ${i % 2 === 0 ? 'lg:order-1' : 'lg:order-2'}`}>
+                <img
+                  src={f.image}
+                  alt={`Captura de ${f.title}`}
+                  loading="lazy"
+                  decoding="async"
+                  class="w-full rounded-2xl border border-white/5 shadow-card"
+                />
+              </div>
+              <div class={`w-full lg:w-1/2 ${i % 2 === 0 ? 'lg:order-2' : 'lg:order-1'}`}>
+                <div class="flex items-center gap-3 mb-3">
+                  <div class="w-8 h-8 flex items-center justify-center rounded-lg bg-primary/10 text-accent shrink-0" aria-hidden="true" set:html={`<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">${iconPaths[f.icon]}</svg>`}>
+                  </div>
+                  <h3 class="text-sm sm:text-base font-bold">{f.title}</h3>
+                </div>
+                <p class="text-xs sm:text-sm text-skin-secondary leading-relaxed">{f.desc}</p>
+              </div>
+            </div>
+          </ScrollReveal>
+        ))
+      }
+    </div>
+  </div>
+</section>

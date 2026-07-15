@@ -1,0 +1,121 @@
+---
+import MobileMenu from './MobileMenu.astro';
+
+export interface Props {
+  class?: string;
+}
+
+const { class: className = '' } = Astro.props;
+const hasMobile = Astro.slots.has('mobile') || Astro.slots.has('cta');
+---
+
+<nav class={`fixed top-0 left-0 right-0 z-50 border-b border-skin bg-skin-base text-skin-primary ${className}`} aria-label="Navegación principal">
+  <div class="mx-auto flex max-w-content items-center justify-between px-4 sm:px-6 h-14 sm:h-16">
+    <slot name="brand">
+      <a href="/" class="flex items-center gap-2.5 text-sm sm:text-[15px] font-bold" aria-label="Emprendecoders - Inicio">
+        <img src="/logo.webp" alt="" width="24" height="24" class="rounded-md" />
+        Emprendecoders
+      </a>
+    </slot>
+
+    {
+      hasMobile && (
+        <button id="nav-toggle" class="sm:hidden flex items-center justify-center w-10 h-10 rounded-xl text-skin-secondary hover:text-skin-primary transition-colors" aria-label="Abrir menú" aria-expanded="false">
+          <svg id="nav-icon-open" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <line x1="4" y1="7" x2="20" y2="7"/>
+            <line x1="4" y1="12" x2="20" y2="12"/>
+            <line x1="4" y1="17" x2="20" y2="17"/>
+          </svg>
+          <svg id="nav-icon-close" class="hidden" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <line x1="18" y1="6" x2="6" y2="18"/>
+            <line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      )
+    }
+
+    <div class="flex items-center gap-2">
+      <div class="hidden sm:flex items-center gap-2">
+        <slot name="nav-links" />
+        <slot name="cta" />
+      </div>
+      <button id="theme-toggle" class="flex items-center justify-center w-9 h-9 rounded-xl text-skin-secondary hover:text-skin-primary hover:bg-skin-surface transition-all" aria-label="Cambiar tema">
+        <svg class="dark:hidden" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+        <svg class="hidden dark:block" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  {
+    hasMobile && (
+      <MobileMenu>
+        <slot name="mobile" />
+      </MobileMenu>
+    )
+  }
+</nav>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggle = document.getElementById('nav-toggle');
+    const menu = document.getElementById('nav-mobile-menu');
+    const openIcon = document.getElementById('nav-icon-open');
+    const closeIcon = document.getElementById('nav-icon-close');
+
+    const toggleLabel = () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-label', expanded ? 'Cerrar menú' : 'Abrir menú');
+    };
+
+    if (toggle && menu) {
+      const links = menu.querySelectorAll('a, button, [tabindex]:not([tabindex="-1"])');
+
+      toggle.addEventListener('click', () => {
+        const expanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', !expanded);
+        toggleLabel();
+        menu.classList.toggle('hidden');
+        openIcon?.classList.toggle('hidden');
+        closeIcon?.classList.toggle('hidden');
+        if (!expanded && links.length) {
+          links[0].focus();
+        } else if (expanded) {
+          toggle.focus();
+        }
+      });
+
+      toggle.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
+          toggle.click();
+          toggle.focus();
+        }
+      });
+
+      menu.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
+          toggle.click();
+          toggle.focus();
+        }
+      });
+    }
+
+    const themeBtn = document.getElementById('theme-toggle');
+    const updateThemeLabel = () => {
+      if (!themeBtn) return;
+      const isDark = document.documentElement.classList.contains('dark');
+      themeBtn.setAttribute('aria-label', isDark ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro');
+    };
+
+    if (themeBtn && window.__toggleTheme) {
+      themeBtn.addEventListener('click', () => {
+        window.__toggleTheme();
+        updateThemeLabel();
+      });
+      updateThemeLabel();
+    }
+  });
+</script>

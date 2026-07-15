@@ -1,10 +1,39 @@
 ---
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from '@src/layouts/Layout.astro';
+import Navbar from '@src/components/layout/Navbar.astro';
+import Footer from '@src/components/layout/Footer.astro';
+import HeroSection from '@src/components/sections/HeroSection.astro';
+import ProductsSection from '@src/components/sections/ProductsSection.astro';
 ---
 
-<Layout>
-	En desarrollo
+<Layout title="Emprendecoders — Servicios digitales para emprendedores">
+  <Navbar>
+    <a slot="nav-links" href="/app/many" class="px-4 py-2 text-sm font-medium text-skin-secondary hover:text-skin-primary transition-colors rounded-lg hover:bg-skin-surface">
+      Many
+    </a>
+    <a slot="cta" href="#contacto" class="px-5 py-2 text-sm font-bold bg-primary hover:bg-primary/90 text-white rounded-full transition-all shadow-glow hover:shadow-glow hover:-translate-y-0.5">
+      Contacto
+    </a>
+    <a slot="mobile" href="/app/many" class="px-4 py-3 text-sm font-medium text-skin-secondary hover:text-skin-primary hover:bg-skin-surface rounded-xl transition-colors">
+      Many
+    </a>
+    <a slot="mobile" href="#contacto" class="px-4 py-3 text-sm font-bold text-center bg-primary hover:bg-primary/90 text-white rounded-xl transition-colors">
+      Contacto
+    </a>
+  </Navbar>
+
+  <HeroSection>
+    <ProductsSection />
+  </HeroSection>
+
+  <Footer id="contacto">
+    <a slot="links" href="/app/privacidad/many" class="text-xs sm:text-sm text-skin-secondary hover:text-primary transition-colors">Privacidad</a>
+    <a slot="links" href="/app/terminos/many" class="text-xs sm:text-sm text-skin-secondary hover:text-primary transition-colors">Términos</a>
+    <a slot="links" href="mailto:contacto@emprendecoders.com" class="text-xs sm:text-sm text-skin-secondary hover:text-primary transition-colors">Contacto</a>
+  </Footer>
 </Layout>
+
+<script>
+  import { observeReveal } from '@src/utils/observer';
+  document.addEventListener('DOMContentLoaded', () => observeReveal());
+</script>

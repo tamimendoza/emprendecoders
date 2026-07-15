@@ -1,0 +1,33 @@
+---
+export interface Props {
+  variant?: 'default' | 'primary' | 'accent' | 'success' | 'warning' | 'error' | 'info';
+  size?: 'sm' | 'md';
+  class?: string;
+  [key: string]: unknown;
+}
+
+const { variant = 'primary', size = 'sm', class: className = '', ...attrs } = Astro.props;
+
+const base = 'inline-flex items-center gap-1.5 font-semibold rounded-full';
+
+const variants: Record<string, string> = {
+  default: 'bg-skin-surface border border-skin text-skin-primary',
+  primary: 'bg-primary/10 border border-primary/20 text-primary',
+  accent: 'bg-accent/10 border border-accent/20 text-accent',
+  success: 'bg-accent/10 border border-accent/20 text-accent',
+  warning: 'bg-accent/10 border border-accent/20 text-accent',
+  error: 'bg-primary/10 border border-primary/20 text-primary',
+  info: 'bg-primary/10 border border-primary/20 text-primary',
+};
+
+const sizes: Record<string, string> = {
+  sm: 'px-2.5 py-0.5 text-[11px]',
+  md: 'px-3 py-1 text-xs',
+};
+
+const classes = [base, variants[variant], sizes[size], className].filter(Boolean).join(' ');
+---
+
+<span class={classes} {...attrs}>
+  <slot />
+</span>

@@ -1,0 +1,129 @@
+---
+import ScrollReveal from '@src/components/layout/ScrollReveal.astro';
+
+export interface Props {
+  class?: string;
+}
+
+const { class: className = '' } = Astro.props;
+
+const screenshots = [
+  { id: 1,  src: '/screenshots/1.webp',  alt: 'App lista para usar',               label: 'Many lista para usar' },
+  { id: 2,  src: '/screenshots/2.webp',  alt: 'Panel principal modo claro',        label: 'Panel principal (claro)' },
+  { id: 12, src: '/screenshots/12.webp', alt: 'Panel principal modo oscuro',       label: 'Panel principal (oscuro)' },
+  { id: 3,  src: '/screenshots/3.webp',  alt: 'Lista de movimientos modo claro',   label: 'Movimientos (claro)' },
+  { id: 11, src: '/screenshots/11.webp', alt: 'Lista de movimientos modo oscuro',  label: 'Movimientos (oscuro)' },
+  { id: 4,  src: '/screenshots/4.webp',  alt: 'Reporte mensual con gráficos',      label: 'Reportes mensuales' },
+  { id: 10, src: '/screenshots/10.webp', alt: 'Reportes por tarjeta',              label: 'Reportes — vista por tarjeta' },
+  { id: 5,  src: '/screenshots/5.webp',  alt: 'Pantalla de ajustes',               label: 'Ajustes y preferencias' },
+  { id: 6,  src: '/screenshots/6.webp',  alt: 'Activación de notificaciones',      label: 'Activar notificaciones' },
+  { id: 7,  src: '/screenshots/7.webp',  alt: 'Formulario nuevo ingreso/gasto',    label: 'Nuevo ingreso o gasto' },
+  { id: 8,  src: '/screenshots/8.webp',  alt: 'Notificación bancaria detectada',   label: 'Notificación detectada' },
+  { id: 9,  src: '/screenshots/9.webp',  alt: 'Registro desde notificación',       label: 'Registrar desde notificación' },
+  { id: 13, src: '/screenshots/13.webp', alt: 'Editar categoría',                   label: 'Editar categoría' },
+];
+---
+
+<section class="px-4 sm:px-6 py-16 sm:py-20 bg-skin-surface text-skin-primary {className}" id="gallery">
+  <div class="mx-auto max-w-content">
+    <ScrollReveal>
+      <p class="text-xs font-semibold tracking-[0.08em] uppercase text-accent mb-3">
+        Galería
+      </p>
+    </ScrollReveal>
+    <ScrollReveal>
+      <h2 class="text-[clamp(1.5rem,_3.5vw,_2.25rem)] font-extrabold tracking-tight mb-3">
+        Explorá <span class="text-gradient">la app</span>
+      </h2>
+    </ScrollReveal>
+    <ScrollReveal>
+      <p class="text-sm sm:text-base text-skin-secondary max-w-xl leading-relaxed mb-10 sm:mb-12">
+        Todas las pantallas de Many, en detalle. Hacé clic para ampliar.
+      </p>
+    </ScrollReveal>
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+      {
+        screenshots.map((s, i) => (
+          <ScrollReveal>
+            <button
+              class="group relative w-full aspect-[9/16] rounded-2xl overflow-hidden border border-primary/10 hover:border-primary/30 cursor-pointer transition-all duration-300 hover:shadow-elevated hover:scale-[1.02] focus-visible:outline-2 focus-visible:outline-primary"
+              data-gallery-index={i}
+              data-gallery-src={s.src}
+              data-gallery-label={s.label}
+              aria-label={`Ver ${s.label}`}
+            >
+              <img
+                src={s.src}
+                alt={s.alt}
+                width="225"
+                height="400"
+                loading="lazy"
+                class="w-full h-full object-cover"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+              <span class="absolute bottom-0 left-0 right-0 p-2.5 text-[11px] sm:text-xs font-medium text-white/90 text-left leading-tight">
+                {s.label}
+              </span>
+            </button>
+          </ScrollReveal>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div
+  id="gallery-lightbox"
+  class="fixed inset-0 z-50 hidden"
+  role="dialog"
+  aria-modal="true"
+  aria-label="Galería de screenshots"
+>
+  <div id="lightbox-backdrop" class="absolute inset-0 bg-black/90 backdrop-blur-sm"></div>
+  <button
+    id="lightbox-close"
+    class="absolute top-4 right-4 z-10 w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
+    aria-label="Cerrar galería"
+  >
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+    </svg>
+  </button>
+  <button
+    id="lightbox-prev"
+    class="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white opacity-0 group-hover:opacity-100 transition-all duration-200"
+    aria-label="Anterior"
+  >
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="15 18 9 12 15 6"/>
+    </svg>
+  </button>
+  <button
+    id="lightbox-next"
+    class="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white opacity-0 group-hover:opacity-100 transition-all duration-200"
+    aria-label="Siguiente"
+  >
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="9 18 15 12 9 6"/>
+    </svg>
+  </button>
+  <div class="flex items-center justify-center h-full px-12 sm:px-16">
+    <img
+      id="lightbox-image"
+      src=""
+      alt=""
+      class="max-h-[90vh] w-auto object-contain rounded-2xl select-none"
+      style="view-transition-name: lightbox-img"
+    />
+  </div>
+  <p
+    id="lightbox-label"
+    class="absolute bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 text-white/70 text-xs sm:text-sm font-medium text-center px-4"
+  ></p>
+</div>
+
+<script>
+  import { initGallery } from './gallery.js';
+  document.addEventListener('DOMContentLoaded', () => initGallery());
+</script>

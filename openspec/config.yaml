@@ -1,0 +1,24 @@
+schema: spec-driven
+
+context: |
+  Stack: Astro 5 + Tailwind CSS 3 + pnpm
+  Path alias: @src/* → src/*
+  Dark-first: <html class="dark"> in Layout.astro
+  Design tokens via CSS vars in design-tokens.css
+  Components in src/components/{ui,layout,sections}/
+  Pages: /, /app/many, /app/privacidad/{many,voicenotifier}, /app/terminos/{many,voicenotifier}
+  No test/lint/typecheck scripts configured
+
+rules:
+  proposal:
+    - Include problem statement and brand analysis
+    - Reference specific color values from existing logos
+  specs:
+    - Reference CSS variable names where applicable
+    - Include before/after color values for each component
+  design:
+    - Document token structure before component changes
+    - Include file paths for all new/modified files
+  tasks:
+    - Order by sprint as defined in tasks.md
+    - Mark completed items with ✅

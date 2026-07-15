@@ -1,20 +1,102 @@
+---
+import '@src/styles/design-tokens.css';
+
+export interface Props {
+  title?: string;
+  description?: string;
+  ogImage?: string;
+  theme?: 'dark' | 'light';
+  brand?: 'emprendecoders' | 'many';
+}
+
+const {
+  brand = 'emprendecoders',
+  title = brand === 'many'
+    ? 'Many — Control de Gastos y Finanzas Personales | Many'
+    : 'Emprendecoders — Servicios digitales para emprendedores',
+  description = brand === 'many'
+    ? 'Many es el gestor de gastos 100% offline para Android. Captura automática de notificaciones bancarias, múltiples perfiles y reportes visuales. Sin cuentas, sin internet.'
+    : 'Creamos aplicaciones y herramientas que resuelven problemas reales. Privacidad, simplicidad y control en cada producto.',
+  ogImage = brand === 'many' ? '/many-icon.png' : '/logo.png',
+  theme = 'dark',
+} = Astro.props;
+
+const faviconHref = brand === 'many' ? '/many-icon.png' : '/favicon-index.png';
+
+const siteURL = Astro.site ?? Astro.url.origin;
+const canonicalURL = new URL(Astro.url.pathname, siteURL);
+const resolvedOgImage = new URL(ogImage, siteURL).href;
+---
+
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Emprendecoders</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<html lang="es" class={'dark' + (brand === 'many' ? ' many' : '')}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#0E1A2E" />
+    <link rel="icon" type="image/png" href={faviconHref} />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- SEO / Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL.href} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={resolvedOgImage} />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={canonicalURL.href} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={resolvedOgImage} />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href={canonicalURL.href} />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <script is:inline>
+      (function () {
+        var saved = localStorage.getItem('theme');
+        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var html = document.documentElement;
+        if (saved === 'light' || (!saved && !prefersDark)) {
+          html.classList.remove('dark');
+          html.classList.add('light');
+        } else {
+          html.classList.remove('light');
+          html.classList.add('dark');
+        }
+      })();
+    </script>
+
+    <title>{title}</title>
+  </head>
+  <body class="bg-skin-base text-skin-primary font-sans antialiased selection:bg-primary/20">
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-primary focus:text-white focus:rounded-lg focus:text-sm focus:font-semibold">
+      Saltar al contenido principal
+    </a>
+    <div id="main-content">
+      <slot />
+    </div>
+  </body>
 </html>
 
-<style>
-	html,
-	body {
-		font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; padding:1em; 
-	}
-</style>
+<script>
+  window.__toggleTheme = function () {
+    const html = document.documentElement;
+    if (html.classList.contains('dark')) {
+      html.classList.remove('dark');
+      html.classList.add('light');
+      localStorage.setItem('theme', 'light');
+    } else {
+      html.classList.remove('light');
+      html.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    }
+  };
+</script>

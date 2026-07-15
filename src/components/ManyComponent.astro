@@ -1,103 +1,65 @@
 ---
 const appName = "Many: Control de Gastos y Finanzas Personales";
-const developerName = "Emprendecoders";
-const contactEmail = "many@emprendecoders.com";
+const developerName = "Many";
+const contactEmail = "contacto@emprendecoders.com";
 const effectiveDate = "2026-06-02";
 ---
 
-<html lang="es">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Política de Privacidad - {appName}</title>
-  <style>
-    body {
-      font-family: system-ui, -apple-system, sans-serif;
-      line-height: 1.6;
-      color: #333;
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 2rem;
-      background-color: #fcfcfc;
-    }
-    h1 {
-      font-size: 2rem;
-      color: #111;
-      margin-bottom: 0.5rem;
-    }
-    h2 {
-      font-size: 1.25rem;
-      color: #222;
-      margin-top: 2rem;
-      border-bottom: 1px solid #eaeaea;
-      padding-bottom: 0.5rem;
-    }
-    p {
-      margin-bottom: 1rem;
-    }
-    ul {
-      margin-bottom: 1.5rem;
-      padding-left: 1.5rem;
-    }
-    a {
-      color: #0066cc;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    hr {
-      border: 0;
-      border-top: 1px solid #eaeaea;
-      margin: 2rem 0;
-    }
-  </style>
-</head>
-<body>
+<div class="mb-10 sm:mb-12">
+    <h1 class="text-2xl sm:text-3xl font-extrabold text-skin-primary tracking-tight mb-2">Política de Privacidad</h1>
+    <p class="text-skin-muted text-xs sm:text-sm">Aplicación: <strong class="text-skin-primary">{appName}</strong></p>
+  </div>
 
-  <h1>Política de Privacidad</h1>
   <p>Esta política de privacidad aplica a la aplicación <strong>{appName}</strong> (en adelante, la "Aplicación") para dispositivos móviles, creada por <strong>{developerName}</strong> (en adelante, el "Proveedor del Servicio"). Este servicio está destinado a ser utilizado "TAL CUAL".</p>
 
-  <h2>Recopilación y Uso de la Información</h2>
-  <p><strong>Privacidad Total:</strong> La Aplicación ha sido diseñada teniendo en cuenta tu privacidad. Toda tu información financiera, cuentas, registros de ingresos y gastos, y categorías se guardan <strong>localmente en tu dispositivo</strong> para mayor seguridad.</p>
-  <p>El Proveedor del Servicio <strong>NO</strong> recopila, transmite, sincroniza ni almacena tu información financiera o personal en servidores externos.</p>
-  <p>Al descargar y utilizar la Aplicación, no se requiere la creación de una cuenta en nuestros servidores. La Aplicación no recopila información precisa sobre la ubicación de tu dispositivo móvil bajo ninguna circunstancia.</p>
+  <section>
+    <h2 class="text-lg sm:text-xl font-bold text-skin-primary tracking-tight mb-3 mt-8">Recopilación y Uso de la Información</h2>
+    <p><strong class="text-primary">Privacidad Total:</strong> La Aplicación ha sido diseñada teniendo en cuenta tu privacidad. Toda tu información financiera, cuentas, registros de ingresos y gastos, y categorías se guardan <strong class="text-skin-primary">localmente en tu dispositivo</strong> para mayor seguridad.</p>
+    <p>El Proveedor del Servicio <strong class="text-red-400">NO</strong> recopila, transmite, sincroniza ni almacena tu información financiera o personal en servidores externos.</p>
+    <p>Al descargar y utilizar la Aplicación, no se requiere la creación de una cuenta en nuestros servidores. La Aplicación no recopila información precisa sobre la ubicación de tu dispositivo móvil bajo ninguna circunstancia.</p>
+  </section>
 
-  <h2>Acceso de Terceros</h2>
-  <p>Dado que la Aplicación almacena la información de manera local, el Proveedor del Servicio no comparte tu información personal ni tus datos financieros con terceros.</p>
-  <!-- NOTA PARA EL DESARROLLADOR: Si en el futuro decides monetizar con AdMob o añadir analíticas como Firebase Crashlytics, debes descomentar y adaptar la siguiente sección: -->
-  <!-- 
-  <p>Ten en cuenta que la Aplicación puede utilizar servicios de terceros (como análisis de fallos o publicidad) que tienen su propia Política de Privacidad. A continuación, se encuentran los enlaces a las políticas de privacidad de los proveedores de servicios de terceros utilizados por la Aplicación:</p>
-  <ul>
-    <li><a href="https://www.google.com/policies/privacy/" target="_blank" rel="noopener noreferrer">Google Play Services</a></li>
-  </ul>
-  -->
+  <section>
+    <h2 class="text-lg sm:text-xl font-bold text-skin-primary tracking-tight mb-3 mt-8">Acceso de Terceros</h2>
+    <p>Dado que la Aplicación almacena la información de manera local, el Proveedor del Servicio no comparte tu información personal ni tus datos financieros con terceros.</p>
+  </section>
 
-  <h2>Derechos de Exclusión (Opt-Out) y Control de Datos</h2>
-  <p>Tienes el control absoluto sobre tus datos. Dado que la información se almacena localmente en tu dispositivo, puedes eliminar todos los datos de la Aplicación en cualquier momento mediante los siguientes métodos:</p>
-  <ul>
-    <li>Borrando los datos de la aplicación desde el menú de ajustes de tu dispositivo móvil.</li>
-    <li>Desinstalando la Aplicación. Al desinstalarla mediante los procesos estándar de tu dispositivo, se eliminará toda la información almacenada por la misma.</li>
-  </ul>
+  <section>
+    <h2 class="text-lg sm:text-xl font-bold text-skin-primary tracking-tight mb-3 mt-8">Derechos de Exclusión (Opt-Out) y Control de Datos</h2>
+    <p>Tienes el control absoluto sobre tus datos. Dado que la información se almacena localmente en tu dispositivo, puedes eliminar todos los datos de la Aplicación en cualquier momento mediante los siguientes métodos:</p>
+    <ul class="list-disc pl-5 sm:pl-6 space-y-1.5">
+      <li>Borrando los datos de la aplicación desde el menú de ajustes de tu dispositivo móvil.</li>
+      <li>Desinstalando la Aplicación. Al desinstalarla mediante los procesos estándar de tu dispositivo, se eliminará toda la información almacenada por la misma.</li>
+    </ul>
+  </section>
 
-  <h2>Política de Retención de Datos</h2>
-  <p>El Proveedor del Servicio no retiene ningún dato proporcionado por el usuario, ya que toda la información permanece en tu dispositivo. Los datos existirán únicamente durante el tiempo que decidas mantener la Aplicación instalada y no borres el almacenamiento de la misma.</p>
+  <section>
+    <h2 class="text-lg sm:text-xl font-bold text-skin-primary tracking-tight mb-3 mt-8">Política de Retención de Datos</h2>
+    <p>El Proveedor del Servicio no retiene ningún dato proporcionado por el usuario, ya que toda la información permanece en tu dispositivo. Los datos existirán únicamente durante el tiempo que decidas mantener la Aplicación instalada y no borres el almacenamiento de la misma.</p>
+  </section>
 
-  <h2>Privacidad de los Niños</h2>
-  <p>La Aplicación no se dirige a menores de 13 años. El Proveedor del Servicio no recopila a sabiendas información de identificación personal de niños menores de 13 años. Si eres padre o tutor y tienes alguna preocupación respecto al uso de la Aplicación, puedes contactar al Proveedor del Servicio en {contactEmail}.</p>
+  <section>
+    <h2 class="text-lg sm:text-xl font-bold text-skin-primary tracking-tight mb-3 mt-8">Privacidad de los Niños</h2>
+    <p>La Aplicación no se dirige a menores de 13 años. El Proveedor del Servicio no recopila a sabiendas información de identificación personal de niños menores de 13 años. Si eres padre o tutor y tienes alguna preocupación respecto al uso de la Aplicación, puedes contactar al Proveedor del Servicio en <a href={`mailto:${contactEmail}`} class="text-primary hover:underline">{contactEmail}</a>.</p>
+  </section>
 
-  <h2>Seguridad</h2>
-  <p>El Proveedor del Servicio se preocupa por salvaguardar la confidencialidad de tu información. Aunque la Aplicación guarda tus datos localmente, te recomendamos encarecidamente utilizar las medidas de seguridad propias de tu dispositivo (como contraseñas, PIN o biometría) para proteger el acceso físico a tu teléfono y, por ende, a tus datos financieros.</p>
+  <section>
+    <h2 class="text-lg sm:text-xl font-bold text-skin-primary tracking-tight mb-3 mt-8">Seguridad</h2>
+    <p>El Proveedor del Servicio se preocupa por salvaguardar la confidencialidad de tu información. Aunque la Aplicación guarda tus datos localmente, te recomendamos encarecidamente utilizar las medidas de seguridad propias de tu dispositivo (como contraseñas, PIN o biometría) para proteger el acceso físico a tu teléfono y, por ende, a tus datos financieros.</p>
+  </section>
 
-  <h2>Cambios en esta Política de Privacidad</h2>
-  <p>Esta Política de Privacidad puede ser actualizada de vez en cuando por cualquier motivo. El Proveedor del Servicio te notificará sobre cualquier cambio actualizando esta página. Te recomendamos consultar esta Política de Privacidad periódicamente, ya que el uso continuo de la Aplicación se considerará como la aceptación de todos los cambios.</p>
-  <p>Esta política de privacidad es efectiva a partir del <strong>{effectiveDate}</strong>.</p>
+  <section>
+    <h2 class="text-lg sm:text-xl font-bold text-skin-primary tracking-tight mb-3 mt-8">Cambios en esta Política de Privacidad</h2>
+    <p>Esta Política de Privacidad puede ser actualizada de vez en cuando por cualquier motivo. El Proveedor del Servicio te notificará sobre cualquier cambio actualizando esta página. Te recomendamos consultar esta Política de Privacidad periódicamente, ya que el uso continuo de la Aplicación se considerará como la aceptación de todos los cambios.</p>
+    <p>Esta política de privacidad es efectiva a partir del <strong class="text-skin-primary">{effectiveDate}</strong>.</p>
+  </section>
 
-  <h2>Tu Consentimiento</h2>
-  <p>Al utilizar la Aplicación, estás dando tu consentimiento a las prácticas descritas en esta Política de Privacidad, en sus términos actuales y tal como sean modificados por nosotros.</p>
+  <section>
+    <h2 class="text-lg sm:text-xl font-bold text-skin-primary tracking-tight mb-3 mt-8">Tu Consentimiento</h2>
+    <p>Al utilizar la Aplicación, estás dando tu consentimiento a las prácticas descritas en esta Política de Privacidad, en sus términos actuales y tal como sean modificados por nosotros.</p>
+  </section>
 
-  <h2>Contáctanos</h2>
-  <p>Si tienes alguna pregunta sobre la privacidad mientras usas la Aplicación, o tienes preguntas sobre nuestras prácticas, comunícate con el Proveedor del Servicio por correo electrónico a: <strong><a href={`mailto:${contactEmail}`}>{contactEmail}</a></strong>.</p>
-
-</body>
-</html>
+  <section class="!mt-10 sm:!mt-12 pt-6 sm:pt-8 border-t border-skin">
+    <h2 class="text-lg sm:text-xl font-bold text-skin-primary tracking-tight mb-3">Contáctanos</h2>
+    <p>Si tienes alguna pregunta sobre la privacidad mientras usas la Aplicación, o tienes preguntas sobre nuestras prácticas, comunícate con el Proveedor del Servicio por correo electrónico a: <a href={`mailto:${contactEmail}`} class="text-primary hover:underline">{contactEmail}</a>.</p>
+  </section>

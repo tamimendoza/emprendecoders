@@ -1,0 +1,21 @@
+---
+export interface Props {
+  class?: string;
+  copyright?: string;
+}
+
+const { class: className = '', copyright } = Astro.props;
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-skin px-4 sm:px-6 py-8 sm:py-10 {className}" aria-label="Pie de página">
+  <div class="mx-auto max-w-content flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-6">
+    <slot name="brand">
+      <a href="/" class="text-gradient-brand text-sm font-semibold">Emprendecoders</a>
+    </slot>
+    <div class="flex items-center gap-5 sm:gap-6 flex-wrap justify-center">
+      <slot name="links" />
+    </div>
+    <p class="text-xs text-slate-500/60">&copy; {year} {copyright || 'Emprendecoders'}</p>
+  </div>
+</footer>
