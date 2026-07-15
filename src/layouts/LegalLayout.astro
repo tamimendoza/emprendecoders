@@ -1,0 +1,45 @@
+---
+import Layout from './Layout.astro';
+
+export interface Props {
+  title?: string;
+  description?: string;
+  backHref?: string;
+  backLabel?: string;
+  brand?: 'emprendecoders' | 'many';
+}
+
+const { title, description, backHref, backLabel = '← Volver', brand = 'emprendecoders' } = Astro.props;
+---
+
+<Layout title={title} description={description} brand={brand}>
+  <nav class="fixed top-0 left-0 right-0 z-50 border-b border-skin bg-skin-base" aria-label="Navegación">
+    <div class="mx-auto flex max-w-content items-center justify-between px-4 sm:px-6 h-14 sm:h-16">
+      {
+        brand === 'many' ? (
+          <a href="/app/many" class="flex items-center gap-2.5 text-sm sm:text-[15px] font-bold text-skin-primary" aria-label="Many - Inicio">
+            <img src="/many-logo.webp" alt="" width="24" height="24" class="object-contain" />
+            Many
+          </a>
+        ) : (
+          <a href="/" class="flex items-center gap-2.5 text-sm sm:text-[15px] font-bold" aria-label="Emprendecoders - Inicio">
+            <img src="/logo.webp" alt="" width="24" height="24" class="rounded-md" />
+            Emprendecoders
+          </a>
+        )
+      }
+      {
+        backHref && (
+          <a href={backHref} class="inline-flex items-center gap-1.5 px-4 py-2 text-xs sm:text-sm font-semibold bg-primary/10 border border-primary/20 text-primary hover:bg-primary/20 rounded-full transition-all">
+            {backLabel}
+          </a>
+        )
+      }
+    </div>
+  </nav>
+  <main class="pt-14 sm:pt-16">
+    <article class="px-4 sm:px-6 py-16 sm:py-20 max-w-3xl mx-auto text-sm sm:text-base text-skin-secondary leading-[1.8] space-y-5">
+      <slot />
+    </article>
+  </main>
+</Layout>

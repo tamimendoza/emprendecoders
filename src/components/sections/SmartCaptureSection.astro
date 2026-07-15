@@ -1,0 +1,141 @@
+---
+import ScrollReveal from '@src/components/layout/ScrollReveal.astro';
+
+export interface Props {
+  class?: string;
+}
+
+const { class: className = '' } = Astro.props;
+
+const steps = [
+  {
+    icon: 'bell',
+    title: 'Llega la notificación',
+    desc: 'Cuando tu banco envía un SMS o notificación de un movimiento, Many la detecta al instante. Sin que hagas nada.',
+    image: '/screenshots/6.webp',
+    imageAlt: 'Activación de notificaciones en Many',
+  },
+  {
+    icon: 'check',
+    title: 'Extrae los datos',
+    desc: 'Many reconoce el monto, el comercio y la categoría. Solo confirmás o corregís con un toque.',
+    image: '/screenshots/8.webp',
+    imageAlt: 'Notificación bancaria detectada por Many',
+  },
+  {
+    icon: 'bar-chart-3',
+    title: 'Todo en orden',
+    desc: 'El gasto queda registrado automáticamente. Tus reportes se actualizan en tiempo real, sin esfuerzo.',
+    image: '/screenshots/9.webp',
+    imageAlt: 'Registro de gasto desde notificación en Many',
+  },
+];
+
+const iconPaths = {
+  'bell': '<path d="M22 17H2a3 3 0 0 0 3-3V9a7 7 0 0 1 14 0v5a3 3 0 0 0 3 3zm0 0v1a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3v-1"/>',
+  'check': '<polyline points="20 6 9 17 4 12"/>',
+  'bar-chart-3': '<path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-6"/>',
+};
+---
+
+<section class="px-4 sm:px-6 py-16 sm:py-20 bg-skin-surface text-skin-primary {className}" id="smart-capture">
+  <div class="mx-auto max-w-content">
+    <ScrollReveal>
+      <p class="text-xs font-semibold tracking-[0.08em] uppercase text-primary mb-3">
+        Cómo funciona
+      </p>
+    </ScrollReveal>
+    <ScrollReveal>
+      <h2 class="text-[clamp(1.5rem,_3.5vw,_2.25rem)] font-extrabold tracking-tight mb-2">
+        Captura automática <span class="text-gradient">inteligente</span>
+      </h2>
+    </ScrollReveal>
+    <ScrollReveal>
+      <span class="inline-block text-xs font-medium text-skin-secondary mb-3">
+        Opcional — activalo en Ajustes
+      </span>
+    </ScrollReveal>
+    <ScrollReveal>
+      <p class="text-sm sm:text-base text-skin-secondary max-w-xl leading-relaxed mb-10 sm:mb-12">
+        Many escucha tus notificaciones bancarias y pre-completa los formularios
+        de gastos automáticamente. Sin escribir montos, sin perder tiempo.
+      </p>
+    </ScrollReveal>
+
+    <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center">
+      <div class="flex flex-col gap-1 lg:gap-0 order-2 lg:order-1" role="tablist" aria-label="Pasos de captura automática">
+        {
+          steps.map((step, i) => (
+            <button
+              class="sc-step-btn flex items-start gap-4 p-4 sm:p-5 rounded-2xl text-left transition-all duration-300 hover:bg-primary/[0.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
+              data-sc-image={step.image}
+              data-sc-alt={step.imageAlt}
+              role="tab"
+              aria-selected={i === 0 ? 'true' : 'false'}
+              aria-controls={`sc-panel-${i}`}
+              id={`sc-tab-${i}`}
+            >
+              <div class="sc-step-circle w-9 h-9 shrink-0 rounded-full flex items-center justify-center text-sm font-bold transition-all duration-300 {i === 0 ? 'bg-primary text-white shadow-[0_0_12px_rgba(92,53,140,0.4)]' : 'border border-primary/20 text-skin-secondary bg-transparent'}">
+                {i + 1}
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="sc-step-title text-left transition-colors duration-300 {i === 0 ? 'text-primary font-bold' : 'text-skin-secondary font-medium'}">
+                  <span class="text-sm sm:text-base">{step.title}</span>
+                </div>
+                <p class="sc-step-desc text-xs sm:text-sm text-skin-secondary leading-relaxed overflow-hidden transition-all duration-400 ease-in-out {i === 0 ? 'max-h-40 opacity-100 mt-2' : 'max-h-0 opacity-0 mt-0'}">
+                  {step.desc}
+                </p>
+              </div>
+            </button>
+          ))
+        }
+      </div>
+
+      <div class="flex flex-col items-center order-1 lg:order-2">
+        <div class="relative w-full max-w-[240px] sm:max-w-[280px] mx-auto">
+          <div class="aspect-[9/19] rounded-[2rem] border-[3px] border-primary/15 shadow-card overflow-hidden bg-dark">
+            <img
+              id="sc-mockup-img"
+              src={steps[0].image}
+              alt={steps[0].imageAlt}
+              width="360"
+              height="760"
+              class="w-full h-full object-cover transition-all duration-300 ease-out"
+              style="opacity: 1; transform: scale(1);"
+              loading="lazy"
+            />
+          </div>
+          <div class="absolute -top-2 -right-2 w-1 h-6 bg-primary/30 rounded-full"></div>
+          <div class="absolute -bottom-2 -left-2 w-6 h-1 bg-primary/30 rounded-full"></div>
+        </div>
+        <div class="flex items-center gap-2 mt-5" role="tablist" aria-label="Indicador de paso">
+          {
+            steps.map((_, i) => (
+              <div
+                class="sc-dot w-2 h-2 rounded-full transition-all duration-300 {i === 0 ? 'bg-primary w-3' : 'bg-primary/30'}"
+                aria-hidden="true"
+              ></div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+
+    <ScrollReveal>
+      <div class="flex items-start gap-3 sm:gap-4 max-w-xl mx-auto mt-10 sm:mt-12 p-4 sm:p-5 rounded-2xl border border-primary/10 bg-primary/[0.03] text-xs sm:text-sm text-skin-secondary leading-relaxed">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary shrink-0 mt-0.5" aria-hidden="true">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </svg>
+        <p><strong class="text-skin-primary">Privacidad garantizada:</strong> las notificaciones se procesan 100% en tu dispositivo. Nada se envía a servidores externos. Tú tienes el control.</p>
+      </div>
+    </ScrollReveal>
+  </div>
+</section>
+
+<script>
+  import { initSmartCapture } from './smart-capture.js';
+
+  document.addEventListener('DOMContentLoaded', () => {
+    initSmartCapture();
+  });
+</script>

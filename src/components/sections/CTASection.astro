@@ -1,0 +1,60 @@
+---
+import ScrollReveal from '@src/components/layout/ScrollReveal.astro';
+
+export interface Props {
+  class?: string;
+}
+
+const { class: className = '' } = Astro.props;
+---
+
+<section class="relative overflow-hidden px-4 sm:px-6 py-16 sm:py-20 text-center {className}" id="download">
+  <div class="absolute w-[400px] h-[400px] sm:w-[500px] sm:h-[500px] rounded-full bg-[radial-gradient(circle,rgba(92,53,140,0.12),transparent_70%)] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none" aria-hidden="true"></div>
+  <div class="relative mx-auto max-w-xl flex flex-col items-center gap-4 sm:gap-5">
+    <ScrollReveal>
+      <p class="text-xs font-semibold tracking-[0.08em] uppercase text-accent">Descarga ahora</p>
+    </ScrollReveal>
+    <ScrollReveal>
+      <h2 class="text-[clamp(1.5rem,_3.5vw,_2.25rem)] font-extrabold tracking-tight max-w-md">
+        Empezá a controlar tus <span class="text-gradient">gastos</span>
+      </h2>
+    </ScrollReveal>
+    <ScrollReveal>
+      <p class="text-sm sm:text-base text-skin-secondary max-w-lg leading-relaxed">
+        Sin cuentas, sin internet, sin límites. Descargá Many gratis y tomá el control de tus finanzas personales.
+      </p>
+    </ScrollReveal>
+    <ScrollReveal>
+      <a
+        href="https://play.google.com/store/apps/details?id=com.emprendecoders.many&hl=es"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-3 px-6 sm:px-7 py-3 sm:py-3.5 rounded-xl bg-[#0a0a0f] border border-white/10 hover:bg-slate-800 transition-all hover:-translate-y-0.5"
+      >
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" class="text-accent">
+          <path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.807 1.626a1 1 0 0 1 0 1.732l-2.807 1.626L15.206 12l2.492-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/>
+        </svg>
+        <span class="flex flex-col items-start">
+          <span class="text-[9px] tracking-[0.08em] text-slate-400">DISPONIBLE EN</span>
+          <span class="text-sm sm:text-base font-bold text-white">Google Play</span>
+        </span>
+      </a>
+    </ScrollReveal>
+    <ScrollReveal>
+      <div class="flex flex-wrap justify-center gap-4 sm:gap-6 mt-2">
+        <span class="inline-flex items-center gap-1.5 text-xs sm:text-sm text-skin-secondary">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-accent"><polyline points="20 6 9 17 4 12"/></svg>
+          Gratis
+        </span>
+        <span class="inline-flex items-center gap-1.5 text-xs sm:text-sm text-skin-secondary">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-accent"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Offline
+        </span>
+        <span class="inline-flex items-center gap-1.5 text-xs sm:text-sm text-skin-secondary">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="text-accent"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          Sin registro
+        </span>
+      </div>
+    </ScrollReveal>
+  </div>
+</section>

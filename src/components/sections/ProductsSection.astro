@@ -1,0 +1,54 @@
+---
+import ScrollReveal from '@src/components/layout/ScrollReveal.astro';
+---
+
+<div class="w-full max-w-lg mx-auto space-y-3 text-left" role="list" aria-label="Nuestros productos">
+  <ScrollReveal>
+    <p class="text-xs font-semibold tracking-[0.08em] uppercase text-skin-muted mb-4 text-center">
+      Nuestros productos
+    </p>
+  </ScrollReveal>
+
+  <ScrollReveal>
+    <a href="/app/many" class="group flex items-center gap-4 p-4 sm:p-5 rounded-2xl border border-primary/30 bg-primary/[0.06] hover:bg-primary/[0.10] transition-all" role="listitem">
+      <div class="w-11 h-11 sm:w-12 sm:h-12 flex items-center justify-center rounded-xl bg-primary/10 text-primary shrink-0">
+        <img src="/many-logo.webp" alt="" width="28" height="28" class="rounded-md" />
+      </div>
+      <div class="min-w-0 flex-1">
+        <p class="text-sm sm:text-[15px] font-semibold text-skin-primary">Many</p>
+        <p class="text-xs sm:text-sm text-skin-secondary">Control de gastos 100% offline</p>
+      </div>
+      <svg class="w-5 h-5 text-primary opacity-0 group-hover:opacity-100 transition-opacity shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+      </svg>
+    </a>
+  </ScrollReveal>
+
+  <ScrollReveal>
+    <div class="flex items-center gap-4 p-4 sm:p-5 rounded-2xl border border-accent/20 bg-accent/[0.04]" role="listitem">
+      <div class="w-11 h-11 sm:w-12 sm:h-12 flex items-center justify-center rounded-xl bg-accent/10 text-accent-dark shrink-0">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/>
+        </svg>
+      </div>
+      <div class="min-w-0 flex-1">
+        <p class="text-sm sm:text-[15px] font-semibold text-skin-primary">Voice Notifier</p>
+        <p class="text-xs sm:text-sm text-skin-secondary">Notificaciones por voz</p>
+      </div>
+    </div>
+  </ScrollReveal>
+
+  <ScrollReveal>
+    <div class="flex items-center gap-4 p-4 sm:p-5 rounded-2xl border border-skin bg-skin-muted opacity-50 cursor-default" role="listitem">
+      <div class="w-11 h-11 sm:w-12 sm:h-12 flex items-center justify-center rounded-xl bg-skin-surface text-skin-muted shrink-0">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/>
+        </svg>
+      </div>
+      <div class="min-w-0 flex-1">
+        <p class="text-sm sm:text-[15px] font-semibold text-skin-primary">Más servicios</p>
+        <p class="text-xs sm:text-sm text-skin-secondary">Próximamente</p>
+      </div>
+    </div>
+  </ScrollReveal>
+</div>

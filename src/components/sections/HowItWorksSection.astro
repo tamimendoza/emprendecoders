@@ -1,0 +1,106 @@
+---
+import ScrollReveal from '@src/components/layout/ScrollReveal.astro';
+
+export interface Props {
+  class?: string;
+}
+
+const { class: className = '' } = Astro.props;
+
+const steps = [
+  {
+    icon: 'bell',
+    title: 'Llega la notificación',
+    desc: 'Cuando tu banco envía un SMS o notificación de un movimiento, Many la detecta al instante.',
+    image: '/screenshots/6.webp',
+    imageAlt: 'Activación de notificaciones en Many',
+  },
+  {
+    icon: 'check',
+    title: 'Extrae los datos',
+    desc: 'Many reconoce el monto, el comercio y la categoría. Tú solo confirmas o corriges con un toque.',
+    image: '/screenshots/8.webp',
+    imageAlt: 'Notificación bancaria detectada por Many',
+  },
+  {
+    icon: 'bar-chart-3',
+    title: 'Todo en orden',
+    desc: 'El gasto queda registrado automáticamente. Tus reportes se actualizan en tiempo real, sin esfuerzo.',
+    image: '/screenshots/9.webp',
+    imageAlt: 'Registro de gasto desde notificación en Many',
+  },
+];
+
+const iconPaths: Record<string, string> = {
+  'bell': '<path d="M22 17H2a3 3 0 0 0 3-3V9a7 7 0 0 1 14 0v5a3 3 0 0 0 3 3zm0 0v1a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3v-1"/>',
+  'check': '<polyline points="20 6 9 17 4 12"/>',
+  'bar-chart-3': '<path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-6"/>',
+};
+---
+
+<section class="px-4 sm:px-6 py-16 sm:py-20 bg-skin-surface text-skin-primary {className}" id="how-it-works">
+  <div class="mx-auto max-w-content">
+    <ScrollReveal>
+      <p class="text-xs font-semibold tracking-[0.08em] uppercase text-primary mb-3">
+        Cómo funciona
+      </p>
+    </ScrollReveal>
+    <ScrollReveal>
+      <h2 class="text-[clamp(1.5rem,_3.5vw,_2.25rem)] font-extrabold tracking-tight mb-3">
+        Captura automática <span class="text-gradient">inteligente</span>
+      </h2>
+    </ScrollReveal>
+    <ScrollReveal>
+      <p class="text-sm sm:text-base text-skin-secondary max-w-xl leading-relaxed mb-10 sm:mb-12">
+        Many escucha tus notificaciones bancarias y pre-completa los formularios
+        de gastos automáticamente. Sin escribir montos, sin perder tiempo.
+      </p>
+    </ScrollReveal>
+
+    <div class="grid sm:grid-cols-3 gap-4 sm:gap-6 mb-10">
+      {
+        steps.map((step, i) => (
+          <>
+            <ScrollReveal>
+              <div class="relative text-center p-6 sm:p-7 rounded-2xl border border-primary/10 bg-primary/[0.02]">
+                <div class="w-9 h-9 mx-auto rounded-full bg-primary text-white flex items-center justify-center text-sm font-bold mb-5">
+                  {i + 1}
+                </div>
+                <div class="text-primary mb-4 flex justify-center" aria-hidden="true" set:html={`<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${iconPaths[step.icon]}</svg>`}>
+                </div>
+                <h3 class="text-sm sm:text-base font-bold mb-2">{step.title}</h3>
+                <p class="text-xs sm:text-sm text-skin-secondary leading-relaxed mb-4">{step.desc}</p>
+                <img
+                  src={step.image}
+                  alt={step.imageAlt}
+                  width="225"
+                  height="400"
+                  loading="lazy"
+                  class="w-full max-w-[160px] mx-auto rounded-xl border border-primary/10 shadow-soft"
+                />
+              </div>
+            </ScrollReveal>
+            {
+              i < steps.length - 1 && (
+                <div class="hidden sm:flex items-center justify-center text-primary reveal" aria-hidden="true">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+                  </svg>
+                </div>
+              )
+            }
+          </>
+        ))
+      }
+    </div>
+
+    <ScrollReveal>
+      <div class="flex items-start gap-3 sm:gap-4 max-w-xl mx-auto p-4 sm:p-5 rounded-2xl border border-primary/10 bg-primary/[0.03] text-xs sm:text-sm text-skin-secondary leading-relaxed">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary shrink-0 mt-0.5" aria-hidden="true">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </svg>
+        <p><strong class="text-skin-primary">Privacidad garantizada:</strong> las notificaciones se procesan 100% en tu dispositivo. Nada se envía a servidores externos. Tú tienes el control.</p>
+      </div>
+    </ScrollReveal>
+  </div>
+</section>
