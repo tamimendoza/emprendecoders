@@ -38,7 +38,9 @@ export function initRutina(dias) {
     sessionTimer: document.getElementById('session-timer'),
     skipRestBtn: document.getElementById('session-skip-rest'),
     closeSessionBtn: document.getElementById('session-close'),
-    sessionEndMessage: document.getElementById('session-end-message'),
+    sessionEndSummary: document.getElementById('session-end-summary'),
+    sessionEndCount: document.getElementById('session-end-count'),
+    sessionEndList: document.getElementById('session-end-list'),
   };
 
   renderDayTabs();
@@ -380,7 +382,10 @@ function startSession(diaName, options = {}) {
   if (queue.length === 0) return;
 
   state.session = { queue, index: 0, currentSet: 1, phase: 'exercise', intervalId: null, remaining: 0 };
-  refs.sessionEndMessage.classList.add('hidden');
+  refs.sessionEndSummary.classList.add('hidden');
+  refs.sessionExerciseName.classList.remove('hidden');
+  refs.sessionGroupBadge.classList.remove('hidden');
+  refs.sessionTarget.classList.remove('hidden');
   refs.overlay.classList.remove('hidden');
   document.body.style.overflow = 'hidden';
   renderSessionStep();
@@ -485,9 +490,24 @@ function finishExercise() {
 }
 
 function showSessionEnd() {
+  const s = state.session;
   refs.sessionSetChecklist.classList.add('hidden');
   refs.sessionRestView.classList.add('hidden');
-  refs.sessionEndMessage.classList.remove('hidden');
+  refs.sessionExerciseName.classList.add('hidden');
+  refs.sessionGroupBadge.classList.add('hidden');
+  refs.sessionTarget.classList.add('hidden');
+
+  refs.sessionEndCount.textContent = `${s.queue.length}/${s.queue.length} ejercicios completados`;
+  refs.sessionEndList.innerHTML = s.queue
+    .map(
+      (ex) => `
+      <li class="flex items-center gap-2.5 rounded-xl border border-accent/20 bg-accent/10 px-3.5 py-2.5 text-sm font-medium text-skin-primary">
+        <svg class="shrink-0 text-accent" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+        ${ex.ejercicio}
+      </li>`
+    )
+    .join('');
+  refs.sessionEndSummary.classList.remove('hidden');
 }
 
 function endSession() {

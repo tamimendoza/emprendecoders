@@ -83,7 +83,13 @@ const metaDesc = 'Seguimiento de rutina de gimnasio semanal, con checklist por d
             </button>
           </div>
 
-          <p id="session-end-message" class="hidden text-sm text-skin-secondary mb-2 mt-4">¡Sesión completada! Buen trabajo.</p>
+          <!-- Session summary (end of session) -->
+          <div id="session-end-summary" class="hidden">
+            <span class="text-4xl leading-none" aria-hidden="true">🎉</span>
+            <p id="session-end-count" class="text-lg font-extrabold text-skin-primary mt-2 mb-1"></p>
+            <p class="text-sm text-skin-secondary mb-4">¡Sesión completada! Buen trabajo.</p>
+            <ul id="session-end-list" class="flex flex-col gap-2 text-left"></ul>
+          </div>
         </div>
       </div>
     </div>
