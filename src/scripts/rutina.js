@@ -246,61 +246,59 @@ function exerciseCardHTML(ex, dia) {
   const done = isDone(ex.id);
   const isTracked = resolved.series !== null && resolved.series !== undefined;
   return `
-    <div class="exercise-card bg-skin-surface border border-skin rounded-2xl shadow-card p-4 sm:p-5 transition-colors ${done ? 'opacity-60 border-accent/40' : ''}"
+    <details class="exercise-card group bg-skin-surface border border-skin rounded-2xl shadow-card transition-colors ${done ? 'opacity-60 border-accent/40' : ''}"
       data-exercise-id="${ex.id}" data-dia="${dia}" data-done="${done}">
-      <div class="flex items-start gap-3">
-        <input type="checkbox" class="exercise-checkbox mt-1 w-5 h-5 rounded border-skin accent-primary shrink-0 cursor-pointer"
-          data-exercise-id="${ex.id}" ${done ? 'checked' : ''} aria-label="Marcar ${ex.ejercicio} como hecho" />
-        <div class="flex-1 min-w-0">
-          <div class="flex flex-wrap items-center gap-2 mb-1.5">
-            <h4 class="font-semibold text-skin-primary text-sm sm:text-base">${ex.ejercicio}</h4>
-            ${ex.peso ? `<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-skin-surface-2 border border-skin text-[11px] text-skin-secondary">${ex.peso}</span>` : ''}
-            ${done ? `<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-accent/10 border border-accent/20 text-accent text-[11px] font-semibold">Completado</span>` : ''}
-          </div>
+      <summary class="flex items-center gap-3 p-4 sm:p-5 cursor-pointer select-none list-none marker:hidden [&::-webkit-details-marker]:hidden">
+        <input type="checkbox" class="exercise-checkbox w-5 h-5 rounded border-skin accent-primary shrink-0 cursor-pointer"
+          data-exercise-id="${ex.id}" ${done ? 'checked' : ''} aria-label="Marcar ${ex.ejercicio} como hecho" onclick="event.stopPropagation()" />
+        <div class="flex-1 min-w-0 flex flex-wrap items-center gap-2">
+          <h4 class="font-semibold text-skin-primary text-sm sm:text-base">${ex.ejercicio}</h4>
+          ${ex.peso ? `<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-skin-surface-2 border border-skin text-[11px] text-skin-secondary">${ex.peso}</span>` : ''}
+          ${done ? `<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-accent/10 border border-accent/20 text-accent text-[11px] font-semibold">Completado</span>` : ''}
+        </div>
+        <svg class="shrink-0 text-skin-secondary transition-transform group-open:rotate-180" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </summary>
 
+      <div class="px-4 sm:px-5 pb-4 sm:pb-5 pl-[3.25rem] sm:pl-[3.5rem] -mt-1">
+        ${
+          isTracked
+            ? `<div class="flex flex-wrap gap-2 mb-3">
+                <label class="flex items-center gap-1.5 bg-skin-surface-2 rounded-lg border border-skin px-2 py-1 text-xs text-skin-secondary">
+                  Series
+                  <input type="number" min="1" class="exercise-override w-12 bg-transparent text-center text-skin-primary font-semibold outline-none"
+                    data-exercise-id="${ex.id}" data-field="series" value="${resolved.series}" />
+                </label>
+                <span class="flex items-center gap-1.5 bg-skin-surface-2 rounded-lg border border-skin px-2 py-1 text-xs text-skin-secondary">
+                  Reps <strong class="text-skin-primary">${repChipLabel(ex)}</strong>
+                </span>
+                <label class="flex items-center gap-1.5 bg-skin-surface-2 rounded-lg border border-skin px-2 py-1 text-xs text-skin-secondary">
+                  Descanso
+                  <input type="number" min="0" step="5" class="exercise-override w-14 bg-transparent text-center text-skin-primary font-semibold outline-none"
+                    data-exercise-id="${ex.id}" data-field="descanso" value="${resolved.descanso}" />
+                  s
+                </label>
+              </div>`
+            : `<p class="text-xs text-skin-secondary mb-3">${repChipLabel(ex)}</p>`
+        }
+
+        <p class="text-xs text-skin-secondary leading-relaxed mb-3">${ex.descripcion}</p>
+
+        <div class="flex flex-wrap items-center gap-3">
+          <a href="${ex.video}" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-xs font-medium text-skin-secondary hover:text-primary transition-colors">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+            Ver video
+          </a>
           ${
             isTracked
-              ? `<div class="flex flex-wrap gap-2 mb-2">
-                  <label class="flex items-center gap-1.5 bg-skin-surface-2 rounded-lg border border-skin px-2 py-1 text-xs text-skin-secondary">
-                    Series
-                    <input type="number" min="1" class="exercise-override w-12 bg-transparent text-center text-skin-primary font-semibold outline-none"
-                      data-exercise-id="${ex.id}" data-field="series" value="${resolved.series}" />
-                  </label>
-                  <span class="flex items-center gap-1.5 bg-skin-surface-2 rounded-lg border border-skin px-2 py-1 text-xs text-skin-secondary">
-                    Reps <strong class="text-skin-primary">${repChipLabel(ex)}</strong>
-                  </span>
-                  <label class="flex items-center gap-1.5 bg-skin-surface-2 rounded-lg border border-skin px-2 py-1 text-xs text-skin-secondary">
-                    Descanso
-                    <input type="number" min="0" step="5" class="exercise-override w-14 bg-transparent text-center text-skin-primary font-semibold outline-none"
-                      data-exercise-id="${ex.id}" data-field="descanso" value="${resolved.descanso}" />
-                    s
-                  </label>
-                </div>`
-              : `<p class="text-xs text-skin-secondary mb-2">${repChipLabel(ex)}</p>`
+              ? `<button type="button" class="exercise-play-btn inline-flex items-center gap-1.5 text-xs font-medium text-primary hover:text-primary/80 transition-colors" data-exercise-id="${ex.id}">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                  Practicar este ejercicio
+                </button>`
+              : ''
           }
-
-          <details class="text-xs text-skin-secondary">
-            <summary class="cursor-pointer select-none font-medium text-skin-primary/80 hover:text-primary">Descripción</summary>
-            <p class="mt-1.5 leading-relaxed">${ex.descripcion}</p>
-          </details>
-
-          <div class="flex items-center gap-3 mt-2">
-            <a href="${ex.video}" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-xs font-medium text-skin-secondary hover:text-primary transition-colors">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
-              Ver video
-            </a>
-            ${
-              isTracked
-                ? `<button type="button" class="exercise-play-btn inline-flex items-center gap-1.5 text-xs font-medium text-primary hover:text-primary/80 transition-colors" data-exercise-id="${ex.id}">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                    Practicar este ejercicio
-                  </button>`
-                : ''
-            }
-          </div>
         </div>
       </div>
-    </div>`;
+    </details>`;
 }
 
 function renderExerciseList() {
@@ -330,7 +328,10 @@ function updateCardInPlace(exerciseId) {
   const card = refs.list.querySelector(`.exercise-card[data-exercise-id="${exerciseId}"]`);
   if (!card) return;
   const dia = card.dataset.dia;
+  const wasOpen = card.open;
   card.outerHTML = exerciseCardHTML(findExercise(exerciseId), dia);
+  const newCard = refs.list.querySelector(`.exercise-card[data-exercise-id="${exerciseId}"]`);
+  if (newCard && wasOpen) newCard.open = true;
 }
 
 function findExercise(exerciseId) {
