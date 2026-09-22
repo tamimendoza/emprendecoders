@@ -1,0 +1,100 @@
+---
+import Layout from '@src/layouts/Layout.astro';
+import Navbar from '@src/components/layout/Navbar.astro';
+import Footer from '@src/components/layout/Footer.astro';
+
+const metaTitle = 'Mi Rutina Semanal | Emprendecoders';
+const metaDesc = 'Seguimiento de rutina de gimnasio semanal, con checklist por día, control de series/repeticiones/descanso y modo sesión guiada. Todo se guarda en tu navegador.';
+---
+
+<Layout title={metaTitle} description={metaDesc}>
+  <Navbar>
+    <a slot="cta" href="/" class="px-4 sm:px-5 py-2 text-xs sm:text-sm font-bold bg-primary hover:bg-primary/90 text-white rounded-full transition-all shadow-glow hover:shadow-glow hover:-translate-y-0.5">
+      Inicio
+    </a>
+    <a slot="mobile" href="/" class="block px-4 py-3 text-sm font-bold text-center bg-primary hover:bg-primary/90 text-white rounded-xl transition-colors">
+      Inicio
+    </a>
+  </Navbar>
+
+  <main class="relative min-h-screen px-4 sm:px-6 pt-24 pb-20 sm:pt-28">
+    <div class="max-w-content mx-auto">
+      <header class="mb-6 sm:mb-8">
+        <h1 class="text-[clamp(1.5rem,_4vw,_2.25rem)] font-extrabold leading-tight tracking-tight">
+          Mi <span class="text-gradient">rutina</span> semanal
+        </h1>
+        <p class="text-sm text-skin-secondary mt-1.5">
+          Elegí el día, marcá lo que vas completando y usá "Iniciar sesión" para que te guíe serie a serie.
+        </p>
+      </header>
+
+      <div id="day-tabs" role="tablist" aria-label="Días de la semana" class="flex gap-2 overflow-x-auto -mx-4 px-4 sm:mx-0 sm:px-0 pb-1 mb-4 snap-x"></div>
+
+      <div id="day-complete-banner" class="hidden flex-col sm:flex-row items-center sm:items-start gap-3 sm:gap-4 mb-6 bg-accent/10 border border-accent/20 rounded-2xl p-5 sm:p-6 text-center sm:text-left" role="status">
+        <span class="text-4xl sm:text-5xl leading-none" aria-hidden="true">🎉</span>
+        <div class="min-w-0">
+          <p id="day-complete-title" class="text-base sm:text-lg font-extrabold text-skin-primary mb-1">¡Rutina completa!</p>
+          <p id="day-complete-detail" class="text-sm text-skin-secondary"></p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-4 mb-6 bg-skin-surface border border-skin rounded-2xl p-4 shadow-card">
+        <div class="flex-1 min-w-0">
+          <p id="progress-text" class="text-sm font-semibold text-skin-primary mb-2">0/0 ejercicios completados</p>
+          <div class="h-2 rounded-full bg-skin-surface-2 overflow-hidden">
+            <div id="progress-bar" class="h-full bg-primary transition-all duration-300" style="width: 0%"></div>
+          </div>
+        </div>
+        <button
+          id="start-session-btn"
+          type="button"
+          class="shrink-0 inline-flex items-center gap-2 px-4 sm:px-5 py-2.5 rounded-xl bg-primary hover:bg-primary/90 text-white text-sm font-bold transition-all shadow-glow disabled:hover:bg-primary"
+        >
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          Iniciar sesión
+        </button>
+      </div>
+
+      <div id="exercise-list"></div>
+    </div>
+
+    <!-- Session overlay -->
+    <div id="session-overlay" class="fixed inset-0 z-50 hidden" role="dialog" aria-modal="true" aria-label="Sesión de entrenamiento">
+      <div class="absolute inset-0 bg-black/90 backdrop-blur-sm"></div>
+      <div class="relative z-10 flex items-center justify-center h-full px-4">
+        <div class="w-full max-w-sm bg-skin-surface border border-skin rounded-2xl shadow-2xl p-6 sm:p-8 text-center">
+          <button id="session-close" type="button" class="absolute top-4 right-4 w-9 h-9 flex items-center justify-center rounded-full bg-skin-surface-2 hover:bg-skin-surface-hover text-skin-secondary transition-colors" aria-label="Cerrar sesión">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+
+          <span id="session-group-badge" class="inline-flex items-center gap-1.5 font-semibold rounded-full bg-primary/10 border border-primary/20 text-primary px-2.5 py-0.5 text-[11px] mb-3"></span>
+          <h2 id="session-exercise-name" class="text-xl sm:text-2xl font-extrabold text-skin-primary mb-1"></h2>
+          <p id="session-target" class="text-sm font-semibold text-skin-secondary mb-5"></p>
+
+          <!-- Set checklist (exercise phase) -->
+          <div id="session-set-checklist" class="flex flex-col gap-2 mb-2 text-left"></div>
+
+          <!-- Rest countdown (resting phase) -->
+          <div id="session-rest-view" class="hidden">
+            <p id="session-phase-label" class="text-xs uppercase tracking-wide text-skin-secondary font-semibold mb-2"></p>
+            <p id="session-timer" class="text-6xl sm:text-7xl font-extrabold text-gradient mb-6 min-h-[1.2em]"></p>
+            <button id="session-skip-rest" type="button" class="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-skin-surface-2 hover:bg-skin-surface-hover border border-skin text-skin-primary text-sm font-semibold transition-colors">
+              Saltar descanso
+            </button>
+          </div>
+
+          <p id="session-end-message" class="hidden text-sm text-skin-secondary mb-2 mt-4">¡Sesión completada! Buen trabajo.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <Footer copyright="Emprendecoders. Todos los derechos reservados." />
+</Layout>
+
+<script>
+  import rutina from '@src/data/rutina.json';
+  import { initRutina } from '@src/scripts/rutina.js';
+
+  document.addEventListener('DOMContentLoaded', () => initRutina(rutina.dias));
+</script>
