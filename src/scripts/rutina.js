@@ -1,6 +1,7 @@
 const STORAGE_KEY = 'rutina:v1:state';
 const MAX_WEEK_AGE = 8;
 const DIAS_ES = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
+const GROUP_TRANSITION_REST_SECONDS = 120;
 
 /** @type {{data: any[], currentDia: string, storage: any, session: any}} */
 let state = {
@@ -76,7 +77,11 @@ export function initRutina(dias) {
     const checkbox = e.target.closest('.session-set-checkbox');
     if (checkbox && !checkbox.disabled) completeSet();
   });
-  refs.skipRestBtn.addEventListener('click', skipRest);
+  refs.sessionSetChecklist.addEventListener('click', (e) => {
+    const startBtn = e.target.closest('.session-start-timed-set');
+    if (startBtn) startTimedSet();
+  });
+  refs.skipRestBtn.addEventListener('click', skipTimer);
   refs.closeSessionBtn.addEventListener('click', endSession);
 }
 
@@ -381,7 +386,16 @@ function startSession(diaName, options = {}) {
   }
   if (queue.length === 0) return;
 
-  state.session = { queue, index: 0, currentSet: 1, phase: 'exercise', intervalId: null, remaining: 0 };
+  state.session = {
+    diaName,
+    queue,
+    index: 0,
+    currentSet: 1,
+    phase: 'exercise',
+    intervalId: null,
+    remaining: 0,
+    onTimerComplete: null,
+  };
   refs.sessionEndSummary.classList.add('hidden');
   refs.sessionExerciseName.classList.remove('hidden');
   refs.sessionGroupBadge.classList.remove('hidden');
@@ -406,6 +420,7 @@ function renderSessionStep() {
 }
 
 function renderSetChecklist(ex, currentSet) {
+  const isTimed = ex.repeticiones.tipo === 'tiempo';
   const rows = [];
   for (let i = 1; i <= ex.series; i++) {
     const isDoneSet = i < currentSet;
@@ -415,6 +430,16 @@ function renderSetChecklist(ex, currentSet) {
       : isActive
         ? 'border-primary/40 bg-primary/10 text-skin-primary cursor-pointer'
         : 'border-skin bg-skin-surface-2 text-skin-secondary/50';
+
+    if (isActive && isTimed) {
+      rows.push(`
+        <button type="button" class="session-start-timed-set w-full flex items-center justify-between gap-3 rounded-xl border px-3.5 py-3 text-sm font-semibold transition-colors ${rowClasses}">
+          <span>Serie ${i} de ${ex.series} · ${ex.repeticiones.texto}</span>
+          <span class="text-primary">Iniciar</span>
+        </button>`);
+      continue;
+    }
+
     rows.push(`
       <label class="flex items-center gap-3 rounded-xl border px-3.5 py-3 text-sm font-semibold transition-colors ${rowClasses}">
         <input type="checkbox" class="session-set-checkbox w-5 h-5 rounded accent-primary shrink-0"
@@ -438,13 +463,49 @@ function completeSet() {
   startRestTimer(ex.descanso);
 }
 
+function startTimedSet() {
+  const s = state.session;
+  if (!s) return;
+  const ex = s.queue[s.index];
+  s.phase = 'timed-set';
+  startTimer(ex.repeticiones.valor, { label: 'Ejercicio en curso', onComplete: onTimedSetComplete });
+}
+
+function onTimedSetComplete() {
+  const s = state.session;
+  if (!s) return;
+  const ex = s.queue[s.index];
+
+  if (s.currentSet >= ex.series) {
+    finishExercise();
+    return;
+  }
+  s.currentSet += 1;
+  startRestTimer(ex.descanso);
+}
+
 function startRestTimer(seconds) {
   const s = state.session;
   s.phase = 'resting';
+  startTimer(seconds, { label: 'Descanso', onComplete: advanceAfterRest });
+}
+
+function startGroupRestTimer(nextGroupName) {
+  const s = state.session;
+  s.phase = 'group-resting';
+  startTimer(GROUP_TRANSITION_REST_SECONDS, {
+    label: `Pausa · siguiente: ${nextGroupName}`,
+    onComplete: advanceAfterRest,
+  });
+}
+
+function startTimer(seconds, { label, onComplete }) {
+  const s = state.session;
   s.remaining = seconds;
+  s.onTimerComplete = onComplete;
   refs.sessionSetChecklist.classList.add('hidden');
   refs.sessionRestView.classList.remove('hidden');
-  refs.sessionPhaseLabel.textContent = 'Descanso';
+  refs.sessionPhaseLabel.textContent = label;
   refs.sessionTimer.textContent = formatSeconds(s.remaining);
 
   if (s.intervalId) clearInterval(s.intervalId);
@@ -454,17 +515,21 @@ function startRestTimer(seconds) {
     if (s.remaining <= 0) {
       clearInterval(s.intervalId);
       s.intervalId = null;
-      advanceAfterRest();
+      const callback = s.onTimerComplete;
+      s.onTimerComplete = null;
+      if (callback) callback();
     }
   }, 1000);
 }
 
-function skipRest() {
+function skipTimer() {
   const s = state.session;
-  if (!s) return;
+  if (!s || !s.onTimerComplete) return;
   if (s.intervalId) clearInterval(s.intervalId);
   s.intervalId = null;
-  advanceAfterRest();
+  const callback = s.onTimerComplete;
+  s.onTimerComplete = null;
+  callback();
 }
 
 function advanceAfterRest() {
@@ -484,9 +549,27 @@ function finishExercise() {
     showSessionEnd();
     return;
   }
+  const nextEx = s.queue[s.index + 1];
   s.index += 1;
   s.currentSet = 1;
-  renderSessionStep();
+
+  if (nextEx.grupoMuscular !== ex.grupoMuscular) {
+    startGroupRestTimer(nextEx.grupoMuscular);
+  } else {
+    renderSessionStep();
+  }
+}
+
+function allCompletedExercisesForDay(diaName) {
+  const dia = findDia(diaName);
+  if (!dia) return [];
+  const result = [];
+  for (const grupo of dia.grupos) {
+    for (const ex of grupo.ejercicios) {
+      if (isDone(ex.id)) result.push(ex);
+    }
+  }
+  return result;
 }
 
 function showSessionEnd() {
@@ -497,15 +580,23 @@ function showSessionEnd() {
   refs.sessionGroupBadge.classList.add('hidden');
   refs.sessionTarget.classList.add('hidden');
 
-  refs.sessionEndCount.textContent = `${s.queue.length}/${s.queue.length} ejercicios completados`;
-  refs.sessionEndList.innerHTML = s.queue
-    .map(
-      (ex) => `
-      <li class="flex items-center gap-2.5 rounded-xl border border-accent/20 bg-accent/10 px-3.5 py-2.5 text-sm font-medium text-skin-primary">
-        <svg class="shrink-0 text-accent" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-        ${ex.ejercicio}
-      </li>`
-    )
+  const dia = findDia(s.diaName);
+  const totalDia = dia ? dia.grupos.reduce((acc, g) => acc + g.ejercicios.length, 0) : 0;
+  const completed = allCompletedExercisesForDay(s.diaName);
+
+  refs.sessionEndCount.textContent = `${completed.length}/${totalDia} ejercicios completados`;
+  refs.sessionEndList.innerHTML = completed
+    .map((ex) => {
+      const details = [ex.peso, repChipLabel(ex)].filter(Boolean).join(' · ');
+      return `
+      <li class="flex items-start gap-2.5 rounded-xl border border-accent/20 bg-accent/10 px-3.5 py-2.5 text-sm font-medium text-skin-primary">
+        <svg class="shrink-0 text-accent mt-0.5" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+        <span class="flex flex-col">
+          <span>${ex.ejercicio}</span>
+          ${details ? `<span class="text-xs font-normal text-skin-secondary">${details}</span>` : ''}
+        </span>
+      </li>`;
+    })
     .join('');
   refs.sessionEndSummary.classList.remove('hidden');
 }

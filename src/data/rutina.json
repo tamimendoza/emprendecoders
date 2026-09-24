@@ -25,16 +25,6 @@
               "descanso": 60,
               "descripcion": "Brazos ligeramente flexionados, abre en forma de arco y vuelve lentamente.",
               "video": "https://www.youtube.com/results?search_query=dumbbell+fly"
-            },
-            {
-              "id": "lunes-pecho-flexiones",
-              "ejercicio": "Flexiones",
-              "peso": "Peso corporal",
-              "series": 3,
-              "repeticiones": { "tipo": "fallo", "valor": null, "texto": "Al fallo (-2 rep.)" },
-              "descanso": 60,
-              "descripcion": "Mantén el cuerpo recto y baja hasta que el pecho quede cerca del suelo.",
-              "video": "https://www.youtube.com/results?search_query=perfect+push+up"
             }
           ]
         },
@@ -166,7 +156,7 @@
               "ejercicio": "Farmer's Walk",
               "peso": "12 kg",
               "series": 3,
-              "repeticiones": { "tipo": "tiempo", "valor": 50, "unidad": "s", "texto": "40-60 s" },
+              "repeticiones": { "tipo": "tiempo", "valor": 50, "unidad": "s", "texto": "60 s" },
               "descanso": 60,
               "descripcion": "Camina con las mancuernas manteniendo el torso firme y los hombros atrás.",
               "video": "https://www.youtube.com/results?search_query=farmer%27s+walk"
@@ -216,7 +206,7 @@
               "ejercicio": "Farmer's Walk",
               "peso": "12 kg",
               "series": 3,
-              "repeticiones": { "tipo": "tiempo", "valor": 52, "unidad": "s", "texto": "45-60 s" },
+              "repeticiones": { "tipo": "tiempo", "valor": 52, "unidad": "s", "texto": "60 s" },
               "descanso": 60,
               "descripcion": "Camina manteniendo el agarre firme y la espalda recta.",
               "video": "https://www.youtube.com/results?search_query=farmer%27s+walk"
@@ -226,7 +216,7 @@
               "ejercicio": "Agarre estático",
               "peso": "12 kg",
               "series": 3,
-              "repeticiones": { "tipo": "tiempo", "valor": 37, "unidad": "s", "texto": "30-45 s" },
+              "repeticiones": { "tipo": "tiempo", "valor": 37, "unidad": "s", "texto": "45 s" },
               "descanso": 60,
               "descripcion": "Mantén las mancuernas sujetas sin mover los brazos.",
               "video": "https://www.youtube.com/results?search_query=static+dumbbell+hold"
@@ -246,7 +236,7 @@
               "ejercicio": "Remo con mancuerna",
               "peso": "12 kg",
               "series": 4,
-              "repeticiones": { "tipo": "numero", "valor": 11, "texto": "10-12" },
+              "repeticiones": { "tipo": "numero", "valor": 11, "texto": "12" },
               "descanso": 90,
               "descripcion": "Lleva la mancuerna hacia la cadera juntando la escápula.",
               "video": "https://www.youtube.com/results?search_query=one+arm+dumbbell+row"
@@ -311,7 +301,7 @@
               "ejercicio": "Farmer's Walk",
               "peso": "12 kg",
               "series": 3,
-              "repeticiones": { "tipo": "tiempo", "valor": 52, "unidad": "s", "texto": "45-60 s" },
+              "repeticiones": { "tipo": "tiempo", "valor": 52, "unidad": "s", "texto": "60 s" },
               "descanso": 60,
               "descripcion": "Mantén una postura erguida y un agarre fuerte.",
               "video": "https://www.youtube.com/results?search_query=farmer%27s+walk"
@@ -411,7 +401,7 @@
               "ejercicio": "Plancha",
               "peso": "Peso corporal",
               "series": 3,
-              "repeticiones": { "tipo": "tiempo", "valor": 52, "unidad": "s", "texto": "45-60 s" },
+              "repeticiones": { "tipo": "tiempo", "valor": 52, "unidad": "s", "texto": "60 s" },
               "descanso": 45,
               "descripcion": "Mantén el cuerpo completamente alineado.",
               "video": "https://www.youtube.com/results?search_query=plank+exercise"
@@ -441,7 +431,7 @@
               "ejercicio": "Press de pecho en el suelo",
               "peso": "12 kg",
               "series": 3,
-              "repeticiones": { "tipo": "numero", "valor": 14, "texto": "12-15" },
+              "repeticiones": { "tipo": "numero", "valor": 14, "texto": "15" },
               "descanso": 90,
               "descripcion": "Mantén el control durante todo el movimiento.",
               "video": "https://www.youtube.com/results?search_query=dumbbell+floor+press"
@@ -476,7 +466,7 @@
               "ejercicio": "Elevaciones laterales",
               "peso": "2.5 kg",
               "series": 4,
-              "repeticiones": { "tipo": "numero", "valor": 18, "texto": "15-20" },
+              "repeticiones": { "tipo": "numero", "valor": 18, "texto": "20" },
               "descanso": 45,
               "descripcion": "No subas más allá de la línea de los hombros.",
               "video": "https://www.youtube.com/results?search_query=dumbbell+lateral+raise"
@@ -491,7 +481,7 @@
               "ejercicio": "Pájaros",
               "peso": "2.5 kg",
               "series": 3,
-              "repeticiones": { "tipo": "numero", "valor": 18, "texto": "15-20" },
+              "repeticiones": { "tipo": "numero", "valor": 18, "texto": "20" },
               "descanso": 45,
               "descripcion": "Mantén la espalda recta y abre los brazos.",
               "video": "https://www.youtube.com/results?search_query=rear+delt+fly"
@@ -506,7 +496,7 @@
               "ejercicio": "Farmer's Walk",
               "peso": "12 kg",
               "series": 4,
-              "repeticiones": { "tipo": "tiempo", "valor": 52, "unidad": "s", "texto": "45-60 s" },
+              "repeticiones": { "tipo": "tiempo", "valor": 52, "unidad": "s", "texto": "60 s" },
               "descanso": 60,
               "descripcion": "Camina despacio sin perder la postura.",
               "video": "https://www.youtube.com/results?search_query=farmer%27s+walk"
@@ -552,7 +542,7 @@
               "ejercicio": "Caminata o estiramientos",
               "peso": null,
               "series": null,
-              "repeticiones": { "tipo": "libre", "valor": null, "texto": "30-45 min" },
+              "repeticiones": { "tipo": "libre", "valor": null, "texto": "30 min" },
               "descanso": 0,
               "descripcion": "Camina a ritmo ligero o realiza estiramientos de todo el cuerpo para favorecer la recuperación.",
               "video": "https://www.youtube.com/results?search_query=full+body+stretch+routine"
