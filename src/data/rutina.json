@@ -140,22 +140,22 @@
             },
             {
               "id": "martes-piernas-peso-muerto-rumano",
-              "ejercicio": "Peso muerto rumano con barra",
-              "peso": "Barra con discos (~20 kg)",
+              "ejercicio": "Peso muerto rumano a una pierna con mancuerna",
+              "peso": "12 kg",
               "series": 4,
               "repeticiones": {
                 "tipo": "numero",
                 "valor": 10,
-                "texto": "10"
+                "texto": "10 por pierna"
               },
               "descanso": 90,
-              "descripcion": "PREPARACIÓN: pon los seguros en los discos. De pie, pies a la anchura de la cadera, coge la barra con las manos a la anchura de los hombros y las palmas hacia ti. Ponte erguido con la barra frente a los muslos, rodillas un poco dobladas (y así se quedan todo el ejercicio) y hombros hacia atrás. MOVIMIENTO: empuja la cadera hacia atrás como si quisieras cerrar una puerta con el culo. El torso se inclina hacia delante solo porque la cadera va atrás, con la espalda recta todo el tiempo. La barra baja rozando los muslos. Para cuando notes tirantez en la parte de atrás de los muslos (femoral), normalmente con la barra justo por debajo de las rodillas. Sube empujando la cadera hacia delante y aprieta el glúteo arriba. RESPIRACIÓN: coge aire y aprieta el abdomen antes de bajar; suéltalo al llegar arriba. ERRORES A EVITAR: redondear la espalda, doblar mucho las rodillas (se convierte en una sentadilla) y alejar la barra de las piernas. Mírate de lado en un espejo las primeras veces.",
-              "video": "https://www.youtube.com/results?search_query=barbell+romanian+deadlift"
+              "descripcion": "PREPARACIÓN: de pie, con una mancuerna en la mano contraria a la pierna de apoyo. Apoya el peso en una pierna con la rodilla un poco doblada (y así se queda todo el ejercicio). Si pierdes el equilibrio, apoya la otra mano en una pared o en el respaldo de la silla. MOVIMIENTO: empuja la cadera hacia atrás mientras la pierna libre sube por detrás, con la espalda recta y la mancuerna rozando la pierna de apoyo. Baja hasta notar tirantez en la parte de atrás del muslo y sube empujando la cadera hacia delante, apretando el glúteo. RESPIRACIÓN: coge aire antes de bajar y suéltalo al subir. ERRORES A EVITAR: redondear la espalda, girar la cadera hacia un lado y doblar la rodilla de apoyo (se convierte en una sentadilla).",
+              "video": "https://www.youtube.com/results?search_query=single+leg+romanian+deadlift+dumbbell"
             },
             {
               "id": "martes-piernas-hip-thrust",
               "ejercicio": "Hip thrust con la espalda apoyada en el banco",
-              "peso": "Barra con discos (~20 kg)",
+              "peso": "12 kg",
               "series": 3,
               "repeticiones": {
                 "tipo": "numero",
@@ -163,7 +163,7 @@
                 "texto": "12"
               },
               "descanso": 90,
-              "descripcion": "PREPARACIÓN: pon el banco en plano y apóyalo de lado contra la pared para que no se desplace. Pon los seguros en los discos. Siéntate en el suelo con la espalda contra el lado largo del banco, de modo que el borde quede a la altura de la parte baja de los omóplatos (no sobre la unión entre asiento y respaldo). Rueda la barra sobre las piernas hasta la cadera y protégela con una toalla doblada o una esterilla. Dobla las rodillas con los pies apoyados a la anchura de la cadera. MOVIMIENTO: sujeta la barra con las manos para que no ruede y empuja con los talones para subir la cadera hasta que rodillas, cadera y hombros formen una línea recta, como una mesa. Arriba, las espinillas quedan verticales. Mete la barbilla hacia el pecho, aprieta el culo 1 s y baja controlado sin llegar a sentarte en el suelo. RESPIRACIÓN: suelta el aire al subir y cógelo al bajar. ERRORES A EVITAR: arquear la zona lumbar arriba en vez de apretar el glúteo y empujar con las puntas de los pies. Si notas el trabajo en los muslos de atrás, acerca los pies; si lo notas delante, aléjalos.",
+              "descripcion": "PREPARACIÓN: siéntate en el suelo con la parte alta de la espalda apoyada en el borde del banco, las rodillas dobladas y los pies a la anchura de la cadera. Apoya una mancuerna en la cadera y sujétala con las dos manos. MOVIMIENTO: empuja con los talones y sube la cadera hasta que el torso quede paralelo al suelo y las espinillas verticales. Aprieta el glúteo 1 s arriba y baja despacio. RESPIRACIÓN: suelta el aire al subir y cógelo al bajar. ERRORES A EVITAR: arquear la zona lumbar arriba, empujar con las puntas de los pies y llevar la barbilla al cuello sin control. Si la mancuerna te incomoda, apoya una toalla doblada debajo.",
               "video": "https://www.youtube.com/results?search_query=barbell+hip+thrust+bench"
             },
             {
@@ -254,8 +254,8 @@
             },
             {
               "id": "miercoles-core-pallof",
-              "ejercicio": "Press Pallof con banda",
-              "peso": "Banda elástica",
+              "ejercicio": "Plancha con toque de hombro",
+              "peso": "Peso corporal",
               "series": 3,
               "repeticiones": {
                 "tipo": "numero",
@@ -263,8 +263,8 @@
                 "texto": "12 por lado"
               },
               "descanso": 45,
-              "descripcion": "PREPARACIÓN: ata la banda a algo firme a la altura del pecho (el pomo de una puerta cerrada, una columna). Colócate de lado respecto al anclaje, coge la banda con las dos manos pegadas al pecho y aléjate hasta que tire con fuerza. Pies a la anchura de los hombros, rodillas un poco dobladas y abdomen apretado. MOVIMIENTO: estira los brazos hacia delante, alejando las manos del pecho. La banda intentará girarte hacia el anclaje: no la dejes. Aguanta 2 s con los brazos estirados y vuelve las manos al pecho. Haz todas las repeticiones hacia un lado y luego gírate para el otro. RESPIRACIÓN: suelta el aire al estirar los brazos. ERRORES A EVITAR: girar el torso o la cadera hacia la banda. Los hombros y la cadera miran al frente todo el tiempo. Si no puedes evitar el giro, acércate al anclaje.",
-              "video": "https://www.youtube.com/results?search_query=pallof+press+band"
+              "descripcion": "PREPARACIÓN: colócate en posición de plancha alta, con las manos bajo los hombros y los pies un poco más abiertos que la cadera. Aprieta abdomen y glúteos. MOVIMIENTO: levanta una mano y toca el hombro contrario, sin dejar que la cadera se balancee. Vuelve la mano al suelo y alterna. Imagina que llevas un vaso de agua apoyado en la zona lumbar. RESPIRACIÓN: respira de forma continua, sin aguantar el aire. ERRORES A EVITAR: girar la cadera, hundir la espalda y mover los pies. Si te cuesta, abre más los pies.",
+              "video": "https://www.youtube.com/results?search_query=plank+shoulder+tap"
             },
             {
               "id": "miercoles-core-dead-bug",
@@ -354,8 +354,8 @@
             },
             {
               "id": "jueves-espalda-remo-inclinado-barra",
-              "ejercicio": "Remo inclinado con barra",
-              "peso": "Barra con discos (~20 kg)",
+              "ejercicio": "Remo inclinado con dos mancuernas",
+              "peso": "12 kg",
               "series": 3,
               "repeticiones": {
                 "tipo": "numero",
@@ -363,12 +363,12 @@
                 "texto": "10"
               },
               "descanso": 90,
-              "descripcion": "PREPARACIÓN: pon los seguros en los discos. De pie, coge la barra con las manos a la anchura de los hombros y las palmas hacia ti. Dobla un poco las rodillas y echa la cadera hacia atrás (igual que en el peso muerto rumano) hasta que el torso quede inclinado unos 45°, con la espalda recta y la barra colgando a la altura de las rodillas. MOVIMIENTO: tira de la barra hacia la parte baja de la tripa llevando los codos hacia atrás y juntando las paletas de la espalda. Aguanta 1 s y baja controlado hasta estirar los brazos. El torso no se mueve: mantén la misma inclinación todo el tiempo. RESPIRACIÓN: coge aire y aprieta el abdomen antes de tirar; suéltalo al bajar. ERRORES A EVITAR: redondear la espalda, levantar el torso para ayudarte con impulso y tirar hacia el pecho. Si te molesta la zona lumbar, para y revisa la postura en un espejo.",
-              "video": "https://www.youtube.com/results?search_query=barbell+bent+over+row"
+              "descripcion": "PREPARACIÓN: de pie, pies a la anchura de la cadera, con una mancuerna en cada mano. Inclina el torso hacia delante con la espalda recta y las rodillas un poco dobladas, con los brazos estirados hacia el suelo y las palmas mirándose. MOVIMIENTO: tira de las dos mancuernas hacia las caderas llevando los codos hacia atrás, pegados al cuerpo. Aguanta 1 s juntando las paletas y baja despacio. RESPIRACIÓN: suelta el aire al tirar y cógelo al bajar. ERRORES A EVITAR: redondear la espalda, incorporar el torso para ayudarte con impulso y encoger los hombros.",
+              "video": "https://www.youtube.com/results?search_query=bent+over+dumbbell+row"
             },
             {
               "id": "jueves-espalda-jalon-banda",
-              "ejercicio": "Jalón con banda",
+              "ejercicio": "Remo de pie con banda pisada",
               "peso": "Banda elástica",
               "series": 3,
               "repeticiones": {
@@ -377,8 +377,8 @@
                 "texto": "15"
               },
               "descanso": 60,
-              "descripcion": "PREPARACIÓN: ancla la banda en un punto alto, por ejemplo con un anclaje de puerta en la parte de arriba de una puerta bien cerrada. Arrodíllate frente a ella, coge un extremo con cada mano con los brazos estirados hacia arriba y aléjate hasta que la banda tenga tensión. Inclina el torso ligeramente hacia atrás. MOVIMIENTO: tira de la banda hacia abajo llevando los codos hacia abajo y atrás, hacia los costados, como si quisieras meterlos en los bolsillos traseros. Las manos terminan a la altura del pecho. Aguanta 1 s juntando las paletas y vuelve despacio estirando los brazos. RESPIRACIÓN: suelta el aire al tirar y cógelo al volver. ERRORES A EVITAR: encoger los hombros hacia las orejas y echarte hacia atrás para tirar con el peso del cuerpo. Comprueba que la puerta está cerrada y que no la va a abrir nadie.",
-              "video": "https://www.youtube.com/results?search_query=resistance+band+lat+pulldown"
+              "descripcion": "PREPARACIÓN: pisa el centro de la banda con los dos pies, a la anchura de la cadera, y coge un extremo con cada mano. Inclina el torso hacia delante con la espalda recta y las rodillas un poco dobladas, con los brazos estirados hacia el suelo. MOVIMIENTO: tira de las manos hacia las caderas llevando los codos hacia atrás, pegados al cuerpo. Aguanta 1 s juntando las paletas y vuelve despacio estirando los brazos. RESPIRACIÓN: suelta el aire al tirar y cógelo al volver. ERRORES A EVITAR: redondear la espalda, encoger los hombros hacia las orejas y tirar con impulso del torso.",
+              "video": "https://www.youtube.com/results?search_query=resistance+band+bent+over+row"
             },
             {
               "id": "jueves-espalda-pullover",
@@ -415,7 +415,7 @@
             },
             {
               "id": "jueves-hombro-posterior-face-pull",
-              "ejercicio": "Face pull con banda",
+              "ejercicio": "Apertura de banda (pull-apart)",
               "peso": "Banda elástica",
               "series": 3,
               "repeticiones": {
@@ -424,8 +424,8 @@
                 "texto": "15"
               },
               "descanso": 45,
-              "descripcion": "PREPARACIÓN: ancla la banda a la altura de la cara (en una puerta cerrada o una columna). Coge un extremo con cada mano con las palmas hacia abajo, da un par de pasos atrás hasta que tenga tensión y ponte de pie con los pies a la anchura de los hombros y los brazos estirados hacia delante. MOVIMIENTO: tira de la banda hacia la frente abriendo los codos hacia los lados y hacia arriba, a la altura de los hombros. Al final, gira los antebrazos hacia arriba como si hicieras un doble bíceps de culturista, con las manos a los lados de la cabeza. Aguanta 1 s juntando las paletas y vuelve despacio. RESPIRACIÓN: suelta el aire al tirar y cógelo al volver. ERRORES A EVITAR: bajar los codos hacia las costillas (se convierte en un remo), echarte hacia atrás y encoger los hombros.",
-              "video": "https://www.youtube.com/results?search_query=band+face+pull"
+              "descripcion": "PREPARACIÓN: de pie, pies a la anchura de los hombros, sujeta la banda con las manos a la anchura de los hombros, palmas hacia abajo y brazos estirados al frente a la altura del pecho. MOVIMIENTO: abre los brazos hacia los lados estirando la banda hasta llevarla al pecho, juntando las paletas. Aguanta 1 s y vuelve despacio. Si la banda tiene mucha tensión, sujétala más separada. RESPIRACIÓN: suelta el aire al abrir y cógelo al volver. ERRORES A EVITAR: encoger los hombros hacia las orejas, arquear la espalda y soltar la banda de golpe.",
+              "video": "https://www.youtube.com/results?search_query=band+pull+apart"
             }
           ]
         },
@@ -525,8 +525,8 @@
           "ejercicios": [
             {
               "id": "viernes-triceps-skull-crusher-banco",
-              "ejercicio": "Skull crusher en banco con barra",
-              "peso": "Barra con discos (~12 kg)",
+              "ejercicio": "Skull crusher en banco con mancuernas",
+              "peso": "8.5 kg",
               "series": 3,
               "repeticiones": {
                 "tipo": "numero",
@@ -534,8 +534,8 @@
                 "texto": "10"
               },
               "descanso": 60,
-              "descripcion": "PREPARACIÓN: pon el banco en plano y los seguros en los discos. Siéntate con la barra sobre los muslos, túmbate y súbela sobre el pecho con los brazos estirados, las manos a la anchura de los hombros y las palmas hacia los pies. Inclina un poco los brazos hacia atrás, hacia la cabeza: así el tríceps trabaja todo el tiempo. MOVIMIENTO: sin mover los brazos, dobla solo los codos para bajar la barra despacio (2 s) hacia la frente o justo por encima de la cabeza, hasta notar estiramiento en la parte de atrás del brazo. Estira los codos para volver arriba. RESPIRACIÓN: coge aire al bajar y suéltalo al subir. ERRORES A EVITAR: abrir los codos hacia los lados, mover los hombros y bajar rápido: la barra va hacia tu cabeza, así que control total. Empieza con poco peso hasta dominar el movimiento.",
-              "video": "https://www.youtube.com/results?search_query=barbell+skull+crusher+bench"
+              "descripcion": "PREPARACIÓN: túmbate en el banco con una mancuerna en cada mano, los brazos estirados hacia arriba y las palmas mirándose. Los pies bien apoyados en el suelo. MOVIMIENTO: dobla solo los codos para bajar las mancuernas hacia los lados de la cabeza, con los codos apuntando al techo y quietos. Cuando notes el tríceps estirado, estira los brazos para volver arriba. RESPIRACIÓN: coge aire al bajar y suéltalo al subir. ERRORES A EVITAR: abrir los codos hacia los lados, mover los hombros y bajar con prisa. Baja de forma controlada y deja las mancuernas junto a la cabeza, nunca sobre la cara.",
+              "video": "https://www.youtube.com/results?search_query=dumbbell+skull+crusher"
             }
           ]
         },
@@ -740,8 +740,8 @@
           "ejercicios": [
             {
               "id": "sabado-core-woodchop-banda",
-              "ejercicio": "Woodchop con banda",
-              "peso": "Banda elástica",
+              "ejercicio": "Woodchop con mancuerna",
+              "peso": "2.5 kg",
               "series": 3,
               "repeticiones": {
                 "tipo": "numero",
@@ -749,8 +749,8 @@
                 "texto": "12 por lado"
               },
               "descanso": 45,
-              "descripcion": "PREPARACIÓN: ancla la banda en un punto alto (parte superior de una puerta cerrada). Colócate de lado respecto al anclaje, con los pies a la anchura de los hombros y las rodillas un poco dobladas. Coge la banda con las dos manos por encima del hombro más cercano al anclaje y aléjate hasta que tenga tensión. MOVIMIENTO: tira de la banda en diagonal hacia abajo, hacia la cadera contraria, como si cortaras leña con un hacha. Los brazos van casi rectos y el movimiento sale del giro del tronco. Deja que el pie de atrás pivote sobre la punta para acompañar el giro. Vuelve despacio frenando la banda. Haz todas las repeticiones de un lado y cambia. RESPIRACIÓN: suelta el aire al tirar y cógelo al volver. ERRORES A EVITAR: tirar solo con los brazos, doblar los codos y dejar que la banda te devuelva de golpe.",
-              "video": "https://www.youtube.com/results?search_query=band+woodchop"
+              "descripcion": "PREPARACIÓN: de pie, pies a la anchura de los hombros y rodillas un poco dobladas. Sujeta una mancuerna con las dos manos junto a una cadera. MOVIMIENTO: sube la mancuerna en diagonal hacia el hombro contrario, como si cortaras leña con un hacha, girando el tronco y dejando que el pie de atrás pivote sobre la punta. Los brazos van casi rectos. Baja en diagonal controlando el peso. Haz todas las repeticiones de un lado y cambia. RESPIRACIÓN: suelta el aire al subir y cógelo al bajar. ERRORES A EVITAR: mover solo los brazos, doblar los codos y soltar la mancuerna de golpe en la bajada.",
+              "video": "https://www.youtube.com/results?search_query=dumbbell+woodchop"
             },
             {
               "id": "sabado-core-bicicleta",
