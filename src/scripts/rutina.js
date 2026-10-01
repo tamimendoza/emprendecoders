@@ -444,7 +444,7 @@ function renderSetChecklist(ex, currentSet) {
       <label class="flex items-center gap-3 rounded-xl border px-3.5 py-3 text-sm font-semibold transition-colors ${rowClasses}">
         <input type="checkbox" class="session-set-checkbox w-5 h-5 rounded accent-primary shrink-0"
           data-set="${i}" ${isDoneSet ? 'checked disabled' : ''} ${isActive ? '' : isDoneSet ? '' : 'disabled'} />
-        Serie ${i} de ${ex.series}
+        Serie ${i} de ${ex.series}${isTwoSided(ex) ? ` · ${ex.repeticiones.texto}` : ''}
       </label>`);
   }
   refs.sessionSetChecklist.innerHTML = rows.join('');
@@ -463,12 +463,33 @@ function completeSet() {
   startRestTimer(ex.descanso);
 }
 
+const SIDE_SWITCH_SECONDS = 20;
+
+function isTwoSided(ex) {
+  return /por (lado|pierna|brazo)/i.test(ex.repeticiones.texto);
+}
+
 function startTimedSet() {
   const s = state.session;
   if (!s) return;
   const ex = s.queue[s.index];
   s.phase = 'timed-set';
-  startTimer(ex.repeticiones.valor, { label: 'Ejercicio en curso', onComplete: onTimedSetComplete });
+  if (!isTwoSided(ex)) {
+    startTimer(ex.repeticiones.valor, { label: 'Ejercicio en curso', onComplete: onTimedSetComplete });
+    return;
+  }
+  startTimer(ex.repeticiones.valor, { label: 'Lado 1 de 2', onComplete: startSideSwitch });
+}
+
+function startSideSwitch() {
+  startTimer(SIDE_SWITCH_SECONDS, { label: 'Cambia de lado', onComplete: startSecondSide });
+}
+
+function startSecondSide() {
+  const s = state.session;
+  if (!s) return;
+  const ex = s.queue[s.index];
+  startTimer(ex.repeticiones.valor, { label: 'Lado 2 de 2', onComplete: onTimedSetComplete });
 }
 
 function onTimedSetComplete() {
