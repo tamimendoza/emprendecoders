@@ -42,6 +42,9 @@ export function initRutina(dias) {
     sessionEndSummary: document.getElementById('session-end-summary'),
     sessionEndCount: document.getElementById('session-end-count'),
     sessionEndList: document.getElementById('session-end-list'),
+    sessionEndTime: document.getElementById('session-end-time'),
+    sessionElapsed: document.getElementById('session-elapsed'),
+    sessionDescription: document.getElementById('session-description'),
   };
 
   renderDayTabs();
@@ -308,6 +311,40 @@ function exerciseCardHTML(ex, dia) {
     </details>`;
 }
 
+function warmupHTML(dia) {
+  if (!dia.calentamiento || dia.calentamiento.length === 0) return '';
+  const minutes = dia.calentamientoMinutos ? ` · ~${dia.calentamientoMinutos} min` : '';
+  const items = dia.calentamiento
+    .map(
+      (w, i) => `
+      <li class="flex gap-3">
+        <span class="shrink-0 w-6 h-6 rounded-full bg-primary/10 border border-primary/20 text-primary text-[11px] font-bold flex items-center justify-center">${i + 1}</span>
+        <div class="min-w-0">
+          <p class="text-sm font-semibold text-skin-primary">${w.ejercicio}
+            <span class="text-xs font-medium text-skin-secondary">· ${w.repeticiones.texto}${w.peso ? ` · ${w.peso}` : ''}</span>
+          </p>
+          <p class="text-xs text-skin-secondary leading-relaxed mt-0.5">${w.descripcion}</p>
+          <a href="${w.video}" target="_blank" rel="noopener" class="inline-block mt-1 text-xs font-medium text-skin-secondary hover:text-primary transition-colors">Ver video</a>
+        </div>
+      </li>`
+    )
+    .join('');
+  const rest = dia.descansoEntreEjercicios
+    ? `<p class="text-xs text-skin-secondary mt-4">Descanso entre ejercicios: <strong class="text-skin-primary">${dia.descansoEntreEjercicios} s</strong></p>`
+    : '';
+  return `
+    <details open class="group mb-6 bg-skin-surface border border-skin rounded-2xl shadow-card">
+      <summary class="flex items-center justify-between gap-3 p-4 sm:p-5 cursor-pointer select-none list-none marker:hidden [&::-webkit-details-marker]:hidden">
+        <h3 class="font-semibold text-skin-primary text-sm sm:text-base">Calentamiento${minutes}</h3>
+        <svg class="shrink-0 text-skin-secondary transition-transform group-open:rotate-180" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </summary>
+      <div class="px-4 sm:px-5 pb-4 sm:pb-5">
+        <ol class="flex flex-col gap-3">${items}</ol>
+        ${rest}
+      </div>
+    </details>`;
+}
+
 function renderExerciseList() {
   const dia = findDia(state.currentDia);
   if (!dia) {
@@ -316,7 +353,7 @@ function renderExerciseList() {
     return;
   }
 
-  refs.list.innerHTML = dia.grupos
+  refs.list.innerHTML = warmupHTML(dia) + dia.grupos
     .map(
       (grupo) => `
       <div class="mb-6">
@@ -386,6 +423,20 @@ function startSession(diaName, options = {}) {
   }
   if (queue.length === 0) return;
 
+  // Guided warm-up only when starting the whole day from scratch
+  const includeWarmup =
+    !options.onlyExerciseId && dia.calentamiento?.length > 0 && computeProgress(diaName).done === 0;
+  if (includeWarmup) {
+    const warmup = dia.calentamiento.map((w) => ({
+      ...w,
+      kind: 'warmup',
+      series: 1,
+      descanso: 0,
+      grupoMuscular: 'Calentamiento',
+    }));
+    queue = [...warmup, ...queue];
+  }
+
   state.session = {
     diaName,
     queue,
@@ -394,6 +445,9 @@ function startSession(diaName, options = {}) {
     phase: 'exercise',
     intervalId: null,
     remaining: 0,
+    restBetween: dia.descansoEntreEjercicios ?? 0,
+    startedAt: Date.now(),
+    elapsedIntervalId: null,
     onTimerComplete: null,
   };
   refs.sessionEndSummary.classList.add('hidden');
@@ -402,6 +456,7 @@ function startSession(diaName, options = {}) {
   refs.sessionTarget.classList.remove('hidden');
   refs.overlay.classList.remove('hidden');
   document.body.style.overflow = 'hidden';
+  startElapsedTimer();
   renderSessionStep();
 }
 
@@ -412,7 +467,12 @@ function renderSessionStep() {
 
   refs.sessionExerciseName.textContent = ex.ejercicio;
   refs.sessionGroupBadge.textContent = ex.grupoMuscular;
-  refs.sessionTarget.textContent = `Objetivo por serie: ${repChipLabel(ex)}`;
+  const isWarmup = ex.kind === 'warmup';
+  refs.sessionTarget.textContent = isWarmup
+    ? `${repChipLabel(ex)}${ex.peso ? ` · ${ex.peso}` : ''}`
+    : `Objetivo por serie: ${repChipLabel(ex)}`;
+  refs.sessionDescription.textContent = isWarmup ? ex.descripcion : '';
+  refs.sessionDescription.classList.toggle('hidden', !isWarmup);
 
   renderSetChecklist(ex, s.currentSet);
   refs.sessionSetChecklist.classList.remove('hidden');
@@ -434,7 +494,7 @@ function renderSetChecklist(ex, currentSet) {
     if (isActive && isTimed) {
       rows.push(`
         <button type="button" class="session-start-timed-set w-full flex items-center justify-between gap-3 rounded-xl border px-3.5 py-3 text-sm font-semibold transition-colors ${rowClasses}">
-          <span>Serie ${i} de ${ex.series} · ${ex.repeticiones.texto}</span>
+          <span>${ex.kind === 'warmup' ? ex.repeticiones.texto : `Serie ${i} de ${ex.series} · ${ex.repeticiones.texto}`}</span>
           <span class="text-primary">Iniciar</span>
         </button>`);
       continue;
@@ -444,7 +504,7 @@ function renderSetChecklist(ex, currentSet) {
       <label class="flex items-center gap-3 rounded-xl border px-3.5 py-3 text-sm font-semibold transition-colors ${rowClasses}">
         <input type="checkbox" class="session-set-checkbox w-5 h-5 rounded accent-primary shrink-0"
           data-set="${i}" ${isDoneSet ? 'checked disabled' : ''} ${isActive ? '' : isDoneSet ? '' : 'disabled'} />
-        Serie ${i} de ${ex.series}${isTwoSided(ex) ? ` · ${ex.repeticiones.texto}` : ''}
+        ${ex.kind === 'warmup' ? 'Hecho' : `Serie ${i} de ${ex.series}${isTwoSided(ex) ? ` · ${ex.repeticiones.texto}` : ''}`}
       </label>`);
   }
   refs.sessionSetChecklist.innerHTML = rows.join('');
@@ -564,7 +624,7 @@ function finishExercise() {
   const s = state.session;
   if (!s) return;
   const ex = s.queue[s.index];
-  toggleExerciseDone(ex.id, true);
+  if (ex.kind !== 'warmup') toggleExerciseDone(ex.id, true);
 
   if (s.index >= s.queue.length - 1) {
     showSessionEnd();
@@ -573,11 +633,21 @@ function finishExercise() {
   const nextEx = s.queue[s.index + 1];
   s.index += 1;
   s.currentSet = 1;
+  const involvesWarmup = ex.kind === 'warmup' || nextEx.kind === 'warmup';
+  const groupChanged = nextEx.grupoMuscular !== ex.grupoMuscular;
+  renderSessionStep();
 
-  if (nextEx.grupoMuscular !== ex.grupoMuscular) {
+  if (involvesWarmup) return;
+  if (s.restBetween > 0) {
+    s.phase = groupChanged ? 'group-resting' : 'resting';
+    startTimer(s.restBetween, {
+      label: groupChanged
+        ? `Pausa · siguiente: ${nextEx.grupoMuscular}`
+        : 'Descanso antes del siguiente ejercicio',
+      onComplete: advanceAfterRest,
+    });
+  } else if (groupChanged) {
     startGroupRestTimer(nextEx.grupoMuscular);
-  } else {
-    renderSessionStep();
   }
 }
 
@@ -600,6 +670,12 @@ function showSessionEnd() {
   refs.sessionExerciseName.classList.add('hidden');
   refs.sessionGroupBadge.classList.add('hidden');
   refs.sessionTarget.classList.add('hidden');
+  refs.sessionDescription.classList.add('hidden');
+
+  stopElapsedTimer();
+  refs.sessionElapsed.classList.add('hidden');
+  const totalSeconds = Math.max(0, Math.round((Date.now() - s.startedAt) / 1000));
+  refs.sessionEndTime.textContent = `Tiempo total: ${formatDuration(totalSeconds)}`;
 
   const dia = findDia(s.diaName);
   const totalDia = dia ? dia.grupos.reduce((acc, g) => acc + g.ejercicios.length, 0) : 0;
@@ -625,10 +701,50 @@ function showSessionEnd() {
 function endSession() {
   const s = state.session;
   if (s && s.intervalId) clearInterval(s.intervalId);
+  stopElapsedTimer();
+  refs.sessionElapsed.classList.add('hidden');
   state.session = null;
   refs.overlay.classList.add('hidden');
   document.body.style.overflow = '';
   renderExerciseList();
+}
+
+function startElapsedTimer() {
+  const s = state.session;
+  if (!s) return;
+  refs.sessionElapsed.classList.remove('hidden');
+  updateElapsed();
+  s.elapsedIntervalId = setInterval(updateElapsed, 1000);
+}
+
+function stopElapsedTimer() {
+  const s = state.session;
+  if (s && s.elapsedIntervalId) clearInterval(s.elapsedIntervalId);
+  if (s) s.elapsedIntervalId = null;
+}
+
+function updateElapsed() {
+  const s = state.session;
+  if (!s) return;
+  const seconds = Math.floor((Date.now() - s.startedAt) / 1000);
+  refs.sessionElapsed.textContent = `Tiempo: ${formatClock(seconds)}`;
+}
+
+function formatClock(total) {
+  const h = Math.floor(total / 3600);
+  const m = Math.floor((total % 3600) / 60);
+  const s = total % 60;
+  const mm = String(m).padStart(2, '0');
+  const ss = String(s).padStart(2, '0');
+  return h > 0 ? `${h}:${mm}:${ss}` : `${mm}:${ss}`;
+}
+
+function formatDuration(total) {
+  const h = Math.floor(total / 3600);
+  const m = Math.floor((total % 3600) / 60);
+  const s = total % 60;
+  if (h > 0) return `${h} h ${String(m).padStart(2, '0')} min`;
+  return `${m} min ${String(s).padStart(2, '0')} s`;
 }
 
 function formatSeconds(total) {

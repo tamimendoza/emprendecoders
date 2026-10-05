@@ -2,37 +2,89 @@
   "dias": [
     {
       "dia": "Lunes",
+      "descansoEntreEjercicios": 90,
+      "calentamientoMinutos": 8,
+      "calentamiento": [
+        {
+          "id": "lunes-calentamiento-marcha",
+          "ejercicio": "Marcha en el sitio",
+          "repeticiones": { "tipo": "tiempo", "valor": 120, "unidad": "s", "texto": "2 min" },
+          "descripcion": "Eleva las rodillas a ritmo suave para subir la temperatura corporal.",
+          "video": "https://www.youtube.com/results?search_query=march+in+place+warm+up"
+        },
+        {
+          "id": "lunes-calentamiento-circulos-brazos",
+          "ejercicio": "Círculos de brazos",
+          "repeticiones": { "tipo": "numero", "valor": 20, "texto": "10 adelante y 10 atrás" },
+          "descripcion": "Brazos extendidos a los lados, círculos amplios que van creciendo poco a poco.",
+          "video": "https://www.youtube.com/results?search_query=arm+circles+warm+up"
+        },
+        {
+          "id": "lunes-calentamiento-gato-camello",
+          "ejercicio": "Gato-camello",
+          "repeticiones": { "tipo": "numero", "valor": 8, "texto": "8" },
+          "descripcion": "En cuadrupedia, redondea y arquea la espalda despacio para movilizar la columna.",
+          "video": "https://www.youtube.com/results?search_query=cat+cow+stretch"
+        },
+        {
+          "id": "lunes-calentamiento-retraccion-escapular",
+          "ejercicio": "Retracciones de escápulas",
+          "repeticiones": { "tipo": "numero", "valor": 12, "texto": "12" },
+          "descripcion": "De pie con los brazos al frente, junta las escápulas y vuelve lentamente.",
+          "video": "https://www.youtube.com/results?search_query=scapular+retraction+exercise"
+        },
+        {
+          "id": "lunes-calentamiento-aproximacion",
+          "ejercicio": "Serie de aproximación: press en el suelo",
+          "peso": "6 kg",
+          "repeticiones": { "tipo": "numero", "valor": 10, "texto": "10" },
+          "descripcion": "Una serie ligera del primer ejercicio con movimiento controlado, para preparar el patrón antes de la carga de trabajo.",
+          "video": "https://www.youtube.com/results?search_query=warm+up+set+explained"
+        }
+      ],
       "grupos": [
         {
           "grupoMuscular": "Pecho",
           "ejercicios": [
             {
-              "id": "lunes-pecho-press-inclinado",
-              "ejercicio": "Press inclinado con mancuernas",
-              "peso": "12 kg",
+              "id": "lunes-pecho-floor-press",
+              "ejercicio": "Press de pecho en el suelo (Floor Press)",
+              "peso": "13.5 kg",
               "series": 4,
-              "repeticiones": {
-                "tipo": "numero",
-                "valor": 10,
-                "texto": "10"
-              },
+              "repeticiones": { "tipo": "numero", "valor": 12, "texto": "12" },
               "descanso": 90,
-              "descripcion": "PREPARACIÓN: sube el respaldo a 30° (la primera o segunda posición por encima de plano) y comprueba que el pasador está bien encajado. Siéntate con las mancuernas apoyadas de pie sobre los muslos y túmbate llevándolas contra el pecho. Pies en el suelo, glúteos y espalda en contacto con el banco, y junta los omóplatos (las paletas de la espalda) como si quisieras sujetar un lápiz entre ellas. MOVIMIENTO: empieza con los brazos estirados y las mancuernas sobre la parte alta del pecho. Baja despacio (cuenta 2-3 s) doblando los codos, que quedan en diagonal a unos 45° del cuerpo, no abiertos en cruz. Para cuando las mancuernas lleguen a los lados del pecho y notes estiramiento, y empuja hacia arriba sin llegar a bloquear los codos. RESPIRACIÓN: coge aire al bajar y suéltalo al empujar. ERRORES A EVITAR: despegar los glúteos del banco, doblar las muñecas hacia atrás (deben estar rectas, en línea con el antebrazo) y chocar las mancuernas arriba. AL TERMINAR: lleva las mancuernas al pecho y siéntate balanceándolas sobre los muslos; no las sueltes a los lados.",
-              "video": "https://www.youtube.com/results?search_query=incline+dumbbell+press"
+              "descripcion": "PREPARACIÓN: túmbate boca arriba en el suelo con las rodillas dobladas y los pies apoyados. Coge una mancuerna en cada mano y llévalas al pecho con las palmas mirando hacia los pies y los codos a unos 45° del cuerpo (ni pegados ni abiertos en cruz). MOVIMIENTO: empuja las mancuernas hacia el techo hasta estirar los brazos sin bloquear los codos. Baja despacio (2-3 s) hasta que la parte de atrás de los brazos toque el suelo, haz una pausa de 1 s sin relajar los brazos y vuelve a subir. RESPIRACIÓN: coge aire al bajar y suéltalo al empujar. ERRORES A EVITAR: abrir los codos en cruz, dejar caer los brazos contra el suelo y arquear la zona lumbar. Si no puedes controlar la bajada, el peso es demasiado.",
+              "video": "https://www.youtube.com/results?search_query=dumbbell+floor+press"
             },
             {
               "id": "lunes-pecho-aperturas",
-              "ejercicio": "Aperturas en banco plano",
-              "peso": "8.5 kg",
+              "ejercicio": "Aperturas (Fly)",
+              "peso": "9.75 kg",
               "series": 3,
-              "repeticiones": {
-                "tipo": "numero",
-                "valor": 15,
-                "texto": "15"
-              },
+              "repeticiones": { "tipo": "numero", "valor": 15, "texto": "15" },
               "descanso": 60,
-              "descripcion": "PREPARACIÓN: pon el banco en plano (0°) y túmbate con los pies en el suelo y los omóplatos juntos. Sube las mancuernas sobre el pecho con las palmas mirándose entre sí y los codos un poco doblados, como si abrazaras un árbol grande. MOVIMIENTO: abre los brazos hacia los lados dibujando un arco, despacio (3 s), manteniendo siempre la misma flexión de codos. Baja hasta que las mancuernas lleguen más o menos a la altura del banco y notes estiramiento en el pecho, sin dolor en el hombro. Vuelve por el mismo arco apretando el pecho, como si abrazaras el árbol. RESPIRACIÓN: coge aire al abrir y suéltalo al cerrar. ERRORES A EVITAR: doblar y estirar los codos durante el movimiento (eso lo convierte en un press), bajar demasiado y usar demasiado peso. Si notas molestia delante del hombro, reduce el recorrido.",
-              "video": "https://www.youtube.com/results?search_query=dumbbell+fly+bench"
+              "descripcion": "PREPARACIÓN: túmbate boca arriba en el suelo con las rodillas dobladas y los pies apoyados. Sube las mancuernas sobre el pecho con los brazos casi estirados, las palmas mirándose y los codos un poco doblados (unos 15°). MOVIMIENTO: abre los brazos hacia los lados dibujando un arco, despacio (3 s), hasta que los codos toquen el suelo. Vuelve por el mismo arco apretando el pecho, como si abrazaras un árbol grande. RESPIRACIÓN: coge aire al abrir y suéltalo al cerrar. ERRORES A EVITAR: doblar y estirar los codos durante el movimiento (eso lo convierte en un press), dejar caer los brazos contra el suelo y usar demasiado peso. Si notas molestia delante del hombro, reduce el recorrido.",
+              "video": "https://www.youtube.com/results?search_query=dumbbell+fly"
+            },
+            {
+              "id": "lunes-pecho-flexiones",
+              "ejercicio": "Flexiones",
+              "peso": "Peso corporal",
+              "series": 3,
+              "repeticiones": { "tipo": "fallo", "valor": null, "texto": "Al fallo (-2 rep.)" },
+              "descanso": 60,
+              "descripcion": "PREPARACIÓN: manos en el suelo un poco más anchas que los hombros, dedos al frente y cuerpo en línea recta de la cabeza a los talones. Aprieta el abdomen y los glúteos. Si no puedes mantener la línea, apoya las rodillas. MOVIMIENTO: baja el pecho hacia el suelo en 2 s, con los codos a unos 45° del cuerpo, hasta quedar a un puño del suelo, y empuja para subir sin bloquear los codos. Para cada serie cuando te queden unas 2 repeticiones por hacer con buena técnica. RESPIRACIÓN: coge aire al bajar y suéltalo al subir. ERRORES A EVITAR: dejar caer la cadera, abrir los codos en cruz y bajar solo la mitad del recorrido.",
+              "video": "https://www.youtube.com/results?search_query=perfect+push+up"
+            },
+            {
+              "id": "lunes-pecho-press-inclinado",
+              "ejercicio": "Press inclinado con mancuernas",
+              "peso": "12.75 kg",
+              "series": 3,
+              "repeticiones": { "tipo": "numero", "valor": 10, "texto": "10" },
+              "descanso": 90,
+              "descripcion": "PREPARACIÓN: coloca la silla reclinable con una inclinación moderada (30-45°) sobre una superficie que no resbale y comprueba que queda bloqueada y estable antes de coger peso. Siéntate con la espalda y la cabeza apoyadas y los pies firmes en el suelo. Sube las mancuernas a la altura del pecho con las palmas al frente. MOVIMIENTO: empuja hacia arriba y ligeramente hacia dentro hasta estirar los brazos, sin chocar las mancuernas. Baja despacio (3 s) hasta la altura del pecho. RESPIRACIÓN: coge aire al bajar y suéltalo al empujar. ERRORES A EVITAR: separar la espalda del respaldo arqueándola y abrir los codos en cruz. Si la silla se mueve o cruje, no la uses para este ejercicio y haz el press en el suelo.",
+              "video": "https://www.youtube.com/results?search_query=incline+dumbbell+press"
             }
           ]
         },
@@ -41,31 +93,38 @@
           "ejercicios": [
             {
               "id": "lunes-hombros-press-militar",
-              "ejercicio": "Press militar sentado en banco",
-              "peso": "8.5 kg",
+              "ejercicio": "Press militar",
+              "peso": "9.75 kg",
               "series": 4,
-              "repeticiones": {
-                "tipo": "numero",
-                "valor": 8,
-                "texto": "8"
-              },
+              "repeticiones": { "tipo": "numero", "valor": 8, "texto": "8" },
               "descanso": 90,
-              "descripcion": "PREPARACIÓN: sube el respaldo casi vertical (80-90°) y comprueba que el pasador está encajado. Siéntate con la espalda y la cabeza apoyadas y los pies firmes en el suelo, algo separados. Lleva las mancuernas a la altura de los hombros con las palmas mirando al frente y los antebrazos verticales (los codos quedan debajo de las muñecas). MOVIMIENTO: aprieta el abdomen como si fueran a darte un golpe en la tripa y empuja las mancuernas hacia arriba hasta estirar los brazos, acercándolas un poco entre sí arriba sin chocarlas. Baja despacio (2 s) hasta que queden a la altura de las orejas. RESPIRACIÓN: suelta el aire al empujar y cógelo al bajar. ERRORES A EVITAR: separar la zona lumbar del respaldo arqueando la espalda, encoger los hombros hacia las orejas y bajar las mancuernas de golpe. Si arqueas la espalda para subirlas, el peso es demasiado.",
+              "descripcion": "PREPARACIÓN: de pie, con los pies a la anchura de la cadera y las rodillas ligeramente flojas (o sentado en la silla reclinable con el respaldo casi vertical y bien bloqueado). Lleva las mancuernas a la altura de los hombros con las palmas al frente y los antebrazos verticales, de modo que los codos queden debajo de las muñecas. MOVIMIENTO: aprieta el abdomen como si fueran a darte un golpe en la tripa y empuja las mancuernas hacia arriba hasta estirar los brazos, acercándolas un poco entre sí arriba sin chocarlas. Baja despacio (2 s) hasta que queden a la altura de las orejas. RESPIRACIÓN: suelta el aire al empujar y cógelo al bajar. ERRORES A EVITAR: arquear la zona lumbar, encoger los hombros hacia las orejas y bajar las mancuernas de golpe. Si arqueas la espalda para subirlas, el peso es demasiado.",
               "video": "https://www.youtube.com/results?search_query=dumbbell+shoulder+press"
             },
             {
               "id": "lunes-hombros-elevaciones-laterales",
               "ejercicio": "Elevaciones laterales",
-              "peso": "2.5 kg",
+              "peso": "3.75 kg",
               "series": 4,
-              "repeticiones": {
-                "tipo": "numero",
-                "valor": 15,
-                "texto": "15"
-              },
+              "repeticiones": { "tipo": "numero", "valor": 15, "texto": "15" },
               "descanso": 45,
-              "descripcion": "PREPARACIÓN: de pie, pies a la anchura de la cadera y rodillas ligeramente flojas. Inclina un poco el torso hacia delante. Mancuernas a los lados de los muslos, palmas mirando hacia el cuerpo y codos un poco doblados (unos 15°). MOVIMIENTO: sube los brazos hacia los lados, no hacia delante, hasta que lleguen a la altura de los hombros, formando una T. Imagina que viertes agua de una jarra: el meñique queda un poco más alto que el pulgar. Baja despacio contando 3 s. RESPIRACIÓN: suelta el aire al subir y cógelo al bajar. ERRORES A EVITAR: balancear el cuerpo para lanzar las mancuernas, subir por encima de los hombros y encoger los hombros hacia las orejas (piensa en alejar los hombros de las orejas). Es un ejercicio de peso ligero: con 2.5 kg es normal que queme.",
+              "descripcion": "PREPARACIÓN: de pie, pies a la anchura de la cadera y rodillas ligeramente flojas. Inclina un poco el torso hacia delante. Mancuernas a los lados de los muslos, palmas mirando hacia el cuerpo y codos un poco doblados (unos 15°). MOVIMIENTO: sube los brazos hacia los lados, no hacia delante, hasta que lleguen a la altura de los hombros, formando una T. Imagina que viertes agua de una jarra: el meñique queda un poco más alto que el pulgar. Baja despacio contando 3 s. RESPIRACIÓN: suelta el aire al subir y cógelo al bajar. ERRORES A EVITAR: balancear el cuerpo para lanzar las mancuernas, subir por encima de los hombros y encoger los hombros hacia las orejas (piensa en alejar los hombros de las orejas). Es un ejercicio de peso ligero: con poco peso es normal que queme.",
               "video": "https://www.youtube.com/results?search_query=dumbbell+lateral+raise"
+            }
+          ]
+        },
+        {
+          "grupoMuscular": "Hombro posterior",
+          "ejercicios": [
+            {
+              "id": "lunes-hombro-posterior-pajaros",
+              "ejercicio": "Pájaros",
+              "peso": "3.75 kg",
+              "series": 3,
+              "repeticiones": { "tipo": "numero", "valor": 15, "texto": "15" },
+              "descanso": 45,
+              "descripcion": "PREPARACIÓN: de pie, con los pies a la anchura de la cadera y las rodillas ligeramente flojas. Inclina el torso hacia delante desde la cadera, con la espalda recta, hasta que quede casi paralela al suelo (si te cuesta, apoya la frente en una mesa baja). Deja colgar las mancuernas debajo de los hombros con las palmas mirándose y los codos un poco doblados. MOVIMIENTO: abre los brazos hacia los lados, como si fueran alas, hasta que lleguen a la altura del torso. Al final junta las paletas de la espalda. Baja despacio contando 3 s. Los codos mantienen la misma flexión todo el tiempo. RESPIRACIÓN: suelta el aire al abrir y cógelo al bajar. ERRORES A EVITAR: balancear el cuerpo para subir las mancuernas, subir los brazos por encima del torso y encoger los hombros. Es un músculo pequeño: con peso ligero se trabaja bien.",
+              "video": "https://www.youtube.com/results?search_query=rear+delt+fly"
             }
           ]
         },
@@ -74,31 +133,23 @@
           "ejercicios": [
             {
               "id": "lunes-triceps-extension",
-              "ejercicio": "Extensión por encima de la cabeza sentado en banco",
-              "peso": "8.5 kg",
+              "ejercicio": "Extensión por encima de la cabeza",
+              "peso": "11 kg",
               "series": 3,
-              "repeticiones": {
-                "tipo": "numero",
-                "valor": 10,
-                "texto": "10"
-              },
+              "repeticiones": { "tipo": "numero", "valor": 10, "texto": "10" },
               "descanso": 60,
-              "descripcion": "PREPARACIÓN: sube el respaldo casi vertical (80-90°) y siéntate con la espalda pegada: el respaldo evita que arquees la zona lumbar. Coge una mancuerna por un extremo con las dos manos, formando un rombo con los pulgares e índices bajo el disco superior, y súbela sobre la cabeza con los brazos estirados. MOVIMIENTO: sin mover los brazos de arriba, dobla solo los codos para bajar la mancuerna por detrás de la cabeza, despacio (2-3 s), hasta notar estiramiento en la parte de atrás del brazo. Los codos apuntan al frente y se quedan cerca de las orejas. Estira los brazos para volver arriba. RESPIRACIÓN: coge aire al bajar y suéltalo al subir. ERRORES A EVITAR: abrir los codos hacia los lados, mover los hombros y separar la espalda del respaldo. Sujeta la mancuerna con firmeza durante todo el ejercicio.",
-              "video": "https://www.youtube.com/results?search_query=seated+overhead+dumbbell+triceps+extension"
+              "descripcion": "PREPARACIÓN: de pie con los pies a la anchura de la cadera (o sentado con la espalda bien apoyada en el respaldo de la silla). Coge una mancuerna por un extremo con las dos manos, formando un rombo con los pulgares e índices bajo el disco superior, y súbela sobre la cabeza con los brazos estirados. MOVIMIENTO: sin mover los brazos de arriba, dobla solo los codos para bajar la mancuerna por detrás de la cabeza, despacio (2-3 s), hasta notar estiramiento en la parte de atrás del brazo. Los codos apuntan al frente y se quedan cerca de las orejas. Estira los brazos para volver arriba. RESPIRACIÓN: coge aire al bajar y suéltalo al subir. ERRORES A EVITAR: abrir los codos hacia los lados, mover los hombros y arquear la zona lumbar. Sujeta la mancuerna con firmeza durante todo el ejercicio: si notas que se te resbala, baja el peso.",
+              "video": "https://www.youtube.com/results?search_query=overhead+dumbbell+triceps+extension"
             },
             {
-              "id": "lunes-triceps-fondos-banco",
-              "ejercicio": "Fondos en banco",
-              "peso": "Peso corporal",
+              "id": "lunes-triceps-press-frances",
+              "ejercicio": "Press francés en el suelo",
+              "peso": "9.75 kg",
               "series": 3,
-              "repeticiones": {
-                "tipo": "numero",
-                "valor": 12,
-                "texto": "12"
-              },
+              "repeticiones": { "tipo": "numero", "valor": 12, "texto": "12" },
               "descanso": 60,
-              "descripcion": "PREPARACIÓN: pon el banco en plano y, si puede ser, contra la pared para que no se mueva. Siéntate en el borde del asiento, apoya las manos a los lados de la cadera con los dedos hacia delante y desliza el culo fuera del banco. Para empezar, deja las rodillas dobladas a 90° y los pies en el suelo; cuando sea fácil, estira las piernas. MOVIMIENTO: dobla los codos hacia atrás (no hacia los lados) para bajar el cuerpo en vertical, rozando el banco con la espalda, hasta que los codos formen un ángulo recto (90°). Empuja con las manos hasta estirar los brazos. RESPIRACIÓN: coge aire al bajar y suéltalo al subir. ERRORES A EVITAR: bajar más de 90° (carga mucho el hombro), alejar la espalda del banco y encoger los hombros. Si notas dolor delante del hombro, reduce el recorrido.",
-              "video": "https://www.youtube.com/results?search_query=bench+dips+triceps"
+              "descripcion": "PREPARACIÓN: túmbate boca arriba en el suelo con las rodillas dobladas y los pies apoyados. Sujeta una mancuerna en cada mano sobre el pecho con los brazos estirados y las palmas mirándose. MOVIMIENTO: sin mover los brazos de arriba, dobla solo los codos para bajar las mancuernas hacia los lados de la frente, despacio (2-3 s). Estira los codos para volver arriba, sin abrirlos. RESPIRACIÓN: coge aire al bajar y suéltalo al estirar. ERRORES A EVITAR: abrir los codos, mover los hombros y bajar demasiado rápido. Las mancuernas pasan cerca de la cara: sujétalas con firmeza y no uses un peso que no controles.",
+              "video": "https://www.youtube.com/results?search_query=dumbbell+skull+crusher"
             }
           ]
         }
@@ -106,6 +157,53 @@
     },
     {
       "dia": "Martes",
+      "descansoEntreEjercicios": 120,
+      "calentamientoMinutos": 10,
+      "calentamiento": [
+        {
+          "id": "martes-calentamiento-marcha",
+          "ejercicio": "Marcha en el sitio",
+          "repeticiones": { "tipo": "tiempo", "valor": 120, "unidad": "s", "texto": "2 min" },
+          "descripcion": "Eleva las rodillas a ritmo suave para subir la temperatura corporal.",
+          "video": "https://www.youtube.com/results?search_query=march+in+place+warm+up"
+        },
+        {
+          "id": "martes-calentamiento-circulos-cadera",
+          "ejercicio": "Círculos de cadera",
+          "repeticiones": { "tipo": "numero", "valor": 8, "texto": "8 por lado" },
+          "descripcion": "Manos en la cintura, dibuja círculos amplios con la cadera.",
+          "video": "https://www.youtube.com/results?search_query=hip+circles+warm+up"
+        },
+        {
+          "id": "martes-calentamiento-balanceo-piernas",
+          "ejercicio": "Balanceo de piernas",
+          "repeticiones": { "tipo": "numero", "valor": 10, "texto": "10 por pierna" },
+          "descripcion": "Apóyate en una pared y balancea la pierna adelante y atrás con control.",
+          "video": "https://www.youtube.com/results?search_query=leg+swings+warm+up"
+        },
+        {
+          "id": "martes-calentamiento-sentadilla-peso-corporal",
+          "ejercicio": "Sentadilla con peso corporal",
+          "repeticiones": { "tipo": "numero", "valor": 12, "texto": "12" },
+          "descripcion": "Baja despacio en 3 segundos y sube sin bloquear las rodillas.",
+          "video": "https://www.youtube.com/results?search_query=bodyweight+squat"
+        },
+        {
+          "id": "martes-calentamiento-puente-gluteos",
+          "ejercicio": "Puente de glúteos sin peso",
+          "repeticiones": { "tipo": "numero", "valor": 12, "texto": "12" },
+          "descripcion": "Sube la cadera apretando los glúteos y baja lento.",
+          "video": "https://www.youtube.com/results?search_query=glute+bridge+bodyweight"
+        },
+        {
+          "id": "martes-calentamiento-aproximacion",
+          "ejercicio": "Serie de aproximación: sentadilla goblet",
+          "peso": "8.5 kg",
+          "repeticiones": { "tipo": "numero", "valor": 10, "texto": "10" },
+          "descripcion": "Una serie ligera del primer ejercicio con movimiento controlado, para preparar el patrón antes de la carga de trabajo.",
+          "video": "https://www.youtube.com/results?search_query=warm+up+set+explained"
+        }
+      ],
       "grupos": [
         {
           "grupoMuscular": "Piernas",
@@ -113,72 +211,52 @@
             {
               "id": "martes-piernas-sentadilla-goblet",
               "ejercicio": "Sentadilla Goblet",
-              "peso": "12 kg",
+              "peso": "16.5 kg",
               "series": 4,
-              "repeticiones": {
-                "tipo": "numero",
-                "valor": 12,
-                "texto": "12"
-              },
+              "repeticiones": { "tipo": "numero", "valor": 12, "texto": "12" },
               "descanso": 90,
               "descripcion": "PREPARACIÓN: coge la mancuerna en vertical sujetando el disco superior con las dos manos, como si fuera una copa, y pégala al pecho con los codos apuntando al suelo. Pies un poco más anchos que los hombros y puntas ligeramente abiertas hacia fuera. MOVIMIENTO: baja despacio (3 s) como si fueras a sentarte en una silla que está detrás de ti: la cadera va hacia atrás y abajo a la vez. Mantén el pecho alto y los talones apoyados. Las rodillas deben ir en la misma dirección que las puntas de los pies. Baja hasta que los muslos queden paralelos al suelo (o lo que puedas con la espalda recta) y sube empujando el suelo con todo el pie. RESPIRACIÓN: coge aire arriba antes de bajar y suéltalo al subir. ERRORES A EVITAR: que las rodillas se junten hacia dentro, levantar los talones y redondear la espalda. Si te cuesta bajar, pon los talones sobre un disco.",
               "video": "https://www.youtube.com/results?search_query=goblet+squat"
             },
             {
-              "id": "martes-piernas-sentadilla-bulgara",
-              "ejercicio": "Sentadilla búlgara",
-              "peso": "12 kg",
+              "id": "martes-piernas-zancadas",
+              "ejercicio": "Zancadas",
+              "peso": "14 kg",
               "series": 3,
-              "repeticiones": {
-                "tipo": "numero",
-                "valor": 10,
-                "texto": "10 por pierna"
-              },
+              "repeticiones": { "tipo": "numero", "valor": 10, "texto": "10 por pierna" },
               "descanso": 90,
-              "descripcion": "PREPARACIÓN: pon el banco en plano. De espaldas a él, apoya el empeine (la parte de arriba del pie) de una pierna en el borde del asiento y da un paso largo hacia delante con la otra. Coge una mancuerna en cada mano con los brazos colgando. Prueba la distancia: al bajar, la rodilla de delante no debe adelantar mucho la punta del pie. MOVIMIENTO: baja en vertical doblando las dos rodillas, como si la rodilla de atrás fuera a tocar el suelo, hasta que el muslo de delante quede paralelo al suelo. El torso puede inclinarse un poco hacia delante. Sube empujando con el talón de la pierna de delante. La pierna de atrás solo sirve de apoyo. Haz todas las repeticiones con una pierna y luego cambia. RESPIRACIÓN: coge aire al bajar y suéltalo al subir. ERRORES A EVITAR: que la rodilla de delante se vaya hacia dentro y ponerte demasiado cerca del banco. Al principio puedes hacerlo sin peso para coger el equilibrio.",
-              "video": "https://www.youtube.com/results?search_query=bulgarian+split+squat"
+              "descripcion": "PREPARACIÓN: de pie, con una mancuerna en cada mano a los lados, los pies a la anchura de la cadera y la espalda recta. MOVIMIENTO: da un paso largo hacia delante y baja doblando las dos rodillas, hasta que la de atrás quede cerca del suelo y la de delante forme unos 90°, con la rodilla encima del tobillo. Empuja con el pie de delante para volver a la posición inicial. Haz todas las repeticiones con una pierna y cambia, o alterna una y una. RESPIRACIÓN: coge aire al bajar y suéltalo al subir. ERRORES A EVITAR: dar un paso demasiado corto, inclinar el torso hacia delante, dejar que la rodilla se vaya hacia dentro y rebotar abajo. Si pierdes el equilibrio, apoya una mano en la pared.",
+              "video": "https://www.youtube.com/results?search_query=dumbbell+lunge"
             },
             {
               "id": "martes-piernas-peso-muerto-rumano",
-              "ejercicio": "Peso muerto rumano a una pierna con mancuerna",
-              "peso": "12 kg",
+              "ejercicio": "Peso muerto rumano",
+              "peso": "16.5 kg",
               "series": 4,
-              "repeticiones": {
-                "tipo": "numero",
-                "valor": 10,
-                "texto": "10 por pierna"
-              },
+              "repeticiones": { "tipo": "numero", "valor": 10, "texto": "10" },
               "descanso": 90,
-              "descripcion": "PREPARACIÓN: de pie, con una mancuerna en la mano contraria a la pierna de apoyo. Apoya el peso en una pierna con la rodilla un poco doblada (y así se queda todo el ejercicio). Si pierdes el equilibrio, apoya la otra mano en una pared o en el respaldo de la silla. MOVIMIENTO: empuja la cadera hacia atrás mientras la pierna libre sube por detrás, con la espalda recta y la mancuerna rozando la pierna de apoyo. Baja hasta notar tirantez en la parte de atrás del muslo y sube empujando la cadera hacia delante, apretando el glúteo. RESPIRACIÓN: coge aire antes de bajar y suéltalo al subir. ERRORES A EVITAR: redondear la espalda, girar la cadera hacia un lado y doblar la rodilla de apoyo (se convierte en una sentadilla).",
-              "video": "https://www.youtube.com/results?search_query=single+leg+romanian+deadlift+dumbbell"
+              "descripcion": "PREPARACIÓN: de pie, pies a la anchura de la cadera, con una mancuerna en cada mano delante de los muslos y las palmas hacia ti. Rodillas un poco dobladas (y así se quedan todo el ejercicio), espalda recta y hombros hacia atrás. MOVIMIENTO: empuja la cadera hacia atrás como si quisieras cerrar una puerta con el culo. El torso se inclina hacia delante solo porque la cadera va atrás, con la espalda recta. Las mancuernas bajan rozando las piernas. Baja despacio (3 s) hasta notar tirantez en la parte de atrás de los muslos (femoral), normalmente a media espinilla o justo por debajo de las rodillas. Sube empujando la cadera hacia delante y aprieta el culo arriba. RESPIRACIÓN: coge aire y aprieta el abdomen antes de bajar; suéltalo al llegar arriba. ERRORES A EVITAR: redondear la espalda, doblar mucho las rodillas (se convierte en una sentadilla) y alejar las mancuernas de las piernas.",
+              "video": "https://www.youtube.com/results?search_query=dumbbell+romanian+deadlift"
             },
             {
-              "id": "martes-piernas-hip-thrust",
-              "ejercicio": "Hip thrust con la espalda apoyada en el banco",
-              "peso": "12 kg",
+              "id": "martes-piernas-sentadilla-bulgara",
+              "ejercicio": "Sentadilla búlgara",
+              "peso": "12.75 kg",
               "series": 3,
-              "repeticiones": {
-                "tipo": "numero",
-                "valor": 12,
-                "texto": "12"
-              },
+              "repeticiones": { "tipo": "numero", "valor": 10, "texto": "10 por pierna" },
               "descanso": 90,
-              "descripcion": "PREPARACIÓN: siéntate en el suelo con la parte alta de la espalda apoyada en el borde del banco, las rodillas dobladas y los pies a la anchura de la cadera. Apoya una mancuerna en la cadera y sujétala con las dos manos. MOVIMIENTO: empuja con los talones y sube la cadera hasta que el torso quede paralelo al suelo y las espinillas verticales. Aprieta el glúteo 1 s arriba y baja despacio. RESPIRACIÓN: suelta el aire al subir y cógelo al bajar. ERRORES A EVITAR: arquear la zona lumbar arriba, empujar con las puntas de los pies y llevar la barbilla al cuello sin control. Si la mancuerna te incomoda, apoya una toalla doblada debajo.",
-              "video": "https://www.youtube.com/results?search_query=barbell+hip+thrust+bench"
+              "descripcion": "PREPARACIÓN: colócate de espaldas a una silla o sofá firme y estable (nunca con ruedas), a unos 60-80 cm, con una mancuerna en cada mano. Apoya el empeine del pie de atrás en el asiento y planta bien el pie de delante, lo bastante lejos para que la rodilla no pase mucho la punta del pie. MOVIMIENTO: baja en línea recta en 3 s hasta que el muslo de delante quede casi paralelo al suelo y sube empujando con todo el pie delantero (sobre todo con el talón). Haz todas las repeticiones con una pierna y cambia. RESPIRACIÓN: coge aire al bajar y suéltalo al subir. ERRORES A EVITAR: inclinar mucho el torso, dejar que la rodilla delantera se vaya hacia dentro, empujar con el pie de atrás y usar un apoyo inestable.",
+              "video": "https://www.youtube.com/results?search_query=dumbbell+bulgarian+split+squat"
             },
             {
-              "id": "martes-piernas-gemelos-una-pierna",
-              "ejercicio": "Elevaciones de gemelos a una pierna",
-              "peso": "12 kg",
-              "series": 4,
-              "repeticiones": {
-                "tipo": "numero",
-                "valor": 15,
-                "texto": "15 por pierna"
-              },
+              "id": "martes-piernas-elevaciones-gemelos",
+              "ejercicio": "Elevaciones de gemelos",
+              "peso": "16.5 kg",
+              "series": 5,
+              "repeticiones": { "tipo": "numero", "valor": 20, "texto": "20" },
               "descanso": 45,
-              "descripcion": "PREPARACIÓN: ponte al lado de una pared y apoya en ella una mano para mantener el equilibrio. Coge la mancuerna con la otra mano. Apóyate solo sobre la pierna del mismo lado que la mancuerna y dobla la otra hacia atrás. Si tienes un escalón, pon solo la parte delantera del pie sobre el borde para que el talón pueda bajar más. MOVIMIENTO: sube todo lo que puedas sobre la punta del pie, aguanta 1 s arriba y baja despacio (2-3 s) hasta notar estiramiento en la pantorrilla. La rodilla queda estirada pero sin bloquear. Haz todas las repeticiones con una pierna y cambia. RESPIRACIÓN: suelta el aire al subir y cógelo al bajar. ERRORES A EVITAR: hacerlo rápido rebotando y empujarte con la mano de la pared. Solo sirve para no caerte.",
-              "video": "https://www.youtube.com/results?search_query=single+leg+dumbbell+calf+raise"
+              "descripcion": "PREPARACIÓN: de pie, con una mancuerna en cada mano a los lados y los pies a la anchura de la cadera. Para tener más recorrido, apoya la parte delantera de los pies en un escalón o un libro grueso, con los talones fuera. Si lo necesitas, apóyate con una mano en la pared. MOVIMIENTO: sube los talones lo más alto que puedas, haz una pausa de 1 s arriba y baja despacio (3 s) hasta notar el estiramiento en los gemelos. RESPIRACIÓN: suelta el aire al subir y cógelo al bajar. ERRORES A EVITAR: rebotar, doblar las rodillas y acortar el recorrido. Al final de las repeticiones debe arder: es normal.",
+              "video": "https://www.youtube.com/results?search_query=dumbbell+calf+raise"
             }
           ]
         },
@@ -188,31 +266,22 @@
             {
               "id": "martes-antebrazo-curl-muneca",
               "ejercicio": "Curl de muñeca",
-              "peso": "8.5 kg",
+              "peso": "9.75 kg",
               "series": 3,
-              "repeticiones": {
-                "tipo": "numero",
-                "valor": 20,
-                "texto": "20"
-              },
+              "repeticiones": { "tipo": "numero", "valor": 20, "texto": "20" },
               "descanso": 45,
-              "descripcion": "PREPARACIÓN: pon el banco en plano. Arrodíllate frente a él (o siéntate en él) y apoya los antebrazos sobre el banco con las palmas hacia arriba, de modo que solo las manos queden fuera del borde. Coge una mancuerna con cada mano o una con las dos. MOVIMIENTO: deja bajar las muñecas despacio y abre un poco los dedos para que la mancuerna ruede hacia las yemas. Después cierra la mano y sube la mancuerna doblando solo la muñeca, lo más arriba que puedas. Baja en 2 s. Los antebrazos no se despegan del banco. RESPIRACIÓN: normal y continua, sin aguantar el aire. ERRORES A EVITAR: levantar los codos o los antebrazos para ayudarte y hacer movimientos rápidos. Es normal notar quemazón en el antebrazo.",
+              "descripcion": "PREPARACIÓN: siéntate en una silla firme y apoya los antebrazos sobre los muslos con las palmas hacia arriba, de modo que solo las manos queden fuera de las rodillas. Coge una mancuerna con cada mano. MOVIMIENTO: deja bajar las muñecas despacio y abre un poco los dedos para que la mancuerna ruede hacia las yemas. Después cierra la mano y sube doblando solo la muñeca, lo más arriba que puedas. Baja en 2 s. Los antebrazos no se despegan de los muslos. RESPIRACIÓN: normal y continua, sin aguantar el aire. ERRORES A EVITAR: levantar los codos o los antebrazos para ayudarte y hacer movimientos rápidos. Es normal notar quemazón en el antebrazo.",
               "video": "https://www.youtube.com/results?search_query=wrist+curl"
             },
             {
-              "id": "martes-antebrazo-farmers-walk",
-              "ejercicio": "Farmer's Walk",
-              "peso": "12 kg",
+              "id": "martes-antebrazo-curl-muneca-invertido",
+              "ejercicio": "Curl de muñeca invertido",
+              "peso": "3.75 kg",
               "series": 3,
-              "repeticiones": {
-                "tipo": "tiempo",
-                "valor": 60,
-                "unidad": "s",
-                "texto": "60 s"
-              },
-              "descanso": 60,
-              "descripcion": "PREPARACIÓN: pon las mancuernas en el suelo a tus lados. Agáchate doblando rodillas y cadera, con la espalda recta, como en una sentadilla, cógelas y levántate. No las subas redondeando la espalda. Ponte erguido: hombros hacia atrás y abajo, abdomen firme y mirada al frente. MOVIMIENTO: camina con pasos cortos y controlados durante 60 s, dando la vuelta cuando llegues al final del espacio. Aprieta las mancuernas con toda la fuerza que puedas durante todo el tiempo. RESPIRACIÓN: respira de forma continua y tranquila, sin aguantar el aire. ERRORES A EVITAR: inclinarte hacia un lado, dejar caer los hombros hacia delante y encogerlos hacia las orejas. AL TERMINAR: deja las mancuernas en el suelo agachándote igual que al cogerlas. Si se te abren las manos antes de 60 s, descansa unos segundos y continúa.",
-              "video": "https://www.youtube.com/results?search_query=farmer%27s+walk"
+              "repeticiones": { "tipo": "numero", "valor": 15, "texto": "15" },
+              "descanso": 45,
+              "descripcion": "PREPARACIÓN: siéntate en una silla firme y apoya los antebrazos sobre los muslos con las palmas hacia abajo, de modo que solo las manos queden fuera de las rodillas. Coge una mancuerna ligera con cada mano. MOVIMIENTO: deja bajar las muñecas despacio y sube el dorso de la mano lo más alto que puedas, doblando solo la muñeca. Baja en 2 s. Los antebrazos no se despegan de los muslos. RESPIRACIÓN: normal y continua, sin aguantar el aire. ERRORES A EVITAR: usar demasiado peso (los músculos de este lado son pequeños), levantar los codos y hacer movimientos rápidos. Es normal notar quemazón.",
+              "video": "https://www.youtube.com/results?search_query=reverse+wrist+curl"
             }
           ]
         }
@@ -220,113 +289,64 @@
     },
     {
       "dia": "Miércoles",
-      "grupos": [
+      "descansoEntreEjercicios": 60,
+      "calentamientoMinutos": 4,
+      "calentamiento": [
         {
-          "grupoMuscular": "Core",
-          "ejercicios": [
-            {
-              "id": "miercoles-core-rollout-barra",
-              "ejercicio": "Rueda abdominal (rollout)",
-              "peso": "Rueda abdominal",
-              "series": 3,
-              "repeticiones": {
-                "tipo": "numero",
-                "valor": 8,
-                "texto": "8"
-              },
-              "descanso": 60,
-              "descripcion": "PREPARACIÓN: arrodíllate sobre una esterilla doblada para proteger las rodillas y coge la rueda con las dos manos, justo debajo de los hombros. Antes de moverte, aprieta el culo y mete un poco la pelvis como si quisieras acercar el ombligo a las costillas (esto se llama retroversión y protege la zona lumbar). MOVIMIENTO: rueda hacia delante despacio en línea recta, estirando el cuerpo, solo hasta donde puedas sin que la zona lumbar se hunda hacia el suelo. Vuelve a la posición inicial tirando con el abdomen, no con los brazos. Para empezar, rueda hacia una pared a medio recorrido: hará de tope y te frenará. RESPIRACIÓN: coge aire antes de salir, suéltalo al volver. ERRORES A EVITAR: dejar que la espalda se arquee (si pasa, reduce la distancia), sacar el culo hacia arriba al volver y hacer más recorrido del que controlas. Es un ejercicio exigente: un recorrido corto bien hecho es mejor que uno largo mal hecho.",
-              "video": "https://www.youtube.com/results?search_query=ab+wheel+rollout+kneeling"
-            },
-            {
-              "id": "miercoles-core-elevacion-piernas-banco",
-              "ejercicio": "Elevación de piernas en el banco",
-              "peso": "Peso corporal",
-              "series": 3,
-              "repeticiones": {
-                "tipo": "numero",
-                "valor": 12,
-                "texto": "12"
-              },
-              "descanso": 45,
-              "descripcion": "PREPARACIÓN: pon el banco en plano y túmbate boca arriba con la cadera cerca de un extremo y la cabeza hacia el otro. Agarra el banco por detrás de la cabeza con las dos manos. Piernas juntas y casi rectas (puedes doblar un poco las rodillas para que sea más fácil). Pega la zona lumbar al banco. MOVIMIENTO: sube las piernas juntas hasta que queden verticales, apuntando al techo. Al final, despega un poco el culo del banco enrollando la pelvis hacia las costillas. Baja las piernas despacio contando 3 s sin que la zona lumbar se despegue del banco. RESPIRACIÓN: suelta el aire al subir y cógelo al bajar. ERRORES A EVITAR: balancear las piernas para coger impulso y arquear la espalda al bajar. Si se arquea, no bajes tanto las piernas o dobla más las rodillas.",
-              "video": "https://www.youtube.com/results?search_query=bench+leg+raise+abs"
-            },
-            {
-              "id": "miercoles-core-pallof",
-              "ejercicio": "Plancha con toque de hombro",
-              "peso": "Peso corporal",
-              "series": 3,
-              "repeticiones": {
-                "tipo": "numero",
-                "valor": 12,
-                "texto": "12 por lado"
-              },
-              "descanso": 45,
-              "descripcion": "PREPARACIÓN: colócate en posición de plancha alta, con las manos bajo los hombros y los pies un poco más abiertos que la cadera. Aprieta abdomen y glúteos. MOVIMIENTO: levanta una mano y toca el hombro contrario, sin dejar que la cadera se balancee. Vuelve la mano al suelo y alterna. Imagina que llevas un vaso de agua apoyado en la zona lumbar. RESPIRACIÓN: respira de forma continua, sin aguantar el aire. ERRORES A EVITAR: girar la cadera, hundir la espalda y mover los pies. Si te cuesta, abre más los pies.",
-              "video": "https://www.youtube.com/results?search_query=plank+shoulder+tap"
-            },
-            {
-              "id": "miercoles-core-dead-bug",
-              "ejercicio": "Dead bug con mancuerna ligera",
-              "peso": "2.5 kg",
-              "series": 3,
-              "repeticiones": {
-                "tipo": "numero",
-                "valor": 10,
-                "texto": "10 por lado"
-              },
-              "descanso": 45,
-              "descripcion": "PREPARACIÓN: túmbate boca arriba en la esterilla. Sujeta la mancuerna de 2.5 kg con las dos manos y los brazos estirados hacia el techo. Sube las piernas con cadera y rodillas dobladas a 90°, como si estuvieran apoyadas en una silla invisible. Aprieta la zona lumbar contra el suelo: no debe caber tu mano debajo. MOVIMIENTO: baja despacio la mancuerna hacia atrás, por encima de la cabeza, y a la vez estira la pierna contraria hacia el suelo sin tocarlo. Como solo sujetas una mancuerna, alterna: primero estira una pierna mientras llevas los brazos atrás y vuelve; luego la otra. Mantén la espalda pegada al suelo en todo momento. RESPIRACIÓN: suelta el aire despacio mientras bajas brazos y pierna. ERRORES A EVITAR: que la zona lumbar se despegue del suelo (si pasa, no estires tanto la pierna) y hacerlo rápido. Es un ejercicio lento y de control.",
-              "video": "https://www.youtube.com/results?search_query=dead+bug+exercise"
-            },
-            {
-              "id": "miercoles-core-plancha-lateral",
-              "ejercicio": "Plancha lateral",
-              "peso": "Peso corporal",
-              "series": 3,
-              "repeticiones": {
-                "tipo": "tiempo",
-                "valor": 30,
-                "unidad": "s",
-                "texto": "30 s por lado"
-              },
-              "descanso": 30,
-              "descripcion": "PREPARACIÓN: túmbate de lado sobre la esterilla, apoyado en el antebrazo, con el codo justo debajo del hombro. Pon los pies uno encima del otro o, para tener más equilibrio, uno delante del otro. Para empezar más fácil, apoya las rodillas dobladas en lugar de los pies. MOVIMIENTO: levanta la cadera del suelo hasta que la cabeza, la cadera y los pies formen una línea recta. Aprieta el culo y el abdomen y aguanta 30 s sin moverte. Descansa y haz el otro lado. RESPIRACIÓN: respira de forma normal, sin aguantar el aire. ERRORES A EVITAR: dejar caer la cadera hacia el suelo, sacar el culo hacia atrás y girar el pecho hacia el suelo o el techo. Si no llegas a 30 s con buena postura, para y apunta cuánto aguantas.",
-              "video": "https://www.youtube.com/results?search_query=side+plank"
-            }
-          ]
+          "id": "miercoles-calentamiento-marcha",
+          "ejercicio": "Marcha en el sitio",
+          "repeticiones": { "tipo": "tiempo", "valor": 120, "unidad": "s", "texto": "2 min" },
+          "descripcion": "Eleva las rodillas a ritmo suave para subir la temperatura corporal.",
+          "video": "https://www.youtube.com/results?search_query=march+in+place+warm+up"
         },
         {
-          "grupoMuscular": "Antebrazo",
+          "id": "miercoles-calentamiento-sentadilla-peso-corporal",
+          "ejercicio": "Sentadilla con peso corporal",
+          "repeticiones": { "tipo": "numero", "valor": 10, "texto": "10" },
+          "descripcion": "Baja despacio en 3 segundos y sube sin bloquear las rodillas.",
+          "video": "https://www.youtube.com/results?search_query=bodyweight+squat"
+        },
+        {
+          "id": "miercoles-calentamiento-puente-gluteos",
+          "ejercicio": "Puente de glúteos sin peso",
+          "repeticiones": { "tipo": "numero", "valor": 12, "texto": "12" },
+          "descripcion": "Sube la cadera apretando los glúteos y baja lento.",
+          "video": "https://www.youtube.com/results?search_query=glute+bridge+bodyweight"
+        }
+      ],
+      "grupos": [
+        {
+          "grupoMuscular": "Piernas (sesión corta)",
           "ejercicios": [
             {
-              "id": "miercoles-antebrazo-curl-muneca",
-              "ejercicio": "Curl de muñeca",
-              "peso": "8.5 kg",
+              "id": "miercoles-piernas-puente-gluteos",
+              "ejercicio": "Puente de glúteos",
+              "peso": "18 kg",
               "series": 3,
-              "repeticiones": {
-                "tipo": "numero",
-                "valor": 20,
-                "texto": "20"
-              },
-              "descanso": 45,
-              "descripcion": "PREPARACIÓN: pon el banco en plano. Arrodíllate frente a él (o siéntate en él) y apoya los antebrazos sobre el banco con las palmas hacia arriba, de modo que solo las manos queden fuera del borde. Coge una mancuerna con cada mano o una con las dos. MOVIMIENTO: deja bajar las muñecas despacio y abre un poco los dedos para que la mancuerna ruede hacia las yemas. Después cierra la mano y sube la mancuerna doblando solo la muñeca, lo más arriba que puedas. Baja en 2 s. Los antebrazos no se despegan del banco. RESPIRACIÓN: normal y continua, sin aguantar el aire. ERRORES A EVITAR: levantar los codos o los antebrazos para ayudarte y hacer movimientos rápidos. Es normal notar quemazón en el antebrazo.",
-              "video": "https://www.youtube.com/results?search_query=wrist+curl"
+              "repeticiones": { "tipo": "numero", "valor": 15, "texto": "15" },
+              "descanso": 60,
+              "descripcion": "PREPARACIÓN: túmbate boca arriba en el suelo con las rodillas dobladas y los pies apoyados, a la anchura de la cadera y cerca de los glúteos. Coloca una mancuerna sobre el hueso de la cadera sujetándola con las dos manos (con carga alta, pon una toalla doblada debajo para amortiguar). MOVIMIENTO: empuja con los talones y sube la cadera apretando los glúteos, hasta que hombros, cadera y rodillas formen una línea recta. Aguanta 1 s arriba y baja despacio (2-3 s) sin apoyar del todo los glúteos. RESPIRACIÓN: suelta el aire al subir y cógelo al bajar. ERRORES A EVITAR: arquear la zona lumbar al subir, empujar con la punta de los pies y dejar que las rodillas se vayan hacia dentro.",
+              "video": "https://www.youtube.com/results?search_query=dumbbell+glute+bridge"
             },
             {
-              "id": "miercoles-antebrazo-curl-martillo",
-              "ejercicio": "Curl martillo",
-              "peso": "8.5 kg",
+              "id": "miercoles-piernas-sentadilla-goblet-ligera",
+              "ejercicio": "Sentadilla Goblet ligera",
+              "peso": "12.75 kg",
               "series": 3,
-              "repeticiones": {
-                "tipo": "numero",
-                "valor": 12,
-                "texto": "12"
-              },
+              "repeticiones": { "tipo": "numero", "valor": 12, "texto": "12" },
               "descanso": 60,
-              "descripcion": "PREPARACIÓN: de pie (o sentado en el banco con el respaldo vertical), con una mancuerna en cada mano y los brazos a los lados. Las palmas miran hacia el cuerpo, como si sujetaras un martillo. Codos pegados a los costados. MOVIMIENTO: dobla los codos para subir las mancuernas hacia los hombros sin cambiar la posición de la mano. Solo se mueve el antebrazo; los codos se quedan quietos junto al cuerpo. Baja despacio contando 3 s hasta estirar el brazo del todo. Puedes subir los dos brazos a la vez o alternar. RESPIRACIÓN: suelta el aire al subir y cógelo al bajar. ERRORES A EVITAR: balancear el cuerpo o echarte hacia atrás para subir el peso y adelantar los codos. Si necesitas balancearte, baja peso.",
-              "video": "https://www.youtube.com/results?search_query=hammer+curl"
+              "descripcion": "PREPARACIÓN: coge la mancuerna en vertical sujetando el disco superior con las dos manos, como si fuera una copa, y pégala al pecho con los codos apuntando al suelo. Pies un poco más anchos que los hombros y puntas ligeramente abiertas hacia fuera. MOVIMIENTO: baja despacio (3 s) como si fueras a sentarte en una silla que está detrás de ti: la cadera va hacia atrás y abajo a la vez. Mantén el pecho alto y los talones apoyados. Las rodillas deben ir en la misma dirección que las puntas de los pies. Baja hasta que los muslos queden paralelos al suelo (o lo que puedas con la espalda recta) y sube empujando el suelo con todo el pie. RESPIRACIÓN: coge aire arriba antes de bajar y suéltalo al subir. ERRORES A EVITAR: que las rodillas se junten hacia dentro, levantar los talones y redondear la espalda. Si te cuesta bajar, pon los talones sobre un disco. DÍA CORTO: usa un peso moderado, baja en 3 s y deja varias repeticiones en reserva. El objetivo es recuperar, no llegar al fallo.",
+              "video": "https://www.youtube.com/results?search_query=goblet+squat"
+            },
+            {
+              "id": "miercoles-piernas-elevaciones-gemelos",
+              "ejercicio": "Elevaciones de gemelos",
+              "peso": "16.5 kg",
+              "series": 3,
+              "repeticiones": { "tipo": "numero", "valor": 20, "texto": "20" },
+              "descanso": 45,
+              "descripcion": "PREPARACIÓN: de pie, con una mancuerna en cada mano a los lados y los pies a la anchura de la cadera. Para tener más recorrido, apoya la parte delantera de los pies en un escalón o un libro grueso, con los talones fuera. Si lo necesitas, apóyate con una mano en la pared. MOVIMIENTO: sube los talones lo más alto que puedas, haz una pausa de 1 s arriba y baja despacio (3 s) hasta notar el estiramiento en los gemelos. RESPIRACIÓN: suelta el aire al subir y cógelo al bajar. ERRORES A EVITAR: rebotar, doblar las rodillas y acortar el recorrido. Al final de las repeticiones debe arder: es normal.",
+              "video": "https://www.youtube.com/results?search_query=dumbbell+calf+raise"
             }
           ]
         }
@@ -334,6 +354,46 @@
     },
     {
       "dia": "Jueves",
+      "descansoEntreEjercicios": 90,
+      "calentamientoMinutos": 8,
+      "calentamiento": [
+        {
+          "id": "jueves-calentamiento-marcha",
+          "ejercicio": "Marcha en el sitio",
+          "repeticiones": { "tipo": "tiempo", "valor": 120, "unidad": "s", "texto": "2 min" },
+          "descripcion": "Eleva las rodillas a ritmo suave para subir la temperatura corporal.",
+          "video": "https://www.youtube.com/results?search_query=march+in+place+warm+up"
+        },
+        {
+          "id": "jueves-calentamiento-circulos-brazos",
+          "ejercicio": "Círculos de brazos",
+          "repeticiones": { "tipo": "numero", "valor": 20, "texto": "10 adelante y 10 atrás" },
+          "descripcion": "Brazos extendidos a los lados, círculos amplios que van creciendo poco a poco.",
+          "video": "https://www.youtube.com/results?search_query=arm+circles+warm+up"
+        },
+        {
+          "id": "jueves-calentamiento-gato-camello",
+          "ejercicio": "Gato-camello",
+          "repeticiones": { "tipo": "numero", "valor": 8, "texto": "8" },
+          "descripcion": "En cuadrupedia, redondea y arquea la espalda despacio para movilizar la columna.",
+          "video": "https://www.youtube.com/results?search_query=cat+cow+stretch"
+        },
+        {
+          "id": "jueves-calentamiento-retraccion-escapular",
+          "ejercicio": "Retracciones de escápulas",
+          "repeticiones": { "tipo": "numero", "valor": 12, "texto": "12" },
+          "descripcion": "De pie con los brazos al frente, junta las escápulas y vuelve lentamente.",
+          "video": "https://www.youtube.com/results?search_query=scapular+retraction+exercise"
+        },
+        {
+          "id": "jueves-calentamiento-aproximacion",
+          "ejercicio": "Serie de aproximación: remo con mancuerna",
+          "peso": "6 kg",
+          "repeticiones": { "tipo": "numero", "valor": 10, "texto": "10 por brazo" },
+          "descripcion": "Una serie ligera del primer ejercicio con movimiento controlado, para preparar el patrón antes de la carga de trabajo.",
+          "video": "https://www.youtube.com/results?search_query=warm+up+set+explained"
+        }
+      ],
       "grupos": [
         {
           "grupoMuscular": "Espalda",
@@ -341,57 +401,31 @@
             {
               "id": "jueves-espalda-remo-mancuerna",
               "ejercicio": "Remo con mancuerna",
-              "peso": "12 kg",
+              "peso": "13.5 kg",
               "series": 4,
-              "repeticiones": {
-                "tipo": "numero",
-                "valor": 12,
-                "texto": "12"
-              },
+              "repeticiones": { "tipo": "numero", "valor": 11, "texto": "10-12" },
               "descanso": 90,
-              "descripcion": "PREPARACIÓN: pon el banco en plano. Apoya en él la rodilla y la mano del mismo lado (por ejemplo, rodilla y mano izquierdas), con la mano justo debajo del hombro. La otra pierna queda en el suelo, algo separada, para tener estabilidad. La espalda debe quedar recta y casi paralela al suelo, como una mesa. Coge la mancuerna con la mano libre y deja el brazo colgando. MOVIMIENTO: sube el codo hacia arriba y hacia atrás, en dirección a la cadera, pegado al cuerpo, como si arrancaras un cortacésped. Al final, junta la paleta del hombro hacia la columna, aguanta 1 s y baja en 2 s hasta estirar el brazo. Haz todas las repeticiones de un lado y cambia. RESPIRACIÓN: suelta el aire al subir y cógelo al bajar. ERRORES A EVITAR: girar el torso para subir el peso, redondear la espalda y tirar con el bíceps en lugar de pensar en llevar el codo atrás.",
+              "descripcion": "PREPARACIÓN: coloca una silla firme o el sofá a tu lado (sin ruedas). Apoya en él la rodilla y la mano del mismo lado (por ejemplo, rodilla y mano izquierdas), con la mano justo debajo del hombro. La otra pierna queda en el suelo, algo separada, para tener estabilidad. La espalda debe quedar recta y casi paralela al suelo, como una mesa. Coge la mancuerna con la mano libre y deja el brazo colgando. MOVIMIENTO: sube el codo hacia arriba y hacia atrás, en dirección a la cadera, pegado al cuerpo, como si arrancaras un cortacésped. Al final, junta la paleta del hombro hacia la columna, aguanta 1 s y baja en 2 s hasta estirar el brazo. Haz todas las repeticiones de un lado y cambia. RESPIRACIÓN: suelta el aire al subir y cógelo al bajar. ERRORES A EVITAR: girar el torso para subir el peso, redondear la espalda y tirar con el bíceps en lugar de pensar en llevar el codo atrás.",
               "video": "https://www.youtube.com/results?search_query=one+arm+dumbbell+row"
             },
             {
-              "id": "jueves-espalda-remo-inclinado-barra",
-              "ejercicio": "Remo inclinado con dos mancuernas",
-              "peso": "12 kg",
-              "series": 3,
-              "repeticiones": {
-                "tipo": "numero",
-                "valor": 10,
-                "texto": "10"
-              },
+              "id": "jueves-espalda-remo-inclinado",
+              "ejercicio": "Remo inclinado a dos manos",
+              "peso": "13.5 kg",
+              "series": 4,
+              "repeticiones": { "tipo": "numero", "valor": 10, "texto": "10" },
               "descanso": 90,
-              "descripcion": "PREPARACIÓN: de pie, pies a la anchura de la cadera, con una mancuerna en cada mano. Inclina el torso hacia delante con la espalda recta y las rodillas un poco dobladas, con los brazos estirados hacia el suelo y las palmas mirándose. MOVIMIENTO: tira de las dos mancuernas hacia las caderas llevando los codos hacia atrás, pegados al cuerpo. Aguanta 1 s juntando las paletas y baja despacio. RESPIRACIÓN: suelta el aire al tirar y cógelo al bajar. ERRORES A EVITAR: redondear la espalda, incorporar el torso para ayudarte con impulso y encoger los hombros.",
+              "descripcion": "PREPARACIÓN: de pie, con los pies a la anchura de la cadera, las rodillas ligeramente flojas y una mancuerna en cada mano. Inclina el torso hacia delante desde la cadera, con la espalda recta, hasta unos 45°, y deja colgar los brazos con las palmas mirándose. MOVIMIENTO: tira de los codos hacia atrás y hacia la cadera, pegados al cuerpo, hasta juntar las paletas. Aguanta 1 s y baja en 2-3 s hasta estirar los brazos. RESPIRACIÓN: suelta el aire al subir y cógelo al bajar. ERRORES A EVITAR: redondear la espalda, subir el torso para ayudarte y tirar con los brazos en lugar de con la espalda. Si notas la zona lumbar, baja el peso o apoya la frente en una mesa baja.",
               "video": "https://www.youtube.com/results?search_query=bent+over+dumbbell+row"
-            },
-            {
-              "id": "jueves-espalda-jalon-banda",
-              "ejercicio": "Remo de pie con banda pisada",
-              "peso": "Banda elástica",
-              "series": 3,
-              "repeticiones": {
-                "tipo": "numero",
-                "valor": 15,
-                "texto": "15"
-              },
-              "descanso": 60,
-              "descripcion": "PREPARACIÓN: pisa el centro de la banda con los dos pies, a la anchura de la cadera, y coge un extremo con cada mano. Inclina el torso hacia delante con la espalda recta y las rodillas un poco dobladas, con los brazos estirados hacia el suelo. MOVIMIENTO: tira de las manos hacia las caderas llevando los codos hacia atrás, pegados al cuerpo. Aguanta 1 s juntando las paletas y vuelve despacio estirando los brazos. RESPIRACIÓN: suelta el aire al tirar y cógelo al volver. ERRORES A EVITAR: redondear la espalda, encoger los hombros hacia las orejas y tirar con impulso del torso.",
-              "video": "https://www.youtube.com/results?search_query=resistance+band+bent+over+row"
             },
             {
               "id": "jueves-espalda-pullover",
               "ejercicio": "Pullover",
-              "peso": "8.5 kg",
+              "peso": "11 kg",
               "series": 3,
-              "repeticiones": {
-                "tipo": "numero",
-                "valor": 12,
-                "texto": "12"
-              },
+              "repeticiones": { "tipo": "numero", "valor": 12, "texto": "12" },
               "descanso": 60,
-              "descripcion": "PREPARACIÓN: pon el banco en plano. Siéntate en el extremo con la mancuerna sobre los muslos y túmbate de través (cruzado sobre el banco), de modo que solo apoyes la parte alta de la espalda y los hombros. Pies firmes en el suelo, algo separados, y cadera un poco más baja que los hombros. Sujeta la mancuerna por un extremo con las dos manos formando un rombo con los dedos y súbela sobre el pecho con los brazos casi rectos. MOVIMIENTO: baja la mancuerna despacio en arco por detrás de la cabeza, con los codos un poco doblados y fijos, hasta que notes estiramiento en los costados de la espalda y el pecho. Vuelve por el mismo arco hasta tener la mancuerna sobre el pecho. RESPIRACIÓN: coge aire al bajar y suéltalo al subir. ERRORES A EVITAR: arquear la espalda al bajar (mantén las costillas hacia abajo), doblar y estirar los codos y bajar tanto que moleste el hombro.",
+              "descripcion": "PREPARACIÓN: túmbate boca arriba en el suelo con las rodillas dobladas y los pies apoyados. Sujeta una mancuerna por un extremo con las dos manos, formando un rombo con los dedos bajo el disco superior, y súbela sobre el pecho con los brazos casi rectos. MOVIMIENTO: baja la mancuerna despacio en arco por detrás de la cabeza, con los codos un poco doblados y fijos, hasta que notes estiramiento en los costados de la espalda y el pecho (sin que la mancuerna llegue a golpear el suelo). Vuelve por el mismo arco hasta tenerla otra vez sobre el pecho. RESPIRACIÓN: coge aire al bajar y suéltalo al subir. ERRORES A EVITAR: arquear la espalda al bajar (mantén las costillas hacia abajo), doblar y estirar los codos, bajar tanto que moleste el hombro y aflojar el agarre.",
               "video": "https://www.youtube.com/results?search_query=dumbbell+pullover"
             }
           ]
@@ -401,31 +435,13 @@
           "ejercicios": [
             {
               "id": "jueves-hombro-posterior-pajaros",
-              "ejercicio": "Pájaros con pecho apoyado en banco inclinado",
-              "peso": "2.5 kg",
-              "series": 3,
-              "repeticiones": {
-                "tipo": "numero",
-                "valor": 15,
-                "texto": "15"
-              },
+              "ejercicio": "Pájaros",
+              "peso": "3.75 kg",
+              "series": 4,
+              "repeticiones": { "tipo": "numero", "valor": 15, "texto": "15" },
               "descanso": 45,
-              "descripcion": "PREPARACIÓN: pon el respaldo a 30-45° y comprueba el pasador. Túmbate boca abajo con el pecho apoyado en el respaldo y la cabeza asomando por encima. Los pies se quedan en el suelo. Deja colgar las mancuernas debajo de los hombros con las palmas mirándose y los codos un poco doblados. MOVIMIENTO: abre los brazos hacia los lados, como si fueran alas, hasta que lleguen a la altura del cuerpo. Al final, junta las paletas de la espalda. Baja despacio contando 3 s. Los codos mantienen la misma flexión todo el tiempo. RESPIRACIÓN: suelta el aire al abrir y cógelo al bajar. ERRORES A EVITAR: despegar el pecho del banco, encoger los hombros y subir los brazos más allá del cuerpo. Es un músculo pequeño: con peso ligero se trabaja bien.",
-              "video": "https://www.youtube.com/results?search_query=incline+bench+rear+delt+fly"
-            },
-            {
-              "id": "jueves-hombro-posterior-face-pull",
-              "ejercicio": "Apertura de banda (pull-apart)",
-              "peso": "Banda elástica",
-              "series": 3,
-              "repeticiones": {
-                "tipo": "numero",
-                "valor": 15,
-                "texto": "15"
-              },
-              "descanso": 45,
-              "descripcion": "PREPARACIÓN: de pie, pies a la anchura de los hombros, sujeta la banda con las manos a la anchura de los hombros, palmas hacia abajo y brazos estirados al frente a la altura del pecho. MOVIMIENTO: abre los brazos hacia los lados estirando la banda hasta llevarla al pecho, juntando las paletas. Aguanta 1 s y vuelve despacio. Si la banda tiene mucha tensión, sujétala más separada. RESPIRACIÓN: suelta el aire al abrir y cógelo al volver. ERRORES A EVITAR: encoger los hombros hacia las orejas, arquear la espalda y soltar la banda de golpe.",
-              "video": "https://www.youtube.com/results?search_query=band+pull+apart"
+              "descripcion": "PREPARACIÓN: de pie, con los pies a la anchura de la cadera y las rodillas ligeramente flojas. Inclina el torso hacia delante desde la cadera, con la espalda recta, hasta que quede casi paralela al suelo (si te cuesta, apoya la frente en una mesa baja). Deja colgar las mancuernas debajo de los hombros con las palmas mirándose y los codos un poco doblados. MOVIMIENTO: abre los brazos hacia los lados, como si fueran alas, hasta que lleguen a la altura del torso. Al final junta las paletas de la espalda. Baja despacio contando 3 s. Los codos mantienen la misma flexión todo el tiempo. RESPIRACIÓN: suelta el aire al abrir y cógelo al bajar. ERRORES A EVITAR: balancear el cuerpo para subir las mancuernas, subir los brazos por encima del torso y encoger los hombros. Es un músculo pequeño: con peso ligero se trabaja bien.",
+              "video": "https://www.youtube.com/results?search_query=rear+delt+fly"
             }
           ]
         },
@@ -433,161 +449,34 @@
           "grupoMuscular": "Bíceps",
           "ejercicios": [
             {
-              "id": "jueves-biceps-curl-inclinado",
-              "ejercicio": "Curl inclinado sentado",
-              "peso": "8.5 kg",
+              "id": "jueves-biceps-curl-alterno",
+              "ejercicio": "Curl alterno",
+              "peso": "12 kg",
               "series": 4,
-              "repeticiones": {
-                "tipo": "numero",
-                "valor": 10,
-                "texto": "10"
-              },
+              "repeticiones": { "tipo": "numero", "valor": 10, "texto": "10" },
               "descanso": 60,
-              "descripcion": "PREPARACIÓN: pon el respaldo a 45-60° y comprueba el pasador. Siéntate con la espalda y la cabeza apoyadas y los pies en el suelo. Deja colgar los brazos rectos hacia el suelo, un poco por detrás del cuerpo, con las palmas mirando al frente. MOVIMIENTO: dobla los codos para subir las mancuernas hacia los hombros sin mover los codos hacia delante: se quedan apuntando al suelo. Arriba, aprieta el bíceps 1 s y baja despacio contando 3 s hasta estirar el brazo del todo. RESPIRACIÓN: suelta el aire al subir y cógelo al bajar. ERRORES A EVITAR: separar la espalda o los hombros del respaldo, adelantar los codos y no estirar el brazo abajo. El estiramiento inicial es la gracia del ejercicio. Si con 8.5 kg no llegas a 10 repeticiones bien hechas, empieza con menos peso.",
-              "video": "https://www.youtube.com/results?search_query=incline+dumbbell+curl"
+              "descripcion": "PREPARACIÓN: de pie, con los pies a la anchura de la cadera y una mancuerna en cada mano a los lados, con las palmas mirando al frente. Codos pegados a los costados. MOVIMIENTO: dobla un codo y sube la mancuerna hacia el hombro, girando la palma hacia ti mientras subes. Aprieta el bíceps arriba, baja en 3 s hasta estirar el brazo y repite con el otro. RESPIRACIÓN: suelta el aire al subir y cógelo al bajar. ERRORES A EVITAR: balancear el cuerpo, adelantar los codos y bajar de golpe. Si necesitas balancearte, baja el peso.",
+              "video": "https://www.youtube.com/results?search_query=alternating+dumbbell+curl"
             },
             {
               "id": "jueves-biceps-curl-martillo",
               "ejercicio": "Curl martillo",
-              "peso": "8.5 kg",
+              "peso": "9.75 kg",
               "series": 3,
-              "repeticiones": {
-                "tipo": "numero",
-                "valor": 12,
-                "texto": "12"
-              },
+              "repeticiones": { "tipo": "numero", "valor": 12, "texto": "12" },
               "descanso": 60,
               "descripcion": "PREPARACIÓN: de pie (o sentado en el banco con el respaldo vertical), con una mancuerna en cada mano y los brazos a los lados. Las palmas miran hacia el cuerpo, como si sujetaras un martillo. Codos pegados a los costados. MOVIMIENTO: dobla los codos para subir las mancuernas hacia los hombros sin cambiar la posición de la mano. Solo se mueve el antebrazo; los codos se quedan quietos junto al cuerpo. Baja despacio contando 3 s hasta estirar el brazo del todo. Puedes subir los dos brazos a la vez o alternar. RESPIRACIÓN: suelta el aire al subir y cógelo al bajar. ERRORES A EVITAR: balancear el cuerpo o echarte hacia atrás para subir el peso y adelantar los codos. Si necesitas balancearte, baja peso.",
               "video": "https://www.youtube.com/results?search_query=hammer+curl"
-            }
-          ]
-        },
-        {
-          "grupoMuscular": "Antebrazo",
-          "ejercicios": [
-            {
-              "id": "jueves-antebrazo-farmers-walk",
-              "ejercicio": "Farmer's Walk",
-              "peso": "12 kg",
-              "series": 3,
-              "repeticiones": {
-                "tipo": "tiempo",
-                "valor": 60,
-                "unidad": "s",
-                "texto": "60 s"
-              },
-              "descanso": 60,
-              "descripcion": "PREPARACIÓN: pon las mancuernas en el suelo a tus lados. Agáchate doblando rodillas y cadera, con la espalda recta, como en una sentadilla, cógelas y levántate. No las subas redondeando la espalda. Ponte erguido: hombros hacia atrás y abajo, abdomen firme y mirada al frente. MOVIMIENTO: camina con pasos cortos y controlados durante 60 s, dando la vuelta cuando llegues al final del espacio. Aprieta las mancuernas con toda la fuerza que puedas durante todo el tiempo. RESPIRACIÓN: respira de forma continua y tranquila, sin aguantar el aire. ERRORES A EVITAR: inclinarte hacia un lado, dejar caer los hombros hacia delante y encogerlos hacia las orejas. AL TERMINAR: deja las mancuernas en el suelo agachándote igual que al cogerlas. Si se te abren las manos antes de 60 s, descansa unos segundos y continúa.",
-              "video": "https://www.youtube.com/results?search_query=farmer%27s+walk"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "dia": "Viernes",
-      "grupos": [
-        {
-          "grupoMuscular": "Pecho",
-          "ejercicios": [
-            {
-              "id": "viernes-pecho-press-banco-neutro",
-              "ejercicio": "Press de banca con mancuernas agarre neutro",
-              "peso": "12 kg",
-              "series": 3,
-              "repeticiones": {
-                "tipo": "numero",
-                "valor": 10,
-                "texto": "10"
-              },
-              "descanso": 90,
-              "descripcion": "PREPARACIÓN: pon el banco en plano (0°). Siéntate con las mancuernas apoyadas de pie sobre los muslos y túmbate llevándolas contra el pecho. Pies en el suelo, glúteos y espalda apoyados y omóplatos juntos. Pon las palmas mirándose entre sí (agarre neutro), una posición más cómoda para el hombro. MOVIMIENTO: con los brazos estirados sobre el pecho, baja despacio (2-3 s) doblando los codos, que van pegados al cuerpo, hasta que las mancuernas queden a los lados del pecho. Empuja hacia arriba hasta estirar los brazos sin bloquear los codos. RESPIRACIÓN: coge aire al bajar y suéltalo al empujar. ERRORES A EVITAR: abrir los codos hacia los lados, despegar los glúteos del banco y doblar las muñecas. AL TERMINAR: lleva las mancuernas al pecho y siéntate balanceándolas sobre los muslos.",
-              "video": "https://www.youtube.com/results?search_query=neutral+grip+dumbbell+bench+press"
             },
             {
-              "id": "viernes-pecho-flexiones-pies-elevados",
-              "ejercicio": "Flexiones con pies elevados en el banco",
-              "peso": "Peso corporal",
+              "id": "jueves-biceps-curl-concentrado",
+              "ejercicio": "Curl concentrado",
+              "peso": "9.75 kg",
               "series": 3,
-              "repeticiones": {
-                "tipo": "numero",
-                "valor": 12,
-                "texto": "12"
-              },
+              "repeticiones": { "tipo": "numero", "valor": 12, "texto": "12 por brazo" },
               "descanso": 60,
-              "descripcion": "PREPARACIÓN: pon el banco en plano. Apoya las manos en el suelo, un poco más separadas que los hombros, y sube los pies al banco. El cuerpo debe formar una línea recta de la cabeza a los talones: aprieta el culo y el abdomen. MOVIMIENTO: dobla los codos para bajar el pecho hacia el suelo, con los codos en diagonal (unos 45° del cuerpo, como una flecha, no en T). Baja hasta que el pecho casi toque el suelo y empuja hasta estirar los brazos. RESPIRACIÓN: coge aire al bajar y suéltalo al subir. ERRORES A EVITAR: dejar caer la cadera (la espalda se arquea), subir el culo y bajar solo la cabeza. Si no llegas a 12 con buena técnica, haz las flexiones con los pies en el suelo o incluso con las rodillas apoyadas.",
-              "video": "https://www.youtube.com/results?search_query=feet+elevated+push+up"
-            }
-          ]
-        },
-        {
-          "grupoMuscular": "Tríceps",
-          "ejercicios": [
-            {
-              "id": "viernes-triceps-skull-crusher-banco",
-              "ejercicio": "Skull crusher en banco con mancuernas",
-              "peso": "8.5 kg",
-              "series": 3,
-              "repeticiones": {
-                "tipo": "numero",
-                "valor": 10,
-                "texto": "10"
-              },
-              "descanso": 60,
-              "descripcion": "PREPARACIÓN: túmbate en el banco con una mancuerna en cada mano, los brazos estirados hacia arriba y las palmas mirándose. Los pies bien apoyados en el suelo. MOVIMIENTO: dobla solo los codos para bajar las mancuernas hacia los lados de la cabeza, con los codos apuntando al techo y quietos. Cuando notes el tríceps estirado, estira los brazos para volver arriba. RESPIRACIÓN: coge aire al bajar y suéltalo al subir. ERRORES A EVITAR: abrir los codos hacia los lados, mover los hombros y bajar con prisa. Baja de forma controlada y deja las mancuernas junto a la cabeza, nunca sobre la cara.",
-              "video": "https://www.youtube.com/results?search_query=dumbbell+skull+crusher"
-            }
-          ]
-        },
-        {
-          "grupoMuscular": "Piernas",
-          "ejercicios": [
-            {
-              "id": "viernes-piernas-step-up",
-              "ejercicio": "Subidas al banco (step-up)",
-              "peso": "12 kg",
-              "series": 3,
-              "repeticiones": {
-                "tipo": "numero",
-                "valor": 10,
-                "texto": "10 por pierna"
-              },
-              "descanso": 90,
-              "descripcion": "PREPARACIÓN: pon el banco en plano, contra la pared si puedes, y comprueba que no se mueve. Colócate de frente con una mancuerna en cada mano y los brazos colgando. Pisa en el centro del respaldo (nunca sobre la unión entre asiento y respaldo ni en un extremo, porque el banco podría bascular). Si el banco te resulta muy alto, hazlo al principio sin peso. MOVIMIENTO: apoya todo el pie de una pierna en el banco. Empuja con el talón de esa pierna para subir hasta quedarte de pie estirando la cadera. La pierna de abajo solo acompaña: no te impulses con ella. Baja despacio contando 3 s, con la misma pierna apoyada en el banco. Haz todas las repeticiones con una pierna y cambia. RESPIRACIÓN: suelta el aire al subir y cógelo al bajar. ERRORES A EVITAR: que la rodilla se vaya hacia dentro, inclinarte mucho hacia delante y dejarte caer al bajar.",
-              "video": "https://www.youtube.com/results?search_query=dumbbell+step+up"
-            },
-            {
-              "id": "viernes-piernas-peso-muerto-rumano",
-              "ejercicio": "Peso muerto rumano",
-              "peso": "12 kg",
-              "series": 3,
-              "repeticiones": {
-                "tipo": "numero",
-                "valor": 12,
-                "texto": "12"
-              },
-              "descanso": 90,
-              "descripcion": "PREPARACIÓN: de pie, pies a la anchura de la cadera, con una mancuerna en cada mano delante de los muslos y las palmas hacia ti. Rodillas un poco dobladas (y así se quedan todo el ejercicio), espalda recta y hombros hacia atrás. MOVIMIENTO: empuja la cadera hacia atrás como si quisieras cerrar una puerta con el culo. El torso se inclina hacia delante solo porque la cadera va atrás, con la espalda recta. Las mancuernas bajan rozando las piernas. Baja despacio (3 s) hasta notar tirantez en la parte de atrás de los muslos (femoral), normalmente a media espinilla o justo por debajo de las rodillas. Sube empujando la cadera hacia delante y aprieta el culo arriba. RESPIRACIÓN: coge aire y aprieta el abdomen antes de bajar; suéltalo al llegar arriba. ERRORES A EVITAR: redondear la espalda, doblar mucho las rodillas (se convierte en una sentadilla) y alejar las mancuernas de las piernas.",
-              "video": "https://www.youtube.com/results?search_query=dumbbell+romanian+deadlift"
-            }
-          ]
-        },
-        {
-          "grupoMuscular": "Espalda",
-          "ejercicios": [
-            {
-              "id": "viernes-espalda-remo-pecho-apoyado",
-              "ejercicio": "Remo con pecho apoyado en banco inclinado",
-              "peso": "12 kg",
-              "series": 3,
-              "repeticiones": {
-                "tipo": "numero",
-                "valor": 10,
-                "texto": "10"
-              },
-              "descanso": 90,
-              "descripcion": "PREPARACIÓN: pon el respaldo a 30-45° y comprueba el pasador. Túmbate boca abajo con el pecho y la tripa apoyados en el respaldo y la cabeza asomando por encima. Pies firmes en el suelo. Deja colgar una mancuerna en cada mano debajo de los hombros, con los brazos estirados y las palmas mirándose. MOVIMIENTO: sube los codos hacia atrás y hacia la cadera, pegados al cuerpo, juntando las paletas de la espalda. Aguanta 1 s arriba y baja en 2 s hasta estirar los brazos. El pecho no se despega del banco. RESPIRACIÓN: suelta el aire al subir y cógelo al bajar. ERRORES A EVITAR: levantar el pecho del banco para ayudarte, encoger los hombros y abrir los codos en cruz. Al estar apoyado, la zona lumbar no trabaja: todo el esfuerzo va a la espalda.",
-              "video": "https://www.youtube.com/results?search_query=chest+supported+dumbbell+row+incline+bench"
+              "descripcion": "PREPARACIÓN: siéntate en una silla firme con las piernas separadas. Coge una mancuerna con una mano, apoya el codo en la parte interna del muslo del mismo lado y deja el brazo colgando con la palma hacia dentro. Apoya la otra mano en el otro muslo. MOVIMIENTO: sube la mancuerna hacia el hombro girando la palma hacia arriba, aprieta el bíceps 1 s y baja en 3 s hasta estirar del todo el brazo. Haz todas las repeticiones de un brazo y cambia. RESPIRACIÓN: suelta el aire al subir y cógelo al bajar. ERRORES A EVITAR: despegar el codo del muslo, balancear el torso y soltar la mancuerna de golpe al bajar.",
+              "video": "https://www.youtube.com/results?search_query=concentration+curl"
             }
           ]
         },
@@ -595,47 +484,97 @@
           "grupoMuscular": "Core",
           "ejercicios": [
             {
-              "id": "viernes-core-plancha-retroversion",
-              "ejercicio": "Plancha con retroversión pélvica",
+              "id": "jueves-core-dead-bug",
+              "ejercicio": "Dead bug",
               "peso": "Peso corporal",
               "series": 3,
-              "repeticiones": {
-                "tipo": "tiempo",
-                "valor": 40,
-                "unidad": "s",
-                "texto": "40 s"
-              },
+              "repeticiones": { "tipo": "numero", "valor": 10, "texto": "10 por lado" },
               "descanso": 45,
-              "descripcion": "PREPARACIÓN: apoya los antebrazos en la esterilla con los codos justo debajo de los hombros, y estira las piernas apoyando las puntas de los pies. El cuerpo forma una línea recta de la cabeza a los talones. MOVIMIENTO: aprieta el culo con fuerza y mete la pelvis como si quisieras acercar el ombligo a las costillas (retroversión): notarás que la zona lumbar se aplana y el abdomen trabaja muchísimo más. Mantén esa tensión 40 s. RESPIRACIÓN: respira de forma corta y continua sin soltar la tensión del abdomen. ERRORES A EVITAR: dejar caer la cadera hacia el suelo, subir el culo en pico y mirar hacia delante (mira al suelo, entre las manos). Es más dura que una plancha normal: si pierdes la posición antes de 40 s, para, descansa y termina el tiempo en otra tanda. Para empezar, puedes apoyar las rodillas.",
-              "video": "https://www.youtube.com/results?search_query=posterior+pelvic+tilt+plank"
+              "descripcion": "PREPARACIÓN: túmbate boca arriba con los brazos estirados hacia el techo y las caderas y rodillas dobladas a 90°, con las piernas en el aire como si estuvieran sobre una mesa. Pega la zona lumbar al suelo apretando el abdomen. MOVIMIENTO: baja a la vez un brazo y la pierna contraria hacia el suelo, sin llegar a tocarlo, manteniendo la zona lumbar pegada. Vuelve al centro y cambia de lado. Cada lado cuenta como una repetición. RESPIRACIÓN: suelta el aire al bajar y cógelo al volver. ERRORES A EVITAR: arquear la espalda (si pasa, reduce el recorrido), ir rápido y aguantar la respiración.",
+              "video": "https://www.youtube.com/results?search_query=dead+bug+exercise"
             },
             {
-              "id": "viernes-core-crunch-mancuerna",
-              "ejercicio": "Crunch con mancuerna",
-              "peso": "2.5 kg",
+              "id": "jueves-core-bird-dog",
+              "ejercicio": "Bird dog",
+              "peso": "Peso corporal",
               "series": 3,
-              "repeticiones": {
-                "tipo": "numero",
-                "valor": 15,
-                "texto": "15"
-              },
+              "repeticiones": { "tipo": "numero", "valor": 10, "texto": "10 por lado" },
               "descanso": 45,
-              "descripcion": "PREPARACIÓN: túmbate boca arriba en la esterilla con las rodillas dobladas y los pies apoyados. Sujeta la mancuerna de 2.5 kg contra el pecho con las dos manos cruzadas. Deja un espacio del tamaño de un puño entre la barbilla y el pecho. MOVIMIENTO: enrolla la parte alta del cuerpo hacia arriba, como si quisieras acercar las costillas a la cadera, hasta despegar los omóplatos del suelo. No hace falta sentarse del todo: el recorrido es corto. Aguanta 1 s apretando el abdomen y baja despacio. RESPIRACIÓN: suelta el aire al subir (te ayuda a contraer el abdomen) y cógelo al bajar. ERRORES A EVITAR: tirar con el cuello, subir con impulso y despegar la zona lumbar del suelo. Si te molesta el cuello, empieza sin mancuerna y con las manos tocando las sienes.",
-              "video": "https://www.youtube.com/results?search_query=weighted+crunch"
+              "descripcion": "PREPARACIÓN: ponte a cuatro apoyos, con las manos debajo de los hombros y las rodillas debajo de la cadera. Mantén la espalda neutra y la mirada al suelo. Aprieta el abdomen. MOVIMIENTO: estira a la vez un brazo hacia delante y la pierna contraria hacia atrás, hasta formar una línea con el torso. Aguanta 2 s sin girar la cadera y vuelve despacio. Cambia de lado. Imagina que llevas un vaso de agua en la espalda y no puede caerse. RESPIRACIÓN: suelta el aire al estirar y cógelo al volver. ERRORES A EVITAR: arquear la zona lumbar, abrir la cadera hacia un lado y hacer el movimiento rápido.",
+              "video": "https://www.youtube.com/results?search_query=bird+dog+exercise"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "dia": "Viernes",
+      "descansoEntreEjercicios": 60,
+      "calentamientoMinutos": 5,
+      "calentamiento": [
+        {
+          "id": "viernes-calentamiento-marcha",
+          "ejercicio": "Marcha en el sitio",
+          "repeticiones": { "tipo": "tiempo", "valor": 120, "unidad": "s", "texto": "2 min" },
+          "descripcion": "Eleva las rodillas a ritmo suave para subir la temperatura corporal.",
+          "video": "https://www.youtube.com/results?search_query=march+in+place+warm+up"
+        },
+        {
+          "id": "viernes-calentamiento-balanceo-piernas",
+          "ejercicio": "Balanceo de piernas",
+          "repeticiones": { "tipo": "numero", "valor": 10, "texto": "10 por pierna" },
+          "descripcion": "Apóyate en una pared y balancea la pierna adelante y atrás con control.",
+          "video": "https://www.youtube.com/results?search_query=leg+swings+warm+up"
+        },
+        {
+          "id": "viernes-calentamiento-sentadilla-peso-corporal",
+          "ejercicio": "Sentadilla con peso corporal",
+          "repeticiones": { "tipo": "numero", "valor": 10, "texto": "10" },
+          "descripcion": "Baja despacio en 3 segundos y sube sin bloquear las rodillas.",
+          "video": "https://www.youtube.com/results?search_query=bodyweight+squat"
+        },
+        {
+          "id": "viernes-calentamiento-aproximacion",
+          "ejercicio": "Serie de aproximación: sentadilla goblet",
+          "peso": "6 kg",
+          "repeticiones": { "tipo": "numero", "valor": 10, "texto": "10" },
+          "descripcion": "Una serie ligera del primer ejercicio con movimiento controlado, para preparar el patrón antes de la carga de trabajo.",
+          "video": "https://www.youtube.com/results?search_query=warm+up+set+explained"
+        }
+      ],
+      "grupos": [
+        {
+          "grupoMuscular": "Piernas (sesión corta)",
+          "ejercicios": [
+            {
+              "id": "viernes-piernas-sentadilla-goblet",
+              "ejercicio": "Sentadilla Goblet",
+              "peso": "14 kg",
+              "series": 3,
+              "repeticiones": { "tipo": "numero", "valor": 12, "texto": "12" },
+              "descanso": 75,
+              "descripcion": "PREPARACIÓN: coge la mancuerna en vertical sujetando el disco superior con las dos manos, como si fuera una copa, y pégala al pecho con los codos apuntando al suelo. Pies un poco más anchos que los hombros y puntas ligeramente abiertas hacia fuera. MOVIMIENTO: baja despacio (3 s) como si fueras a sentarte en una silla que está detrás de ti: la cadera va hacia atrás y abajo a la vez. Mantén el pecho alto y los talones apoyados. Las rodillas deben ir en la misma dirección que las puntas de los pies. Baja hasta que los muslos queden paralelos al suelo (o lo que puedas con la espalda recta) y sube empujando el suelo con todo el pie. RESPIRACIÓN: coge aire arriba antes de bajar y suéltalo al subir. ERRORES A EVITAR: que las rodillas se junten hacia dentro, levantar los talones y redondear la espalda. Si te cuesta bajar, pon los talones sobre un disco.",
+              "video": "https://www.youtube.com/results?search_query=goblet+squat"
             },
             {
-              "id": "viernes-core-russian-twist",
-              "ejercicio": "Russian Twist",
-              "peso": "2.5 kg",
+              "id": "viernes-piernas-peso-muerto-rumano",
+              "ejercicio": "Peso muerto rumano",
+              "peso": "14 kg",
               "series": 3,
-              "repeticiones": {
-                "tipo": "numero",
-                "valor": 20,
-                "texto": "20"
-              },
-              "descanso": 45,
-              "descripcion": "PREPARACIÓN: siéntate en la esterilla con las rodillas dobladas y los talones apoyados. Inclina el torso hacia atrás hasta unos 45° con la espalda recta, sin encorvarte. Sujeta la mancuerna de 2.5 kg con las dos manos delante del pecho. Para empezar, deja los pies en el suelo; cuando lo domines, levántalos un poco. MOVIMIENTO: gira el torso hacia un lado llevando la mancuerna junto a la cadera, vuelve al centro y gira hacia el otro lado. Sigue la mancuerna con la mirada: así giras desde el tronco y no solo con los brazos. Cada giro a un lado cuenta como una repetición (20 en total). RESPIRACIÓN: suelta el aire en cada giro. ERRORES A EVITAR: redondear la espalda, mover solo los brazos y hacerlo rápido y a lo loco. Si te molesta la zona lumbar, inclínate menos hacia atrás.",
-              "video": "https://www.youtube.com/results?search_query=russian+twist"
+              "repeticiones": { "tipo": "numero", "valor": 12, "texto": "12" },
+              "descanso": 75,
+              "descripcion": "PREPARACIÓN: de pie, pies a la anchura de la cadera, con una mancuerna en cada mano delante de los muslos y las palmas hacia ti. Rodillas un poco dobladas (y así se quedan todo el ejercicio), espalda recta y hombros hacia atrás. MOVIMIENTO: empuja la cadera hacia atrás como si quisieras cerrar una puerta con el culo. El torso se inclina hacia delante solo porque la cadera va atrás, con la espalda recta. Las mancuernas bajan rozando las piernas. Baja despacio (3 s) hasta notar tirantez en la parte de atrás de los muslos (femoral), normalmente a media espinilla o justo por debajo de las rodillas. Sube empujando la cadera hacia delante y aprieta el culo arriba. RESPIRACIÓN: coge aire y aprieta el abdomen antes de bajar; suéltalo al llegar arriba. ERRORES A EVITAR: redondear la espalda, doblar mucho las rodillas (se convierte en una sentadilla) y alejar las mancuernas de las piernas.",
+              "video": "https://www.youtube.com/results?search_query=dumbbell+romanian+deadlift"
+            },
+            {
+              "id": "viernes-piernas-curl-isquios-toalla",
+              "ejercicio": "Curl de isquios con toalla",
+              "peso": "Peso corporal",
+              "series": 3,
+              "repeticiones": { "tipo": "numero", "valor": 10, "texto": "10" },
+              "descanso": 60,
+              "descripcion": "PREPARACIÓN: túmbate boca arriba en un suelo liso (parquet o baldosa, no moqueta) con los talones sobre una toalla pequeña, las rodillas dobladas y los brazos a los lados. MOVIMIENTO: sube la cadera apretando los glúteos, hasta formar una línea recta entre hombros y rodillas. Desliza los talones hacia fuera, estirando las piernas todo lo que controles (3 s), y vuelve doblando las rodillas, arrastrando los talones hacia los glúteos, sin dejar caer la cadera. RESPIRACIÓN: coge aire antes de estirar y suéltalo al volver. ERRORES A EVITAR: dejar caer la cadera, arquear la zona lumbar e ir rápido. Si el talón resbala demasiado, usa un suelo menos liso; si no desliza, humedece un poco la toalla.",
+              "video": "https://www.youtube.com/results?search_query=hamstring+slider+curl+towel"
             }
           ]
         }
@@ -643,37 +582,109 @@
     },
     {
       "dia": "Sábado",
+      "descansoEntreEjercicios": 90,
+      "calentamientoMinutos": 8,
+      "calentamiento": [
+        {
+          "id": "sabado-calentamiento-marcha",
+          "ejercicio": "Marcha en el sitio",
+          "repeticiones": { "tipo": "tiempo", "valor": 120, "unidad": "s", "texto": "2 min" },
+          "descripcion": "Eleva las rodillas a ritmo suave para subir la temperatura corporal.",
+          "video": "https://www.youtube.com/results?search_query=march+in+place+warm+up"
+        },
+        {
+          "id": "sabado-calentamiento-circulos-brazos",
+          "ejercicio": "Círculos de brazos",
+          "repeticiones": { "tipo": "numero", "valor": 20, "texto": "10 adelante y 10 atrás" },
+          "descripcion": "Brazos extendidos a los lados, círculos amplios que van creciendo poco a poco.",
+          "video": "https://www.youtube.com/results?search_query=arm+circles+warm+up"
+        },
+        {
+          "id": "sabado-calentamiento-gato-camello",
+          "ejercicio": "Gato-camello",
+          "repeticiones": { "tipo": "numero", "valor": 8, "texto": "8" },
+          "descripcion": "En cuadrupedia, redondea y arquea la espalda despacio para movilizar la columna.",
+          "video": "https://www.youtube.com/results?search_query=cat+cow+stretch"
+        },
+        {
+          "id": "sabado-calentamiento-retraccion-escapular",
+          "ejercicio": "Retracciones de escápulas",
+          "repeticiones": { "tipo": "numero", "valor": 12, "texto": "12" },
+          "descripcion": "De pie con los brazos al frente, junta las escápulas y vuelve lentamente.",
+          "video": "https://www.youtube.com/results?search_query=scapular+retraction+exercise"
+        },
+        {
+          "id": "sabado-calentamiento-aproximacion",
+          "ejercicio": "Serie de aproximación: press en el suelo",
+          "peso": "6 kg",
+          "repeticiones": { "tipo": "numero", "valor": 10, "texto": "10" },
+          "descripcion": "Una serie ligera del primer ejercicio con movimiento controlado, para preparar el patrón antes de la carga de trabajo.",
+          "video": "https://www.youtube.com/results?search_query=warm+up+set+explained"
+        }
+      ],
       "grupos": [
+        {
+          "grupoMuscular": "Pecho",
+          "ejercicios": [
+            {
+              "id": "sabado-pecho-floor-press",
+              "ejercicio": "Press de pecho en el suelo",
+              "peso": "13.5 kg",
+              "series": 3,
+              "repeticiones": { "tipo": "numero", "valor": 14, "texto": "12-15" },
+              "descanso": 90,
+              "descripcion": "PREPARACIÓN: túmbate boca arriba en el suelo con las rodillas dobladas y los pies apoyados. Coge una mancuerna en cada mano y llévalas al pecho con las palmas mirando hacia los pies y los codos a unos 45° del cuerpo (ni pegados ni abiertos en cruz). MOVIMIENTO: empuja las mancuernas hacia el techo hasta estirar los brazos sin bloquear los codos. Baja despacio (2-3 s) hasta que la parte de atrás de los brazos toque el suelo, haz una pausa de 1 s sin relajar los brazos y vuelve a subir. RESPIRACIÓN: coge aire al bajar y suéltalo al empujar. ERRORES A EVITAR: abrir los codos en cruz, dejar caer los brazos contra el suelo y arquear la zona lumbar. Si no puedes controlar la bajada, el peso es demasiado.",
+              "video": "https://www.youtube.com/results?search_query=dumbbell+floor+press"
+            },
+            {
+              "id": "sabado-pecho-aperturas",
+              "ejercicio": "Aperturas (Fly)",
+              "peso": "9.75 kg",
+              "series": 3,
+              "repeticiones": { "tipo": "numero", "valor": 15, "texto": "15" },
+              "descanso": 60,
+              "descripcion": "PREPARACIÓN: túmbate boca arriba en el suelo con las rodillas dobladas y los pies apoyados. Sube las mancuernas sobre el pecho con los brazos casi estirados, las palmas mirándose y los codos un poco doblados (unos 15°). MOVIMIENTO: abre los brazos hacia los lados dibujando un arco, despacio (3 s), hasta que los codos toquen el suelo. Vuelve por el mismo arco apretando el pecho, como si abrazaras un árbol grande. RESPIRACIÓN: coge aire al abrir y suéltalo al cerrar. ERRORES A EVITAR: doblar y estirar los codos durante el movimiento (eso lo convierte en un press), dejar caer los brazos contra el suelo y usar demasiado peso. Si notas molestia delante del hombro, reduce el recorrido.",
+              "video": "https://www.youtube.com/results?search_query=dumbbell+fly"
+            }
+          ]
+        },
         {
           "grupoMuscular": "Hombros",
           "ejercicios": [
             {
               "id": "sabado-hombros-press-militar",
-              "ejercicio": "Press militar sentado en banco",
-              "peso": "8.5 kg",
+              "ejercicio": "Press militar",
+              "peso": "9.75 kg",
               "series": 3,
-              "repeticiones": {
-                "tipo": "numero",
-                "valor": 12,
-                "texto": "12"
-              },
+              "repeticiones": { "tipo": "numero", "valor": 12, "texto": "12" },
               "descanso": 90,
-              "descripcion": "PREPARACIÓN: sube el respaldo casi vertical (80-90°) y comprueba que el pasador está encajado. Siéntate con la espalda y la cabeza apoyadas y los pies firmes en el suelo, algo separados. Lleva las mancuernas a la altura de los hombros con las palmas mirando al frente y los antebrazos verticales (los codos quedan debajo de las muñecas). MOVIMIENTO: aprieta el abdomen como si fueran a darte un golpe en la tripa y empuja las mancuernas hacia arriba hasta estirar los brazos, acercándolas un poco entre sí arriba sin chocarlas. Baja despacio (2 s) hasta que queden a la altura de las orejas. RESPIRACIÓN: suelta el aire al empujar y cógelo al bajar. ERRORES A EVITAR: separar la zona lumbar del respaldo arqueando la espalda, encoger los hombros hacia las orejas y bajar las mancuernas de golpe. Si arqueas la espalda para subirlas, el peso es demasiado.",
+              "descripcion": "PREPARACIÓN: de pie, con los pies a la anchura de la cadera y las rodillas ligeramente flojas (o sentado en la silla reclinable con el respaldo casi vertical y bien bloqueado). Lleva las mancuernas a la altura de los hombros con las palmas al frente y los antebrazos verticales, de modo que los codos queden debajo de las muñecas. MOVIMIENTO: aprieta el abdomen como si fueran a darte un golpe en la tripa y empuja las mancuernas hacia arriba hasta estirar los brazos, acercándolas un poco entre sí arriba sin chocarlas. Baja despacio (2 s) hasta que queden a la altura de las orejas. RESPIRACIÓN: suelta el aire al empujar y cógelo al bajar. ERRORES A EVITAR: arquear la zona lumbar, encoger los hombros hacia las orejas y bajar las mancuernas de golpe. Si arqueas la espalda para subirlas, el peso es demasiado.",
               "video": "https://www.youtube.com/results?search_query=dumbbell+shoulder+press"
             },
             {
               "id": "sabado-hombros-elevaciones-laterales",
               "ejercicio": "Elevaciones laterales",
-              "peso": "2.5 kg",
+              "peso": "3.75 kg",
               "series": 4,
-              "repeticiones": {
-                "tipo": "numero",
-                "valor": 20,
-                "texto": "20"
-              },
+              "repeticiones": { "tipo": "numero", "valor": 18, "texto": "15-20" },
               "descanso": 45,
-              "descripcion": "PREPARACIÓN: de pie, pies a la anchura de la cadera y rodillas ligeramente flojas. Inclina un poco el torso hacia delante. Mancuernas a los lados de los muslos, palmas mirando hacia el cuerpo y codos un poco doblados (unos 15°). MOVIMIENTO: sube los brazos hacia los lados, no hacia delante, hasta que lleguen a la altura de los hombros, formando una T. Imagina que viertes agua de una jarra: el meñique queda un poco más alto que el pulgar. Baja despacio contando 3 s. RESPIRACIÓN: suelta el aire al subir y cógelo al bajar. ERRORES A EVITAR: balancear el cuerpo para lanzar las mancuernas, subir por encima de los hombros y encoger los hombros hacia las orejas (piensa en alejar los hombros de las orejas). Es un ejercicio de peso ligero: con 2.5 kg es normal que queme. OPCIONAL: pisa el centro de una banda elástica y sujeta un extremo junto con cada mancuerna para añadir tensión arriba.",
+              "descripcion": "PREPARACIÓN: de pie, pies a la anchura de la cadera y rodillas ligeramente flojas. Inclina un poco el torso hacia delante. Mancuernas a los lados de los muslos, palmas mirando hacia el cuerpo y codos un poco doblados (unos 15°). MOVIMIENTO: sube los brazos hacia los lados, no hacia delante, hasta que lleguen a la altura de los hombros, formando una T. Imagina que viertes agua de una jarra: el meñique queda un poco más alto que el pulgar. Baja despacio contando 3 s. RESPIRACIÓN: suelta el aire al subir y cógelo al bajar. ERRORES A EVITAR: balancear el cuerpo para lanzar las mancuernas, subir por encima de los hombros y encoger los hombros hacia las orejas (piensa en alejar los hombros de las orejas). Es un ejercicio de peso ligero: con poco peso es normal que queme. OPCIONAL: pisa el centro de una banda elástica y sujeta un extremo junto con cada mancuerna para añadir tensión arriba.",
               "video": "https://www.youtube.com/results?search_query=dumbbell+lateral+raise"
+            }
+          ]
+        },
+        {
+          "grupoMuscular": "Espalda",
+          "ejercicios": [
+            {
+              "id": "sabado-espalda-remo-mancuerna",
+              "ejercicio": "Remo con mancuerna",
+              "peso": "13.5 kg",
+              "series": 3,
+              "repeticiones": { "tipo": "numero", "valor": 10, "texto": "10" },
+              "descanso": 90,
+              "descripcion": "PREPARACIÓN: coloca una silla firme o el sofá a tu lado (sin ruedas). Apoya en él la rodilla y la mano del mismo lado (por ejemplo, rodilla y mano izquierdas), con la mano justo debajo del hombro. La otra pierna queda en el suelo, algo separada, para tener estabilidad. La espalda debe quedar recta y casi paralela al suelo, como una mesa. Coge la mancuerna con la mano libre y deja el brazo colgando. MOVIMIENTO: sube el codo hacia arriba y hacia atrás, en dirección a la cadera, pegado al cuerpo, como si arrancaras un cortacésped. Al final, junta la paleta del hombro hacia la columna, aguanta 1 s y baja en 2 s hasta estirar el brazo. Haz todas las repeticiones de un lado y cambia. RESPIRACIÓN: suelta el aire al subir y cógelo al bajar. ERRORES A EVITAR: girar el torso para subir el peso, redondear la espalda y tirar con el bíceps en lugar de pensar en llevar el codo atrás.",
+              "video": "https://www.youtube.com/results?search_query=one+arm+dumbbell+row"
             }
           ]
         },
@@ -682,36 +693,13 @@
           "ejercicios": [
             {
               "id": "sabado-hombro-posterior-pajaros",
-              "ejercicio": "Pájaros con pecho apoyado en banco inclinado",
-              "peso": "2.5 kg",
+              "ejercicio": "Pájaros",
+              "peso": "3.75 kg",
               "series": 3,
-              "repeticiones": {
-                "tipo": "numero",
-                "valor": 20,
-                "texto": "20"
-              },
+              "repeticiones": { "tipo": "numero", "valor": 18, "texto": "15-20" },
               "descanso": 45,
-              "descripcion": "PREPARACIÓN: pon el respaldo a 30-45° y comprueba el pasador. Túmbate boca abajo con el pecho apoyado en el respaldo y la cabeza asomando por encima. Los pies se quedan en el suelo. Deja colgar las mancuernas debajo de los hombros con las palmas mirándose y los codos un poco doblados. MOVIMIENTO: abre los brazos hacia los lados, como si fueran alas, hasta que lleguen a la altura del cuerpo. Al final, junta las paletas de la espalda. Baja despacio contando 3 s. Los codos mantienen la misma flexión todo el tiempo. RESPIRACIÓN: suelta el aire al abrir y cógelo al bajar. ERRORES A EVITAR: despegar el pecho del banco, encoger los hombros y subir los brazos más allá del cuerpo. Es un músculo pequeño: con peso ligero se trabaja bien.",
-              "video": "https://www.youtube.com/results?search_query=incline+bench+rear+delt+fly"
-            }
-          ]
-        },
-        {
-          "grupoMuscular": "Espalda",
-          "ejercicios": [
-            {
-              "id": "sabado-espalda-remo-banda",
-              "ejercicio": "Remo sentado con banda",
-              "peso": "Banda elástica",
-              "series": 3,
-              "repeticiones": {
-                "tipo": "numero",
-                "valor": 15,
-                "texto": "15"
-              },
-              "descanso": 60,
-              "descripcion": "PREPARACIÓN: siéntate en la esterilla con las piernas estiradas y las rodillas un poco dobladas. Pasa la banda por la planta de los pies y coge un extremo con cada mano, con los brazos estirados y las palmas mirándose. Siéntate erguido, con la espalda recta y el pecho alto. MOVIMIENTO: tira de la banda hacia la tripa llevando los codos hacia atrás, pegados al cuerpo, y junta las paletas de la espalda. Aguanta 1 s y vuelve despacio estirando los brazos. El torso se queda quieto y recto. RESPIRACIÓN: suelta el aire al tirar y cógelo al volver. ERRORES A EVITAR: echarte hacia atrás para tirar con el peso del cuerpo, redondear la espalda al volver y encoger los hombros. Si la banda es muy fácil, cógela más corta.",
-              "video": "https://www.youtube.com/results?search_query=seated+resistance+band+row"
+              "descripcion": "PREPARACIÓN: de pie, con los pies a la anchura de la cadera y las rodillas ligeramente flojas. Inclina el torso hacia delante desde la cadera, con la espalda recta, hasta que quede casi paralela al suelo (si te cuesta, apoya la frente en una mesa baja). Deja colgar las mancuernas debajo de los hombros con las palmas mirándose y los codos un poco doblados. MOVIMIENTO: abre los brazos hacia los lados, como si fueran alas, hasta que lleguen a la altura del torso. Al final junta las paletas de la espalda. Baja despacio contando 3 s. Los codos mantienen la misma flexión todo el tiempo. RESPIRACIÓN: suelta el aire al abrir y cógelo al bajar. ERRORES A EVITAR: balancear el cuerpo para subir las mancuernas, subir los brazos por encima del torso y encoger los hombros. Es un músculo pequeño: con peso ligero se trabaja bien.",
+              "video": "https://www.youtube.com/results?search_query=rear+delt+fly"
             }
           ]
         },
@@ -721,16 +709,11 @@
             {
               "id": "sabado-antebrazo-farmers-walk",
               "ejercicio": "Farmer's Walk",
-              "peso": "12 kg",
+              "peso": "16.5 kg",
               "series": 3,
-              "repeticiones": {
-                "tipo": "tiempo",
-                "valor": 60,
-                "unidad": "s",
-                "texto": "60 s"
-              },
+              "repeticiones": { "tipo": "tiempo", "valor": 52, "unidad": "s", "texto": "45-60 s" },
               "descanso": 60,
-              "descripcion": "PREPARACIÓN: pon las mancuernas en el suelo a tus lados. Agáchate doblando rodillas y cadera, con la espalda recta, como en una sentadilla, cógelas y levántate. No las subas redondeando la espalda. Ponte erguido: hombros hacia atrás y abajo, abdomen firme y mirada al frente. MOVIMIENTO: camina con pasos cortos y controlados durante 60 s, dando la vuelta cuando llegues al final del espacio. Aprieta las mancuernas con toda la fuerza que puedas durante todo el tiempo. RESPIRACIÓN: respira de forma continua y tranquila, sin aguantar el aire. ERRORES A EVITAR: inclinarte hacia un lado, dejar caer los hombros hacia delante y encogerlos hacia las orejas. AL TERMINAR: deja las mancuernas en el suelo agachándote igual que al cogerlas. Si se te abren las manos antes de 60 s, descansa unos segundos y continúa.",
+              "descripcion": "PREPARACIÓN: pon las mancuernas en el suelo a tus lados. Agáchate doblando rodillas y cadera, con la espalda recta, como en una sentadilla, cógelas y levántate. No las subas redondeando la espalda. Ponte erguido: hombros hacia atrás y abajo, abdomen firme y mirada al frente. MOVIMIENTO: camina con pasos cortos y controlados durante 45-60 s, dando la vuelta cuando llegues al final del espacio. Aprieta las mancuernas con toda la fuerza que puedas durante todo el tiempo. RESPIRACIÓN: respira de forma continua y tranquila, sin aguantar el aire. ERRORES A EVITAR: inclinarte hacia un lado, dejar caer los hombros hacia delante y encogerlos hacia las orejas. AL TERMINAR: deja las mancuernas en el suelo agachándote igual que al cogerlas. Si se te abren las manos antes de que termine el tiempo, descansa unos segundos y continúa.",
               "video": "https://www.youtube.com/results?search_query=farmer%27s+walk"
             }
           ]
@@ -739,32 +722,24 @@
           "grupoMuscular": "Core",
           "ejercicios": [
             {
-              "id": "sabado-core-woodchop-banda",
-              "ejercicio": "Woodchop con mancuerna",
-              "peso": "2.5 kg",
-              "series": 3,
-              "repeticiones": {
-                "tipo": "numero",
-                "valor": 12,
-                "texto": "12 por lado"
-              },
-              "descanso": 45,
-              "descripcion": "PREPARACIÓN: de pie, pies a la anchura de los hombros y rodillas un poco dobladas. Sujeta una mancuerna con las dos manos junto a una cadera. MOVIMIENTO: sube la mancuerna en diagonal hacia el hombro contrario, como si cortaras leña con un hacha, girando el tronco y dejando que el pie de atrás pivote sobre la punta. Los brazos van casi rectos. Baja en diagonal controlando el peso. Haz todas las repeticiones de un lado y cambia. RESPIRACIÓN: suelta el aire al subir y cógelo al bajar. ERRORES A EVITAR: mover solo los brazos, doblar los codos y soltar la mancuerna de golpe en la bajada.",
-              "video": "https://www.youtube.com/results?search_query=dumbbell+woodchop"
-            },
-            {
-              "id": "sabado-core-bicicleta",
-              "ejercicio": "Bicicleta lenta",
+              "id": "sabado-core-plancha-inclinada",
+              "ejercicio": "Plancha inclinada (manos elevadas)",
               "peso": "Peso corporal",
               "series": 3,
-              "repeticiones": {
-                "tipo": "numero",
-                "valor": 20,
-                "texto": "20"
-              },
+              "repeticiones": { "tipo": "tiempo", "valor": 30, "unidad": "s", "texto": "30 s" },
               "descanso": 45,
-              "descripcion": "PREPARACIÓN: túmbate boca arriba en la esterilla con las manos detrás de la cabeza, solo tocándola con los dedos, sin entrelazarlos. Pega la zona lumbar al suelo, despega un poco los hombros y sube las piernas con las rodillas dobladas a 90°. MOVIMIENTO: gira el torso para llevar un codo hacia la rodilla contraria mientras estiras la otra pierna hacia delante sin tocar el suelo. Aguanta 1 s y cambia de lado. Hazlo lento, como a cámara lenta. Cada lado cuenta como una repetición (20 en total). RESPIRACIÓN: suelta el aire en cada giro. ERRORES A EVITAR: tirar de la cabeza con las manos, mover solo los codos en lugar de girar el tronco y hacerlo rápido. Si la zona lumbar se despega del suelo, no estires tanto la pierna.",
-              "video": "https://www.youtube.com/results?search_query=bicycle+crunch+slow"
+              "descripcion": "PREPARACIÓN: apoya las manos, a la anchura de los hombros, en una superficie firme y estable que no se mueva (sofá pegado a la pared, un escalón o una silla sin ruedas contra la pared). Camina con los pies hacia atrás hasta formar una línea recta de la cabeza a los talones. MOVIMIENTO: aguanta la posición el tiempo indicado, apretando el abdomen y los glúteos, con las costillas metidas y la cabeza alineada con la columna. RESPIRACIÓN: respira de forma continua, sin aguantar el aire. PROGRESIÓN: cuando aguantes las 3 series con buena técnica, usa un apoyo más bajo, y así hasta llegar a la plancha en el suelo. ERRORES A EVITAR: dejar caer la cadera, subir el culo, aguantar la respiración y mirar al frente forzando el cuello.",
+              "video": "https://www.youtube.com/results?search_query=incline+plank"
+            },
+            {
+              "id": "sabado-core-russian-twist",
+              "ejercicio": "Russian Twist",
+              "peso": "5.5 kg",
+              "series": 3,
+              "repeticiones": { "tipo": "numero", "valor": 20, "texto": "20" },
+              "descanso": 45,
+              "descripcion": "PREPARACIÓN: siéntate en la esterilla con las rodillas dobladas y los talones apoyados. Inclina el torso hacia atrás hasta unos 45° con la espalda recta, sin encorvarte. Sujeta una mancuerna con las dos manos delante del pecho. Para empezar, deja los pies en el suelo; cuando lo domines, levántalos un poco. MOVIMIENTO: gira el torso hacia un lado llevando la mancuerna junto a la cadera, vuelve al centro y gira hacia el otro lado. Sigue la mancuerna con la mirada: así giras desde el tronco y no solo con los brazos. Cada giro a un lado cuenta como una repetición (20 en total). RESPIRACIÓN: suelta el aire en cada giro. ERRORES A EVITAR: redondear la espalda, mover solo los brazos y hacerlo rápido y a lo loco. Si te molesta la zona lumbar, inclínate menos hacia atrás.",
+              "video": "https://www.youtube.com/results?search_query=russian+twist"
             }
           ]
         }
@@ -782,11 +757,7 @@
               "ejercicio": "Caminata o estiramientos",
               "peso": null,
               "series": null,
-              "repeticiones": {
-                "tipo": "libre",
-                "valor": null,
-                "texto": "30 min"
-              },
+              "repeticiones": { "tipo": "libre", "valor": null, "texto": "30 min" },
               "descanso": 0,
               "descripcion": "OPCIÓN 1, CAMINATA: camina 30 min a un ritmo cómodo; deberías poder mantener una conversación sin ahogarte. OPCIÓN 2, ESTIRAMIENTOS: estira suavemente todo el cuerpo (pecho, hombros, espalda, cadera, parte delantera y trasera de los muslos y gemelos). Llega hasta notar una tensión agradable, nunca dolor, y mantén cada estiramiento 30 s respirando con calma. ERRORES A EVITAR: hacer rebotes para llegar más lejos y forzar un estiramiento que duele. El día de recuperación sirve para que los músculos se reparen: no hace falta cansarse.",
               "video": "https://www.youtube.com/results?search_query=full+body+stretch+routine"
