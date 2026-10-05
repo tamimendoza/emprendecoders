@@ -2,6 +2,46 @@
   "dias": [
     {
       "dia": "Lunes",
+      "descansoEntreEjercicios": 90,
+      "calentamientoMinutos": 8,
+      "calentamiento": [
+        {
+          "id": "lunes-calentamiento-marcha",
+          "ejercicio": "Marcha en el sitio",
+          "repeticiones": { "tipo": "tiempo", "valor": 120, "unidad": "s", "texto": "2 min" },
+          "descripcion": "Eleva las rodillas a ritmo suave para subir la temperatura corporal.",
+          "video": "https://www.youtube.com/results?search_query=march+in+place+warm+up"
+        },
+        {
+          "id": "lunes-calentamiento-circulos-brazos",
+          "ejercicio": "Círculos de brazos",
+          "repeticiones": { "tipo": "numero", "valor": 20, "texto": "10 adelante y 10 atrás" },
+          "descripcion": "Brazos extendidos a los lados, círculos amplios que van creciendo poco a poco.",
+          "video": "https://www.youtube.com/results?search_query=arm+circles+warm+up"
+        },
+        {
+          "id": "lunes-calentamiento-gato-camello",
+          "ejercicio": "Gato-camello",
+          "repeticiones": { "tipo": "numero", "valor": 8, "texto": "8" },
+          "descripcion": "En cuadrupedia, redondea y arquea la espalda despacio para movilizar la columna.",
+          "video": "https://www.youtube.com/results?search_query=cat+cow+stretch"
+        },
+        {
+          "id": "lunes-calentamiento-retraccion-escapular",
+          "ejercicio": "Retracciones de escápulas",
+          "repeticiones": { "tipo": "numero", "valor": 12, "texto": "12" },
+          "descripcion": "De pie con los brazos al frente, junta las escápulas y vuelve lentamente.",
+          "video": "https://www.youtube.com/results?search_query=scapular+retraction+exercise"
+        },
+        {
+          "id": "lunes-calentamiento-aproximacion",
+          "ejercicio": "Serie de aproximación: press en el suelo",
+          "peso": "6 kg",
+          "repeticiones": { "tipo": "numero", "valor": 10, "texto": "10" },
+          "descripcion": "Una serie ligera del primer ejercicio con movimiento controlado, para preparar el patrón antes de la carga de trabajo.",
+          "video": "https://www.youtube.com/results?search_query=warm+up+set+explained"
+        }
+      ],
       "grupos": [
         {
           "grupoMuscular": "Pecho",
@@ -9,7 +49,7 @@
             {
               "id": "lunes-pecho-floor-press",
               "ejercicio": "Press de pecho en el suelo (Floor Press)",
-              "peso": "12 kg",
+              "peso": "13.5 kg",
               "series": 4,
               "repeticiones": { "tipo": "numero", "valor": 12, "texto": "12" },
               "descanso": 90,
@@ -19,7 +59,7 @@
             {
               "id": "lunes-pecho-aperturas",
               "ejercicio": "Aperturas (Fly)",
-              "peso": "8.5 kg",
+              "peso": "9.75 kg",
               "series": 3,
               "repeticiones": { "tipo": "numero", "valor": 15, "texto": "15" },
               "descanso": 60,
@@ -35,6 +75,16 @@
               "descanso": 60,
               "descripcion": "Mantén el cuerpo recto y baja hasta que el pecho quede cerca del suelo.",
               "video": "https://www.youtube.com/results?search_query=perfect+push+up"
+            },
+            {
+              "id": "lunes-pecho-press-inclinado",
+              "ejercicio": "Press inclinado con mancuernas",
+              "peso": "12.75 kg",
+              "series": 3,
+              "repeticiones": { "tipo": "numero", "valor": 10, "texto": "10" },
+              "descanso": 90,
+              "descripcion": "Recostado en la silla reclinable (inclinación moderada), empuja las mancuernas hacia arriba y baja con control hasta la altura del pecho.",
+              "video": "https://www.youtube.com/results?search_query=incline+dumbbell+press"
             }
           ]
         },
@@ -44,7 +94,7 @@
             {
               "id": "lunes-hombros-press-militar",
               "ejercicio": "Press militar",
-              "peso": "8.5 kg",
+              "peso": "9.75 kg",
               "series": 4,
               "repeticiones": { "tipo": "numero", "valor": 8, "texto": "8" },
               "descanso": 90,
@@ -54,22 +104,27 @@
             {
               "id": "lunes-hombros-elevaciones-laterales",
               "ejercicio": "Elevaciones laterales",
-              "peso": "2.5 kg",
+              "peso": "3.75 kg",
               "series": 4,
               "repeticiones": { "tipo": "numero", "valor": 15, "texto": "15" },
               "descanso": 45,
               "descripcion": "Eleva los brazos hasta los hombros con ligera flexión de codos.",
               "video": "https://www.youtube.com/results?search_query=dumbbell+lateral+raise"
-            },
+            }
+          ]
+        },
+        {
+          "grupoMuscular": "Hombro posterior",
+          "ejercicios": [
             {
-              "id": "lunes-hombros-elevaciones-frontales",
-              "ejercicio": "Elevaciones frontales",
-              "peso": "2.5 kg",
+              "id": "lunes-hombro-posterior-pajaros",
+              "ejercicio": "Pájaros",
+              "peso": "3.75 kg",
               "series": 3,
-              "repeticiones": { "tipo": "numero", "valor": 12, "texto": "12" },
+              "repeticiones": { "tipo": "numero", "valor": 15, "texto": "15" },
               "descanso": 45,
-              "descripcion": "Levanta las mancuernas al frente hasta la altura de los hombros.",
-              "video": "https://www.youtube.com/results?search_query=dumbbell+front+raise"
+              "descripcion": "Inclina el torso y abre los brazos hacia los lados, llevando los codos hacia atrás.",
+              "video": "https://www.youtube.com/results?search_query=rear+delt+fly"
             }
           ]
         },
@@ -79,12 +134,22 @@
             {
               "id": "lunes-triceps-extension",
               "ejercicio": "Extensión por encima de la cabeza",
-              "peso": "8.5 kg",
+              "peso": "11 kg",
               "series": 3,
               "repeticiones": { "tipo": "numero", "valor": 10, "texto": "10" },
               "descanso": 60,
               "descripcion": "Baja la mancuerna detrás de la cabeza y extiende los codos.",
               "video": "https://www.youtube.com/results?search_query=overhead+dumbbell+triceps+extension"
+            },
+            {
+              "id": "lunes-triceps-press-frances",
+              "ejercicio": "Press francés en el suelo",
+              "peso": "9.75 kg",
+              "series": 3,
+              "repeticiones": { "tipo": "numero", "valor": 12, "texto": "12" },
+              "descanso": 60,
+              "descripcion": "Acostado boca arriba, baja las mancuernas hacia la frente flexionando solo los codos y extiende sin abrirlos.",
+              "video": "https://www.youtube.com/results?search_query=dumbbell+skull+crusher"
             }
           ]
         }
@@ -92,6 +157,53 @@
     },
     {
       "dia": "Martes",
+      "descansoEntreEjercicios": 120,
+      "calentamientoMinutos": 10,
+      "calentamiento": [
+        {
+          "id": "martes-calentamiento-marcha",
+          "ejercicio": "Marcha en el sitio",
+          "repeticiones": { "tipo": "tiempo", "valor": 120, "unidad": "s", "texto": "2 min" },
+          "descripcion": "Eleva las rodillas a ritmo suave para subir la temperatura corporal.",
+          "video": "https://www.youtube.com/results?search_query=march+in+place+warm+up"
+        },
+        {
+          "id": "martes-calentamiento-circulos-cadera",
+          "ejercicio": "Círculos de cadera",
+          "repeticiones": { "tipo": "numero", "valor": 8, "texto": "8 por lado" },
+          "descripcion": "Manos en la cintura, dibuja círculos amplios con la cadera.",
+          "video": "https://www.youtube.com/results?search_query=hip+circles+warm+up"
+        },
+        {
+          "id": "martes-calentamiento-balanceo-piernas",
+          "ejercicio": "Balanceo de piernas",
+          "repeticiones": { "tipo": "numero", "valor": 10, "texto": "10 por pierna" },
+          "descripcion": "Apóyate en una pared y balancea la pierna adelante y atrás con control.",
+          "video": "https://www.youtube.com/results?search_query=leg+swings+warm+up"
+        },
+        {
+          "id": "martes-calentamiento-sentadilla-peso-corporal",
+          "ejercicio": "Sentadilla con peso corporal",
+          "repeticiones": { "tipo": "numero", "valor": 12, "texto": "12" },
+          "descripcion": "Baja despacio en 3 segundos y sube sin bloquear las rodillas.",
+          "video": "https://www.youtube.com/results?search_query=bodyweight+squat"
+        },
+        {
+          "id": "martes-calentamiento-puente-gluteos",
+          "ejercicio": "Puente de glúteos sin peso",
+          "repeticiones": { "tipo": "numero", "valor": 12, "texto": "12" },
+          "descripcion": "Sube la cadera apretando los glúteos y baja lento.",
+          "video": "https://www.youtube.com/results?search_query=glute+bridge+bodyweight"
+        },
+        {
+          "id": "martes-calentamiento-aproximacion",
+          "ejercicio": "Serie de aproximación: sentadilla goblet",
+          "peso": "8.5 kg",
+          "repeticiones": { "tipo": "numero", "valor": 10, "texto": "10" },
+          "descripcion": "Una serie ligera del primer ejercicio con movimiento controlado, para preparar el patrón antes de la carga de trabajo.",
+          "video": "https://www.youtube.com/results?search_query=warm+up+set+explained"
+        }
+      ],
       "grupos": [
         {
           "grupoMuscular": "Piernas",
@@ -99,7 +211,7 @@
             {
               "id": "martes-piernas-sentadilla-goblet",
               "ejercicio": "Sentadilla Goblet",
-              "peso": "12 kg",
+              "peso": "16.5 kg",
               "series": 4,
               "repeticiones": { "tipo": "numero", "valor": 12, "texto": "12" },
               "descanso": 90,
@@ -109,7 +221,7 @@
             {
               "id": "martes-piernas-zancadas",
               "ejercicio": "Zancadas",
-              "peso": "12 kg",
+              "peso": "14 kg",
               "series": 3,
               "repeticiones": { "tipo": "numero", "valor": 10, "texto": "10 por pierna" },
               "descanso": 90,
@@ -119,7 +231,7 @@
             {
               "id": "martes-piernas-peso-muerto-rumano",
               "ejercicio": "Peso muerto rumano",
-              "peso": "12 kg",
+              "peso": "16.5 kg",
               "series": 4,
               "repeticiones": { "tipo": "numero", "valor": 10, "texto": "10" },
               "descanso": 90,
@@ -127,9 +239,19 @@
               "video": "https://www.youtube.com/results?search_query=dumbbell+romanian+deadlift"
             },
             {
+              "id": "martes-piernas-sentadilla-bulgara",
+              "ejercicio": "Sentadilla búlgara",
+              "peso": "12.75 kg",
+              "series": 3,
+              "repeticiones": { "tipo": "numero", "valor": 10, "texto": "10 por pierna" },
+              "descanso": 90,
+              "descripcion": "Apoya el pie trasero en una silla o sofá estable, baja con el torso recto y empuja con la pierna delantera.",
+              "video": "https://www.youtube.com/results?search_query=dumbbell+bulgarian+split+squat"
+            },
+            {
               "id": "martes-piernas-elevaciones-gemelos",
               "ejercicio": "Elevaciones de gemelos",
-              "peso": "12 kg",
+              "peso": "16.5 kg",
               "series": 5,
               "repeticiones": { "tipo": "numero", "valor": 20, "texto": "20" },
               "descanso": 45,
@@ -144,8 +266,8 @@
             {
               "id": "martes-antebrazo-curl-muneca",
               "ejercicio": "Curl de muñeca",
-              "peso": "8.5 kg",
-              "series": 4,
+              "peso": "9.75 kg",
+              "series": 3,
               "repeticiones": { "tipo": "numero", "valor": 20, "texto": "20" },
               "descanso": 45,
               "descripcion": "Apoya los antebrazos y flexiona únicamente las muñecas.",
@@ -154,22 +276,12 @@
             {
               "id": "martes-antebrazo-curl-muneca-invertido",
               "ejercicio": "Curl de muñeca invertido",
-              "peso": "2.5 kg",
-              "series": 4,
+              "peso": "3.75 kg",
+              "series": 3,
               "repeticiones": { "tipo": "numero", "valor": 15, "texto": "15" },
               "descanso": 45,
               "descripcion": "Igual que el anterior, con las palmas hacia abajo.",
               "video": "https://www.youtube.com/results?search_query=reverse+wrist+curl"
-            },
-            {
-              "id": "martes-antebrazo-farmers-walk",
-              "ejercicio": "Farmer's Walk",
-              "peso": "12 kg",
-              "series": 3,
-              "repeticiones": { "tipo": "tiempo", "valor": 50, "unidad": "s", "texto": "40-60 s" },
-              "descanso": 60,
-              "descripcion": "Camina con las mancuernas manteniendo el torso firme y los hombros atrás.",
-              "video": "https://www.youtube.com/results?search_query=farmer%27s+walk"
             }
           ]
         }
@@ -177,59 +289,64 @@
     },
     {
       "dia": "Miércoles",
+      "descansoEntreEjercicios": 60,
+      "calentamientoMinutos": 4,
+      "calentamiento": [
+        {
+          "id": "miercoles-calentamiento-marcha",
+          "ejercicio": "Marcha en el sitio",
+          "repeticiones": { "tipo": "tiempo", "valor": 120, "unidad": "s", "texto": "2 min" },
+          "descripcion": "Eleva las rodillas a ritmo suave para subir la temperatura corporal.",
+          "video": "https://www.youtube.com/results?search_query=march+in+place+warm+up"
+        },
+        {
+          "id": "miercoles-calentamiento-sentadilla-peso-corporal",
+          "ejercicio": "Sentadilla con peso corporal",
+          "repeticiones": { "tipo": "numero", "valor": 10, "texto": "10" },
+          "descripcion": "Baja despacio en 3 segundos y sube sin bloquear las rodillas.",
+          "video": "https://www.youtube.com/results?search_query=bodyweight+squat"
+        },
+        {
+          "id": "miercoles-calentamiento-puente-gluteos",
+          "ejercicio": "Puente de glúteos sin peso",
+          "repeticiones": { "tipo": "numero", "valor": 12, "texto": "12" },
+          "descripcion": "Sube la cadera apretando los glúteos y baja lento.",
+          "video": "https://www.youtube.com/results?search_query=glute+bridge+bodyweight"
+        }
+      ],
       "grupos": [
         {
-          "grupoMuscular": "Antebrazo",
+          "grupoMuscular": "Piernas (sesión corta)",
           "ejercicios": [
             {
-              "id": "miercoles-antebrazo-curl-muneca",
-              "ejercicio": "Curl de muñeca",
-              "peso": "8.5 kg",
+              "id": "miercoles-piernas-puente-gluteos",
+              "ejercicio": "Puente de glúteos",
+              "peso": "18 kg",
               "series": 3,
-              "repeticiones": { "tipo": "numero", "valor": 20, "texto": "20" },
-              "descanso": 45,
-              "descripcion": "Flexiona las muñecas lentamente y controla la bajada.",
-              "video": "https://www.youtube.com/results?search_query=wrist+curl"
+              "repeticiones": { "tipo": "numero", "valor": 15, "texto": "15" },
+              "descanso": 60,
+              "descripcion": "Acostado boca arriba con la mancuerna sobre la cadera, empuja con los glúteos y aprieta arriba un segundo.",
+              "video": "https://www.youtube.com/results?search_query=dumbbell+glute+bridge"
             },
             {
-              "id": "miercoles-antebrazo-curl-muneca-invertido",
-              "ejercicio": "Curl de muñeca invertido",
-              "peso": "2.5 kg",
-              "series": 3,
-              "repeticiones": { "tipo": "numero", "valor": 20, "texto": "20" },
-              "descanso": 45,
-              "descripcion": "Trabaja los extensores del antebrazo con movimiento controlado.",
-              "video": "https://www.youtube.com/results?search_query=reverse+wrist+curl"
-            },
-            {
-              "id": "miercoles-antebrazo-curl-martillo",
-              "ejercicio": "Curl martillo",
-              "peso": "8.5 kg",
+              "id": "miercoles-piernas-sentadilla-goblet-ligera",
+              "ejercicio": "Sentadilla Goblet ligera",
+              "peso": "12.75 kg",
               "series": 3,
               "repeticiones": { "tipo": "numero", "valor": 12, "texto": "12" },
               "descanso": 60,
-              "descripcion": "Palmas enfrentadas durante todo el recorrido.",
-              "video": "https://www.youtube.com/results?search_query=hammer+curl"
+              "descripcion": "Peso moderado y bajada lenta de 3 segundos. El objetivo es recuperar, no llegar al fallo.",
+              "video": "https://www.youtube.com/results?search_query=goblet+squat"
             },
             {
-              "id": "miercoles-antebrazo-farmers-walk",
-              "ejercicio": "Farmer's Walk",
-              "peso": "12 kg",
+              "id": "miercoles-piernas-elevaciones-gemelos",
+              "ejercicio": "Elevaciones de gemelos",
+              "peso": "16.5 kg",
               "series": 3,
-              "repeticiones": { "tipo": "tiempo", "valor": 52, "unidad": "s", "texto": "45-60 s" },
-              "descanso": 60,
-              "descripcion": "Camina manteniendo el agarre firme y la espalda recta.",
-              "video": "https://www.youtube.com/results?search_query=farmer%27s+walk"
-            },
-            {
-              "id": "miercoles-antebrazo-agarre-estatico",
-              "ejercicio": "Agarre estático",
-              "peso": "12 kg",
-              "series": 3,
-              "repeticiones": { "tipo": "tiempo", "valor": 37, "unidad": "s", "texto": "30-45 s" },
-              "descanso": 60,
-              "descripcion": "Mantén las mancuernas sujetas sin mover los brazos.",
-              "video": "https://www.youtube.com/results?search_query=static+dumbbell+hold"
+              "repeticiones": { "tipo": "numero", "valor": 20, "texto": "20" },
+              "descanso": 45,
+              "descripcion": "Eleva los talones al máximo y baja lentamente.",
+              "video": "https://www.youtube.com/results?search_query=dumbbell+calf+raise"
             }
           ]
         }
@@ -237,6 +354,46 @@
     },
     {
       "dia": "Jueves",
+      "descansoEntreEjercicios": 90,
+      "calentamientoMinutos": 8,
+      "calentamiento": [
+        {
+          "id": "jueves-calentamiento-marcha",
+          "ejercicio": "Marcha en el sitio",
+          "repeticiones": { "tipo": "tiempo", "valor": 120, "unidad": "s", "texto": "2 min" },
+          "descripcion": "Eleva las rodillas a ritmo suave para subir la temperatura corporal.",
+          "video": "https://www.youtube.com/results?search_query=march+in+place+warm+up"
+        },
+        {
+          "id": "jueves-calentamiento-circulos-brazos",
+          "ejercicio": "Círculos de brazos",
+          "repeticiones": { "tipo": "numero", "valor": 20, "texto": "10 adelante y 10 atrás" },
+          "descripcion": "Brazos extendidos a los lados, círculos amplios que van creciendo poco a poco.",
+          "video": "https://www.youtube.com/results?search_query=arm+circles+warm+up"
+        },
+        {
+          "id": "jueves-calentamiento-gato-camello",
+          "ejercicio": "Gato-camello",
+          "repeticiones": { "tipo": "numero", "valor": 8, "texto": "8" },
+          "descripcion": "En cuadrupedia, redondea y arquea la espalda despacio para movilizar la columna.",
+          "video": "https://www.youtube.com/results?search_query=cat+cow+stretch"
+        },
+        {
+          "id": "jueves-calentamiento-retraccion-escapular",
+          "ejercicio": "Retracciones de escápulas",
+          "repeticiones": { "tipo": "numero", "valor": 12, "texto": "12" },
+          "descripcion": "De pie con los brazos al frente, junta las escápulas y vuelve lentamente.",
+          "video": "https://www.youtube.com/results?search_query=scapular+retraction+exercise"
+        },
+        {
+          "id": "jueves-calentamiento-aproximacion",
+          "ejercicio": "Serie de aproximación: remo con mancuerna",
+          "peso": "6 kg",
+          "repeticiones": { "tipo": "numero", "valor": 10, "texto": "10 por brazo" },
+          "descripcion": "Una serie ligera del primer ejercicio con movimiento controlado, para preparar el patrón antes de la carga de trabajo.",
+          "video": "https://www.youtube.com/results?search_query=warm+up+set+explained"
+        }
+      ],
       "grupos": [
         {
           "grupoMuscular": "Espalda",
@@ -244,7 +401,7 @@
             {
               "id": "jueves-espalda-remo-mancuerna",
               "ejercicio": "Remo con mancuerna",
-              "peso": "12 kg",
+              "peso": "13.5 kg",
               "series": 4,
               "repeticiones": { "tipo": "numero", "valor": 11, "texto": "10-12" },
               "descanso": 90,
@@ -252,9 +409,19 @@
               "video": "https://www.youtube.com/results?search_query=one+arm+dumbbell+row"
             },
             {
+              "id": "jueves-espalda-remo-inclinado",
+              "ejercicio": "Remo inclinado a dos manos",
+              "peso": "13.5 kg",
+              "series": 4,
+              "repeticiones": { "tipo": "numero", "valor": 10, "texto": "10" },
+              "descanso": 90,
+              "descripcion": "Inclina el torso con la espalda recta y lleva ambas mancuernas hacia la cintura juntando las escápulas.",
+              "video": "https://www.youtube.com/results?search_query=bent+over+dumbbell+row"
+            },
+            {
               "id": "jueves-espalda-pullover",
               "ejercicio": "Pullover",
-              "peso": "8.5 kg",
+              "peso": "11 kg",
               "series": 3,
               "repeticiones": { "tipo": "numero", "valor": 12, "texto": "12" },
               "descanso": 60,
@@ -269,8 +436,8 @@
             {
               "id": "jueves-hombro-posterior-pajaros",
               "ejercicio": "Pájaros",
-              "peso": "2.5 kg",
-              "series": 3,
+              "peso": "3.75 kg",
+              "series": 4,
               "repeticiones": { "tipo": "numero", "valor": 15, "texto": "15" },
               "descanso": 45,
               "descripcion": "Inclina el torso y abre los brazos hacia los lados.",
@@ -294,112 +461,22 @@
             {
               "id": "jueves-biceps-curl-martillo",
               "ejercicio": "Curl martillo",
-              "peso": "8.5 kg",
+              "peso": "9.75 kg",
               "series": 3,
               "repeticiones": { "tipo": "numero", "valor": 12, "texto": "12" },
               "descanso": 60,
               "descripcion": "Mantén las palmas enfrentadas durante todo el movimiento.",
               "video": "https://www.youtube.com/results?search_query=hammer+curl"
-            }
-          ]
-        },
-        {
-          "grupoMuscular": "Antebrazo",
-          "ejercicios": [
+            },
             {
-              "id": "jueves-antebrazo-farmers-walk",
-              "ejercicio": "Farmer's Walk",
-              "peso": "12 kg",
+              "id": "jueves-biceps-curl-concentrado",
+              "ejercicio": "Curl concentrado",
+              "peso": "9.75 kg",
               "series": 3,
-              "repeticiones": { "tipo": "tiempo", "valor": 52, "unidad": "s", "texto": "45-60 s" },
+              "repeticiones": { "tipo": "numero", "valor": 12, "texto": "12 por brazo" },
               "descanso": 60,
-              "descripcion": "Mantén una postura erguida y un agarre fuerte.",
-              "video": "https://www.youtube.com/results?search_query=farmer%27s+walk"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "dia": "Viernes",
-      "grupos": [
-        {
-          "grupoMuscular": "Pecho",
-          "ejercicios": [
-            {
-              "id": "viernes-pecho-floor-press",
-              "ejercicio": "Press de pecho en el suelo",
-              "peso": "12 kg",
-              "series": 3,
-              "repeticiones": { "tipo": "numero", "valor": 10, "texto": "10" },
-              "descanso": 90,
-              "descripcion": "Baja controladamente y empuja hasta extender los brazos.",
-              "video": "https://www.youtube.com/results?search_query=dumbbell+floor+press"
-            }
-          ]
-        },
-        {
-          "grupoMuscular": "Hombros",
-          "ejercicios": [
-            {
-              "id": "viernes-hombros-press-militar",
-              "ejercicio": "Press militar",
-              "peso": "8.5 kg",
-              "series": 3,
-              "repeticiones": { "tipo": "numero", "valor": 10, "texto": "10" },
-              "descanso": 90,
-              "descripcion": "Empuja verticalmente sin inclinar el torso.",
-              "video": "https://www.youtube.com/results?search_query=dumbbell+shoulder+press"
-            },
-            {
-              "id": "viernes-hombros-elevaciones-laterales",
-              "ejercicio": "Elevaciones laterales",
-              "peso": "2.5 kg",
-              "series": 3,
-              "repeticiones": { "tipo": "numero", "valor": 15, "texto": "15" },
-              "descanso": 45,
-              "descripcion": "Levanta hasta la altura de los hombros sin balancearte.",
-              "video": "https://www.youtube.com/results?search_query=dumbbell+lateral+raise"
-            }
-          ]
-        },
-        {
-          "grupoMuscular": "Piernas",
-          "ejercicios": [
-            {
-              "id": "viernes-piernas-sentadilla-goblet",
-              "ejercicio": "Sentadilla Goblet",
-              "peso": "12 kg",
-              "series": 3,
-              "repeticiones": { "tipo": "numero", "valor": 12, "texto": "12" },
-              "descanso": 90,
-              "descripcion": "Baja hasta que los muslos estén paralelos al suelo.",
-              "video": "https://www.youtube.com/results?search_query=goblet+squat"
-            },
-            {
-              "id": "viernes-piernas-peso-muerto-rumano",
-              "ejercicio": "Peso muerto rumano",
-              "peso": "12 kg",
-              "series": 3,
-              "repeticiones": { "tipo": "numero", "valor": 12, "texto": "12" },
-              "descanso": 90,
-              "descripcion": "Mantén la espalda neutra durante todo el recorrido.",
-              "video": "https://www.youtube.com/results?search_query=dumbbell+romanian+deadlift"
-            }
-          ]
-        },
-        {
-          "grupoMuscular": "Espalda",
-          "ejercicios": [
-            {
-              "id": "viernes-espalda-remo-mancuerna",
-              "ejercicio": "Remo con mancuerna",
-              "peso": "12 kg",
-              "series": 3,
-              "repeticiones": { "tipo": "numero", "valor": 10, "texto": "10" },
-              "descanso": 90,
-              "descripcion": "Tira con la espalda, no con el brazo.",
-              "video": "https://www.youtube.com/results?search_query=one+arm+dumbbell+row"
+              "descripcion": "Sentado, apoya el codo en la parte interna del muslo y sube la mancuerna apretando el bíceps arriba.",
+              "video": "https://www.youtube.com/results?search_query=concentration+curl"
             }
           ]
         },
@@ -407,24 +484,97 @@
           "grupoMuscular": "Core",
           "ejercicios": [
             {
-              "id": "viernes-core-plancha",
-              "ejercicio": "Plancha",
+              "id": "jueves-core-dead-bug",
+              "ejercicio": "Dead bug",
               "peso": "Peso corporal",
               "series": 3,
-              "repeticiones": { "tipo": "tiempo", "valor": 52, "unidad": "s", "texto": "45-60 s" },
+              "repeticiones": { "tipo": "numero", "valor": 10, "texto": "10 por lado" },
               "descanso": 45,
-              "descripcion": "Mantén el cuerpo completamente alineado.",
-              "video": "https://www.youtube.com/results?search_query=plank+exercise"
+              "descripcion": "Acostado boca arriba con brazos y rodillas hacia el techo, baja brazo y pierna contrarios sin despegar la zona lumbar del suelo.",
+              "video": "https://www.youtube.com/results?search_query=dead+bug+exercise"
             },
             {
-              "id": "viernes-core-russian-twist",
-              "ejercicio": "Russian Twist",
-              "peso": "2.5 kg",
+              "id": "jueves-core-bird-dog",
+              "ejercicio": "Bird dog",
+              "peso": "Peso corporal",
               "series": 3,
-              "repeticiones": { "tipo": "numero", "valor": 20, "texto": "20" },
+              "repeticiones": { "tipo": "numero", "valor": 10, "texto": "10 por lado" },
               "descanso": 45,
-              "descripcion": "Gira el torso de un lado al otro sin mover las piernas.",
-              "video": "https://www.youtube.com/results?search_query=russian+twist"
+              "descripcion": "En cuadrupedia, estira brazo y pierna contrarios manteniendo la cadera nivelada y la espalda neutra.",
+              "video": "https://www.youtube.com/results?search_query=bird+dog+exercise"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "dia": "Viernes",
+      "descansoEntreEjercicios": 60,
+      "calentamientoMinutos": 5,
+      "calentamiento": [
+        {
+          "id": "viernes-calentamiento-marcha",
+          "ejercicio": "Marcha en el sitio",
+          "repeticiones": { "tipo": "tiempo", "valor": 120, "unidad": "s", "texto": "2 min" },
+          "descripcion": "Eleva las rodillas a ritmo suave para subir la temperatura corporal.",
+          "video": "https://www.youtube.com/results?search_query=march+in+place+warm+up"
+        },
+        {
+          "id": "viernes-calentamiento-balanceo-piernas",
+          "ejercicio": "Balanceo de piernas",
+          "repeticiones": { "tipo": "numero", "valor": 10, "texto": "10 por pierna" },
+          "descripcion": "Apóyate en una pared y balancea la pierna adelante y atrás con control.",
+          "video": "https://www.youtube.com/results?search_query=leg+swings+warm+up"
+        },
+        {
+          "id": "viernes-calentamiento-sentadilla-peso-corporal",
+          "ejercicio": "Sentadilla con peso corporal",
+          "repeticiones": { "tipo": "numero", "valor": 10, "texto": "10" },
+          "descripcion": "Baja despacio en 3 segundos y sube sin bloquear las rodillas.",
+          "video": "https://www.youtube.com/results?search_query=bodyweight+squat"
+        },
+        {
+          "id": "viernes-calentamiento-aproximacion",
+          "ejercicio": "Serie de aproximación: sentadilla goblet",
+          "peso": "6 kg",
+          "repeticiones": { "tipo": "numero", "valor": 10, "texto": "10" },
+          "descripcion": "Una serie ligera del primer ejercicio con movimiento controlado, para preparar el patrón antes de la carga de trabajo.",
+          "video": "https://www.youtube.com/results?search_query=warm+up+set+explained"
+        }
+      ],
+      "grupos": [
+        {
+          "grupoMuscular": "Piernas (sesión corta)",
+          "ejercicios": [
+            {
+              "id": "viernes-piernas-sentadilla-goblet",
+              "ejercicio": "Sentadilla Goblet",
+              "peso": "14 kg",
+              "series": 3,
+              "repeticiones": { "tipo": "numero", "valor": 12, "texto": "12" },
+              "descanso": 75,
+              "descripcion": "Baja hasta que los muslos estén paralelos al suelo.",
+              "video": "https://www.youtube.com/results?search_query=goblet+squat"
+            },
+            {
+              "id": "viernes-piernas-peso-muerto-rumano",
+              "ejercicio": "Peso muerto rumano",
+              "peso": "14 kg",
+              "series": 3,
+              "repeticiones": { "tipo": "numero", "valor": 12, "texto": "12" },
+              "descanso": 75,
+              "descripcion": "Mantén la espalda neutra durante todo el recorrido.",
+              "video": "https://www.youtube.com/results?search_query=dumbbell+romanian+deadlift"
+            },
+            {
+              "id": "viernes-piernas-curl-isquios-toalla",
+              "ejercicio": "Curl de isquios con toalla",
+              "peso": "Peso corporal",
+              "series": 3,
+              "repeticiones": { "tipo": "numero", "valor": 10, "texto": "10" },
+              "descanso": 60,
+              "descripcion": "Acostado boca arriba con los talones sobre una toalla en un suelo liso, eleva la cadera y desliza los talones hacia los glúteos; vuelve despacio.",
+              "video": "https://www.youtube.com/results?search_query=hamstring+slider+curl+towel"
             }
           ]
         }
@@ -432,6 +582,46 @@
     },
     {
       "dia": "Sábado",
+      "descansoEntreEjercicios": 90,
+      "calentamientoMinutos": 8,
+      "calentamiento": [
+        {
+          "id": "sabado-calentamiento-marcha",
+          "ejercicio": "Marcha en el sitio",
+          "repeticiones": { "tipo": "tiempo", "valor": 120, "unidad": "s", "texto": "2 min" },
+          "descripcion": "Eleva las rodillas a ritmo suave para subir la temperatura corporal.",
+          "video": "https://www.youtube.com/results?search_query=march+in+place+warm+up"
+        },
+        {
+          "id": "sabado-calentamiento-circulos-brazos",
+          "ejercicio": "Círculos de brazos",
+          "repeticiones": { "tipo": "numero", "valor": 20, "texto": "10 adelante y 10 atrás" },
+          "descripcion": "Brazos extendidos a los lados, círculos amplios que van creciendo poco a poco.",
+          "video": "https://www.youtube.com/results?search_query=arm+circles+warm+up"
+        },
+        {
+          "id": "sabado-calentamiento-gato-camello",
+          "ejercicio": "Gato-camello",
+          "repeticiones": { "tipo": "numero", "valor": 8, "texto": "8" },
+          "descripcion": "En cuadrupedia, redondea y arquea la espalda despacio para movilizar la columna.",
+          "video": "https://www.youtube.com/results?search_query=cat+cow+stretch"
+        },
+        {
+          "id": "sabado-calentamiento-retraccion-escapular",
+          "ejercicio": "Retracciones de escápulas",
+          "repeticiones": { "tipo": "numero", "valor": 12, "texto": "12" },
+          "descripcion": "De pie con los brazos al frente, junta las escápulas y vuelve lentamente.",
+          "video": "https://www.youtube.com/results?search_query=scapular+retraction+exercise"
+        },
+        {
+          "id": "sabado-calentamiento-aproximacion",
+          "ejercicio": "Serie de aproximación: press en el suelo",
+          "peso": "6 kg",
+          "repeticiones": { "tipo": "numero", "valor": 10, "texto": "10" },
+          "descripcion": "Una serie ligera del primer ejercicio con movimiento controlado, para preparar el patrón antes de la carga de trabajo.",
+          "video": "https://www.youtube.com/results?search_query=warm+up+set+explained"
+        }
+      ],
       "grupos": [
         {
           "grupoMuscular": "Pecho",
@@ -439,7 +629,7 @@
             {
               "id": "sabado-pecho-floor-press",
               "ejercicio": "Press de pecho en el suelo",
-              "peso": "12 kg",
+              "peso": "13.5 kg",
               "series": 3,
               "repeticiones": { "tipo": "numero", "valor": 14, "texto": "12-15" },
               "descanso": 90,
@@ -449,7 +639,7 @@
             {
               "id": "sabado-pecho-aperturas",
               "ejercicio": "Aperturas (Fly)",
-              "peso": "8.5 kg",
+              "peso": "9.75 kg",
               "series": 3,
               "repeticiones": { "tipo": "numero", "valor": 15, "texto": "15" },
               "descanso": 60,
@@ -464,7 +654,7 @@
             {
               "id": "sabado-hombros-press-militar",
               "ejercicio": "Press militar",
-              "peso": "8.5 kg",
+              "peso": "9.75 kg",
               "series": 3,
               "repeticiones": { "tipo": "numero", "valor": 12, "texto": "12" },
               "descanso": 90,
@@ -474,7 +664,7 @@
             {
               "id": "sabado-hombros-elevaciones-laterales",
               "ejercicio": "Elevaciones laterales",
-              "peso": "2.5 kg",
+              "peso": "3.75 kg",
               "series": 4,
               "repeticiones": { "tipo": "numero", "valor": 18, "texto": "15-20" },
               "descanso": 45,
@@ -484,12 +674,27 @@
           ]
         },
         {
+          "grupoMuscular": "Espalda",
+          "ejercicios": [
+            {
+              "id": "sabado-espalda-remo-mancuerna",
+              "ejercicio": "Remo con mancuerna",
+              "peso": "13.5 kg",
+              "series": 3,
+              "repeticiones": { "tipo": "numero", "valor": 10, "texto": "10" },
+              "descanso": 90,
+              "descripcion": "Tira con la espalda, no con el brazo.",
+              "video": "https://www.youtube.com/results?search_query=one+arm+dumbbell+row"
+            }
+          ]
+        },
+        {
           "grupoMuscular": "Hombro posterior",
           "ejercicios": [
             {
               "id": "sabado-hombro-posterior-pajaros",
               "ejercicio": "Pájaros",
-              "peso": "2.5 kg",
+              "peso": "3.75 kg",
               "series": 3,
               "repeticiones": { "tipo": "numero", "valor": 18, "texto": "15-20" },
               "descanso": 45,
@@ -504,22 +709,12 @@
             {
               "id": "sabado-antebrazo-farmers-walk",
               "ejercicio": "Farmer's Walk",
-              "peso": "12 kg",
-              "series": 4,
+              "peso": "16.5 kg",
+              "series": 3,
               "repeticiones": { "tipo": "tiempo", "valor": 52, "unidad": "s", "texto": "45-60 s" },
               "descanso": 60,
               "descripcion": "Camina despacio sin perder la postura.",
               "video": "https://www.youtube.com/results?search_query=farmer%27s+walk"
-            },
-            {
-              "id": "sabado-antebrazo-curl-muneca",
-              "ejercicio": "Curl de muñeca",
-              "peso": "8.5 kg",
-              "series": 3,
-              "repeticiones": { "tipo": "numero", "valor": 20, "texto": "20" },
-              "descanso": 45,
-              "descripcion": "Flexiona las muñecas de forma lenta y controlada.",
-              "video": "https://www.youtube.com/results?search_query=wrist+curl"
             }
           ]
         },
@@ -527,14 +722,24 @@
           "grupoMuscular": "Core",
           "ejercicios": [
             {
-              "id": "sabado-core-plancha",
-              "ejercicio": "Plancha",
+              "id": "sabado-core-plancha-inclinada",
+              "ejercicio": "Plancha inclinada (manos elevadas)",
               "peso": "Peso corporal",
               "series": 3,
-              "repeticiones": { "tipo": "tiempo", "valor": 60, "unidad": "s", "texto": "60 s" },
+              "repeticiones": { "tipo": "tiempo", "valor": 30, "unidad": "s", "texto": "30 s" },
               "descanso": 45,
-              "descripcion": "Mantén abdomen y glúteos contraídos.",
-              "video": "https://www.youtube.com/results?search_query=plank+exercise"
+              "descripcion": "Apoya las manos en una superficie firme y estable (sofá, escalón o silla sin ruedas) y mantén el cuerpo en línea recta. Progresión: baja la altura del apoyo hasta llegar a la plancha en el suelo.",
+              "video": "https://www.youtube.com/results?search_query=incline+plank"
+            },
+            {
+              "id": "sabado-core-russian-twist",
+              "ejercicio": "Russian Twist",
+              "peso": "5.5 kg",
+              "series": 3,
+              "repeticiones": { "tipo": "numero", "valor": 20, "texto": "20" },
+              "descanso": 45,
+              "descripcion": "Gira el torso de un lado al otro sin mover las piernas.",
+              "video": "https://www.youtube.com/results?search_query=russian+twist"
             }
           ]
         }
