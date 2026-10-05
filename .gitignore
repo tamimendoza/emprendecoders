@@ -26,3 +26,5 @@ Thumbs.db
 
 # Playwright CLI execution logs and artifacts
 .playwright-cli/
+
+.atl/
