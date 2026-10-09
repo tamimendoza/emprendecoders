@@ -1,0 +1,99 @@
+---
+import ScrollReveal from '@src/components/layout/ScrollReveal.astro';
+
+export interface Props {
+  class?: string;
+}
+
+const { class: className = '' } = Astro.props;
+
+const videos = [
+  {
+    id: 'NOrJ9PzAw74',
+    tag: 'Primeros pasos',
+    title: 'Empieza a usar Many',
+    desc: 'Recorre la pantalla de inicio, crea categorías, registra ingresos y gastos, corrige movimientos y separa tus finanzas con perfiles.',
+    points: ['Categorías propias', 'Ingresos y gastos', 'Perfiles separados'],
+  },
+  {
+    id: 'vSxQFt4o9rM',
+    tag: 'Captura automática',
+    title: 'Deja que el banco te avise',
+    desc: 'Activa la lectura de notificaciones: Many detecta el monto de cada aviso del banco y tú decides si registrarlo o ignorarlo.',
+    points: ['Datos solo en tu teléfono', 'Sonido de confirmación', 'Siempre confirmas tú'],
+  },
+  {
+    id: 'GZ7VxXr85pE',
+    tag: 'Cuentas y reportes',
+    title: 'Medios de pago y transferencias',
+    desc: 'Crea cuentas, tarjetas y efectivo, mueve dinero entre ellos, revisa el reporte por tarjeta y exporta tus movimientos en CSV.',
+    points: ['Medios de pago', 'Transferencias entre cuentas', 'Exportar a CSV'],
+  },
+  {
+    id: 'kaFprMl2P3o',
+    tag: 'Gastos fijos y filtros',
+    title: 'Encuentra cualquier movimiento',
+    desc: 'Marca categorías como gasto fijo para ver cuánto tienes comprometido cada mes y combina todos los filtros de Movimientos.',
+    points: ['Gasto fijo', 'Filtros combinables', 'Orden por monto'],
+  },
+];
+---
+
+<section class="px-4 sm:px-6 py-16 sm:py-20 bg-skin-primary text-skin-primary {className}" id="video-tour">
+  <div class="mx-auto max-w-content">
+    <ScrollReveal>
+      <p class="text-xs font-semibold tracking-[0.08em] uppercase text-primary dark:text-white mb-3">
+        Tutoriales
+      </p>
+    </ScrollReveal>
+    <ScrollReveal>
+      <h2 class="text-[clamp(1.5rem,_3.5vw,_2.25rem)] font-extrabold tracking-tight mb-2">
+        Mira Many <span class="text-gradient">en acción</span>
+      </h2>
+    </ScrollReveal>
+    <ScrollReveal>
+      <p class="text-sm sm:text-base text-skin-secondary max-w-xl leading-relaxed mb-10 sm:mb-12">
+        Cuatro vídeos cortos con voz que te enseñan todo lo esencial. Reprodúcelos
+        aquí mismo, sin salir de la página.
+      </p>
+    </ScrollReveal>
+
+    <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-10 lg:gap-12">
+      {
+        videos.map((video) => (
+          <ScrollReveal>
+            <div class="flex flex-col gap-5">
+              <div class="relative mx-auto w-full max-w-[280px] sm:max-w-[300px] aspect-[9/16] rounded-[1.75rem] border-[3px] border-primary/15 shadow-card overflow-hidden bg-dark">
+                <iframe
+                  class="absolute inset-0 w-full h-full"
+                  src={`https://www.youtube-nocookie.com/embed/${video.id}?rel=0&playsinline=1`}
+                  title={`${video.title} — tutorial de Many`}
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                />
+              </div>
+              <div class="text-center max-w-sm mx-auto">
+                <span class="inline-block text-[11px] font-semibold uppercase tracking-wide text-primary dark:text-white dark:bg-white/10 dark:border dark:border-white/30 dark:px-2.5 dark:py-1 dark:rounded-full mb-2">
+                  {video.tag}
+                </span>
+                <h3 class="text-base sm:text-lg font-bold mb-1.5">{video.title}</h3>
+                <p class="text-xs sm:text-sm text-skin-secondary leading-relaxed mb-3">
+                  {video.desc}
+                </p>
+                <ul class="flex flex-wrap justify-center gap-2" aria-label="Qué aprenderás">
+                  {video.points.map((point) => (
+                    <li class="px-2.5 py-1 rounded-full border border-primary/20 bg-primary/10 text-primary dark:border-white/30 dark:bg-white/10 dark:text-white text-[11px] font-semibold">
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </ScrollReveal>
+        ))
+      }
+    </div>
+  </div>
+</section>

@@ -221,3 +221,15 @@ input:focus-visible,
 .card-hover:hover {
   transform: translateY(-2px);
 }
+
+/* Many (dark): the brand purple is too dark for text on dark backgrounds */
+html.many.dark .text-primary {
+  color: #C9B0F2;
+}
+
+html.many.dark .text-gradient {
+  background: linear-gradient(135deg, #C9B0F2, #5CC9A0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
