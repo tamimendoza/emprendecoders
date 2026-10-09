@@ -2,7 +2,7 @@
 const appName = "Many: Control de Gastos y Finanzas Personales";
 const developerName = "Many";
 const contactEmail = "contacto@emprendecoders.com";
-const effectiveDate = "2026-06-02";
+const effectiveDate = "2026-10-08";
 ---
 
 <div class="mb-10 sm:mb-12">
@@ -15,27 +15,37 @@ const effectiveDate = "2026-06-02";
   <section>
     <h2 class="text-lg sm:text-xl font-bold text-skin-primary tracking-tight mb-3 mt-8">Recopilación y Uso de la Información</h2>
     <p><strong class="text-primary">Privacidad Total:</strong> La Aplicación ha sido diseñada teniendo en cuenta tu privacidad. Toda tu información financiera, cuentas, registros de ingresos y gastos, y categorías se guardan <strong class="text-skin-primary">localmente en tu dispositivo</strong> para mayor seguridad.</p>
-    <p>El Proveedor del Servicio <strong class="text-red-400">NO</strong> recopila, transmite, sincroniza ni almacena tu información financiera o personal en servidores externos.</p>
+    <p>El Proveedor del Servicio <strong class="text-red-400">NO</strong> recopila, transmite, sincroniza ni almacena tu información financiera (cuentas, montos, categorías ni movimientos) en servidores propios ni de terceros. Sin embargo, la Aplicación sí utiliza servicios de terceros que recopilan datos técnicos y de uso, descritos en la sección "Servicios de Terceros".</p>
     <p>Al descargar y utilizar la Aplicación, no se requiere la creación de una cuenta en nuestros servidores. La Aplicación no recopila información precisa sobre la ubicación de tu dispositivo móvil bajo ninguna circunstancia.</p>
   </section>
 
   <section>
-    <h2 class="text-lg sm:text-xl font-bold text-skin-primary tracking-tight mb-3 mt-8">Acceso de Terceros</h2>
-    <p>Dado que la Aplicación almacena la información de manera local, el Proveedor del Servicio no comparte tu información personal ni tus datos financieros con terceros.</p>
+    <h2 class="text-lg sm:text-xl font-bold text-skin-primary tracking-tight mb-3 mt-8">Servicios de Terceros</h2>
+    <p>La Aplicación integra servicios de terceros que pueden recopilar información. Estos terceros tienen sus propias políticas de privacidad:</p>
+    <ul class="list-disc pl-5 sm:pl-6 space-y-1.5">
+      <li><strong class="text-skin-primary">Firebase Crashlytics (Google):</strong> reporta errores y cierres inesperados. Puede recopilar informes de fallos, modelo de dispositivo, versión del sistema operativo, versión de la Aplicación, estado de la memoria e identificadores de instalación.</li>
+      <li><strong class="text-skin-primary">Firebase Analytics (Google):</strong> mide el uso de la Aplicación de forma agregada (pantallas visitadas, funciones usadas, sesiones). Puede recopilar identificadores de instalación y de publicidad, país aproximado e información del dispositivo.</li>
+      <li><strong class="text-skin-primary">Firebase Remote Config (Google):</strong> descarga ajustes de configuración del servicio. Puede procesar identificadores de instalación y la dirección IP.</li>
+      <li><strong class="text-skin-primary">Google AdMob:</strong> muestra anuncios. Puede recopilar el identificador de publicidad, la dirección IP e información del dispositivo para mostrar y medir anuncios, incluidos anuncios personalizados cuando lo permitas.</li>
+    </ul>
+    <p>Estos servicios <strong class="text-skin-primary">no reciben</strong> los datos financieros que registras en la Aplicación, los cuales permanecen en tu dispositivo. Más información: <a href="https://policies.google.com/privacy" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">Política de Privacidad de Google</a>, <a href="https://firebase.google.com/support/privacy" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">Privacidad y seguridad en Firebase</a>.</p>
+    <p>Fuera de lo anterior, el Proveedor del Servicio no vende ni comparte tu información personal con otros terceros, salvo que la ley lo exija.</p>
   </section>
 
   <section>
     <h2 class="text-lg sm:text-xl font-bold text-skin-primary tracking-tight mb-3 mt-8">Derechos de Exclusión (Opt-Out) y Control de Datos</h2>
-    <p>Tienes el control absoluto sobre tus datos. Dado que la información se almacena localmente en tu dispositivo, puedes eliminar todos los datos de la Aplicación en cualquier momento mediante los siguientes métodos:</p>
+    <p>Tienes el control absoluto sobre tus datos. Tus datos financieros se almacenan localmente, por lo que puedes eliminarlos en cualquier momento mediante los siguientes métodos:</p>
     <ul class="list-disc pl-5 sm:pl-6 space-y-1.5">
       <li>Borrando los datos de la aplicación desde el menú de ajustes de tu dispositivo móvil.</li>
-      <li>Desinstalando la Aplicación. Al desinstalarla mediante los procesos estándar de tu dispositivo, se eliminará toda la información almacenada por la misma.</li>
+      <li>Desinstalando la Aplicación. Al desinstalarla mediante los procesos estándar de tu dispositivo, se eliminará toda la información almacenada localmente.</li>
+      <li>Restableciendo o desactivando el identificador de publicidad desde los ajustes de Android (Google &gt; Anuncios) y desactivando la personalización de anuncios.</li>
     </ul>
+    <p>Los datos técnicos y de uso ya enviados a los servicios de terceros se rigen por las políticas de cada proveedor. Para solicitar información sobre ellos, escribe a <a href={`mailto:${contactEmail}`} class="text-primary hover:underline">{contactEmail}</a>.</p>
   </section>
 
   <section>
     <h2 class="text-lg sm:text-xl font-bold text-skin-primary tracking-tight mb-3 mt-8">Política de Retención de Datos</h2>
-    <p>El Proveedor del Servicio no retiene ningún dato proporcionado por el usuario, ya que toda la información permanece en tu dispositivo. Los datos existirán únicamente durante el tiempo que decidas mantener la Aplicación instalada y no borres el almacenamiento de la misma.</p>
+    <p>El Proveedor del Servicio no retiene datos financieros del usuario, ya que permanecen en tu dispositivo mientras mantengas la Aplicación instalada. Los datos técnicos y de uso recopilados por los servicios de terceros se conservan según los plazos de cada proveedor (por ejemplo, Firebase Crashlytics y Analytics aplican sus propios periodos de retención).</p>
   </section>
 
   <section>
@@ -45,7 +55,7 @@ const effectiveDate = "2026-06-02";
 
   <section>
     <h2 class="text-lg sm:text-xl font-bold text-skin-primary tracking-tight mb-3 mt-8">Seguridad</h2>
-    <p>El Proveedor del Servicio se preocupa por salvaguardar la confidencialidad de tu información. Aunque la Aplicación guarda tus datos localmente, te recomendamos encarecidamente utilizar las medidas de seguridad propias de tu dispositivo (como contraseñas, PIN o biometría) para proteger el acceso físico a tu teléfono y, por ende, a tus datos financieros.</p>
+    <p>El Proveedor del Servicio se preocupa por salvaguardar la confidencialidad de tu información. Aunque la Aplicación guarda tus datos financieros localmente, te recomendamos encarecidamente utilizar las medidas de seguridad propias de tu dispositivo (como contraseñas, PIN o biometría) para proteger el acceso físico a tu teléfono y, por ende, a tus datos financieros.</p>
   </section>
 
   <section>
