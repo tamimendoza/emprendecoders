@@ -1,48 +1,60 @@
-# Astro Starter Kit: Basics
+# Emprendecoders
+
+Landing site for Emprendecoders and its apps (Many, Voicenotifier, Rutina). Built with Astro 5 and Tailwind CSS 3, dark-first.
+
+## Stack
+
+- [Astro 5](https://astro.build) (static output)
+- [Tailwind CSS 3](https://tailwindcss.com)
+- pnpm
+- Path alias: `@src/*` → `src/*`
+
+## Getting started
 
 ```sh
-npm create astro@latest -- --template basics
+pnpm install
+pnpm dev
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+| Command          | Action                                      |
+| :--------------- | :------------------------------------------ |
+| `pnpm dev`       | Dev server at `localhost:4321`              |
+| `pnpm build`     | Production build to `./dist/`               |
+| `pnpm preview`   | Preview the production build locally        |
+| `pnpm astro ...` | Astro CLI (e.g. `pnpm astro check`)         |
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+There is no test runner or linter configured. Run `pnpm astro check` manually for type checking.
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+## Routes
 
-## 🚀 Project Structure
+| Route                         | Page                         |
+| :---------------------------- | :--------------------------- |
+| `/`                           | Homepage (hero, products)    |
+| `/app/many`                   | Many landing (video showcase)|
+| `/app/rutina`                 | Rutina landing               |
+| `/app/privacidad/many`        | Many privacy policy          |
+| `/app/privacidad/voicenotifier` | Voicenotifier privacy policy |
+| `/app/terminos/many`          | Many terms                   |
+| `/app/terminos/voicenotifier` | Voicenotifier terms          |
 
-Inside of your Astro project, you'll see the following folders and files:
+## Project structure
 
 ```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+src/
+├── components/
+│   ├── layout/     # Navbar, MobileMenu, Footer, ScrollReveal
+│   ├── sections/   # Hero, Products, Audience, VideoShowcase, CTA
+│   └── ui/         # Shared primitives (Badge)
+├── layouts/        # Layout.astro (skin CSS variables, <html class="dark">)
+├── pages/          # File-based routes
+└── styles/         # design-tokens.css
+public/             # Static assets
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## Design system
 
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- Skin variables (`--color-*`) are defined in `src/layouts/Layout.astro` and consumed through `text-skin-*`, `bg-skin-*` and `border-skin-*` utilities.
+- Custom colors in `tailwind.config.mjs`: `primary-{50..900}`, `dark-{DEFAULT,2,3}`, `light-{DEFAULT,2}`.
+- Shadows: `soft`, `card`, `elevated`, `glow`.
+- Max content width: `max-w-content` (1200px).
+- Radius: `rounded-xl` for containers, `rounded-2xl` for cards, `rounded-lg` for small elements.
