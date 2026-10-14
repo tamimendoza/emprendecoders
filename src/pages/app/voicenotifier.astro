@@ -1,0 +1,127 @@
+---
+import Layout from '@src/layouts/Layout.astro';
+import Navbar from '@src/components/layout/Navbar.astro';
+import Footer from '@src/components/layout/Footer.astro';
+import ScrollReveal from '@src/components/layout/ScrollReveal.astro';
+
+const metaTitle = 'PoliNoti — Notificaciones por voz para Android | Emprendecoders';
+const metaDesc = 'PoliNoti lee en voz alta las notificaciones de tu teléfono. Historial, búsqueda y configuración por aplicación para Android.';
+
+const features = [
+  {
+    title: 'Notificaciones por voz',
+    desc: 'Escucha tus notificaciones sin mirar la pantalla, mientras conduces, cocinas o trabajas.',
+  },
+  {
+    title: 'Historial',
+    desc: 'Revisa las notificaciones que ya fueron leídas y vuelve a consultarlas cuando quieras.',
+  },
+  {
+    title: 'Búsqueda',
+    desc: 'Encuentra rápidamente cualquier notificación anterior por texto.',
+  },
+  {
+    title: 'Configuración a tu medida',
+    desc: 'Ajusta qué se lee y cómo, para que solo escuches lo que te importa.',
+  },
+];
+---
+
+<Layout title={metaTitle} description={metaDesc}>
+  <Navbar>
+    <a slot="brand" href="/app/voicenotifier" class="flex items-center gap-2.5 text-sm sm:text-[15px] font-bold text-skin-primary">
+      <img src="/voicenotifier/logo.webp" alt="" width="24" height="24" class="rounded-md" />
+      PoliNoti
+    </a>
+    <a slot="nav-links" href="/app/privacidad/voicenotifier" class="px-4 py-2 text-sm font-medium text-skin-secondary hover:text-skin-primary transition-colors rounded-lg hover:bg-skin-surface">
+      Privacidad
+    </a>
+    <a slot="cta" href="#download" class="px-4 sm:px-5 py-2 text-xs sm:text-sm font-bold bg-primary hover:bg-primary/90 text-white rounded-full transition-all shadow-glow hover:-translate-y-0.5">
+      Descargar
+    </a>
+    <a slot="mobile" href="/app/privacidad/voicenotifier" class="block px-4 py-3 text-sm font-medium text-skin-secondary hover:text-skin-primary hover:bg-skin-surface rounded-xl transition-colors">
+      Privacidad
+    </a>
+    <a slot="mobile" href="#download" class="block px-4 py-3 text-sm font-bold text-center bg-primary hover:bg-primary/90 text-white rounded-xl transition-colors">
+      Descargar
+    </a>
+  </Navbar>
+
+  <!-- Hero -->
+  <section class="relative flex items-center overflow-hidden px-4 sm:px-6 pt-28 pb-16 sm:pt-36 sm:pb-20">
+    <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+      <div class="glow w-[600px] h-[600px] bg-primary top-[-300px] right-[-200px]"></div>
+      <div class="glow w-[400px] h-[400px] bg-accent bottom-[-200px] left-[-100px] opacity-20"></div>
+    </div>
+    <div class="relative w-full max-w-content mx-auto flex flex-col gap-5 sm:gap-6 max-w-2xl">
+      <h1 class="text-[clamp(1.75rem,_5vw,_3.25rem)] font-extrabold leading-[1.1] tracking-tight">
+        <span class="text-gradient">PoliNoti</span>
+        <br />
+        Tus notificaciones, en voz alta.
+      </h1>
+      <p class="text-sm sm:text-base text-skin-secondary max-w-lg leading-relaxed">
+        PoliNoti lee en voz alta las notificaciones de tu teléfono para que
+        no tengas que mirar la pantalla. Con historial, búsqueda y configuración
+        a tu medida.
+      </p>
+      <a href="#download" class="inline-flex items-center gap-2.5 px-6 sm:px-7 py-3 sm:py-3.5 rounded-xl bg-primary hover:bg-primary/90 text-white text-sm sm:text-base font-bold transition-all shadow-glow hover:-translate-y-0.5 w-fit">
+        Descargar PoliNoti gratis
+      </a>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="px-4 sm:px-6 py-12 sm:py-16" aria-label="Características">
+    <div class="mx-auto max-w-content grid sm:grid-cols-2 gap-4">
+      {features.map((f) => (
+        <ScrollReveal>
+          <div class="h-full p-5 sm:p-6 rounded-2xl border border-skin bg-skin-surface">
+            <h2 class="text-base sm:text-lg font-bold text-skin-primary mb-1.5">{f.title}</h2>
+            <p class="text-sm text-skin-secondary leading-relaxed">{f.desc}</p>
+          </div>
+        </ScrollReveal>
+      ))}
+    </div>
+  </section>
+
+  <!-- Download -->
+  <section id="download" class="relative px-4 sm:px-6 py-16 sm:py-20 text-center">
+    <div class="relative mx-auto max-w-xl flex flex-col items-center gap-4 sm:gap-5">
+      <ScrollReveal>
+        <p class="text-xs font-semibold tracking-[0.08em] uppercase text-accent">Descarga ahora</p>
+      </ScrollReveal>
+      <ScrollReveal>
+        <h2 class="text-[clamp(1.5rem,_3.5vw,_2.25rem)] font-extrabold tracking-tight max-w-md">
+          Deja que tu teléfono te <span class="text-gradient">hable</span>
+        </h2>
+      </ScrollReveal>
+      <ScrollReveal>
+        <a
+          href="https://play.google.com/store/apps/details?id=com.emprendecoders.voicenotifier&hl=es"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-3 px-6 sm:px-7 py-3 sm:py-3.5 rounded-xl bg-[#0a0a0f] border border-white/10 hover:bg-slate-800 transition-all hover:-translate-y-0.5"
+        >
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" class="text-accent" aria-hidden="true">
+            <path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.807 1.626a1 1 0 0 1 0 1.732l-2.807 1.626L15.206 12l2.492-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/>
+          </svg>
+          <span class="flex flex-col items-start">
+            <span class="text-[9px] tracking-[0.08em] text-slate-400">DISPONIBLE EN</span>
+            <span class="text-sm sm:text-base font-bold text-white">Google Play</span>
+          </span>
+        </a>
+      </ScrollReveal>
+    </div>
+  </section>
+
+  <Footer copyright="Emprendecoders. Todos los derechos reservados.">
+    <a slot="links" href="/app/privacidad/voicenotifier" class="text-xs sm:text-sm text-skin-secondary hover:text-primary transition-colors">Privacidad</a>
+    <a slot="links" href="/app/terminos/voicenotifier" class="text-xs sm:text-sm text-skin-secondary hover:text-primary transition-colors">Términos</a>
+    <a slot="links" href="mailto:contacto@emprendecoders.com" class="text-xs sm:text-sm text-skin-secondary hover:text-primary transition-colors">Contacto</a>
+  </Footer>
+</Layout>
+
+<script>
+  import { observeReveal } from '@src/utils/observer';
+  document.addEventListener('DOMContentLoaded', () => observeReveal());
+</script>
