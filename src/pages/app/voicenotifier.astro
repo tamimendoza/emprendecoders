@@ -70,20 +70,6 @@ const features = [
     </div>
   </section>
 
-  <!-- Features -->
-  <section class="px-4 sm:px-6 py-12 sm:py-16" aria-label="Características">
-    <div class="mx-auto max-w-content grid sm:grid-cols-2 gap-4">
-      {features.map((f) => (
-        <ScrollReveal>
-          <div class="h-full p-5 sm:p-6 rounded-2xl border border-skin bg-skin-surface">
-            <h2 class="text-base sm:text-lg font-bold text-skin-primary mb-1.5">{f.title}</h2>
-            <p class="text-sm text-skin-secondary leading-relaxed">{f.desc}</p>
-          </div>
-        </ScrollReveal>
-      ))}
-    </div>
-  </section>
-
   <!-- Video -->
   <section id="video-tour" class="px-4 sm:px-6 py-12 sm:py-16" aria-label="Tutorial en video">
     <div class="mx-auto max-w-content flex flex-col items-center gap-6 text-center">
@@ -110,6 +96,20 @@ const features = [
           ></iframe>
         </div>
       </ScrollReveal>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="px-4 sm:px-6 py-12 sm:py-16" aria-label="Características">
+    <div class="mx-auto max-w-content grid sm:grid-cols-2 gap-4">
+      {features.map((f) => (
+        <ScrollReveal>
+          <div class="h-full p-5 sm:p-6 rounded-2xl border border-skin bg-skin-surface">
+            <h2 class="text-base sm:text-lg font-bold text-skin-primary mb-1.5">{f.title}</h2>
+            <p class="text-sm text-skin-secondary leading-relaxed">{f.desc}</p>
+          </div>
+        </ScrollReveal>
+      ))}
     </div>
   </section>
 
