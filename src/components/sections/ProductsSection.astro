@@ -25,17 +25,15 @@ import ScrollReveal from '@src/components/layout/ScrollReveal.astro';
   </ScrollReveal>
 
   <ScrollReveal>
-    <div class="flex items-center gap-4 p-4 sm:p-5 rounded-2xl border border-accent/20 bg-accent/[0.04]" role="listitem">
-      <div class="w-11 h-11 sm:w-12 sm:h-12 flex items-center justify-center rounded-xl bg-accent/10 text-accent-dark shrink-0">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/>
-        </svg>
+    <a href="/app/voicenotifier" class="group flex items-center gap-4 p-4 sm:p-5 rounded-2xl border border-accent/20 bg-accent/[0.04] hover:bg-accent/[0.08] transition-all" role="listitem">
+      <div class="w-11 h-11 sm:w-12 sm:h-12 flex items-center justify-center rounded-xl bg-accent/10 shrink-0">
+        <img src="/voicenotifier/logo.webp" alt="" width="28" height="28" class="rounded-md" />
       </div>
       <div class="min-w-0 flex-1">
-        <p class="text-sm sm:text-[15px] font-semibold text-skin-primary">Voice Notifier</p>
+        <p class="text-sm sm:text-[15px] font-semibold text-skin-primary">PoliNoti</p>
         <p class="text-xs sm:text-sm text-skin-secondary">Notificaciones por voz</p>
       </div>
-    </div>
+    </a>
   </ScrollReveal>
 
   <ScrollReveal>
