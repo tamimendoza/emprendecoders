@@ -16,6 +16,8 @@ const effectiveDate = "2026-10-15";
   <section>
     <h2 class="text-lg sm:text-xl font-bold text-skin-primary tracking-tight mb-3 mt-8">Recopilación y Uso de la Información</h2>
     <p><strong class="text-primary">Acceso a notificaciones:</strong> para leer tus notificaciones en voz alta, la Aplicación solicita el permiso de <strong class="text-skin-primary">acceso a notificaciones</strong> de Android. Con él, la Aplicación procesa el contenido de las notificaciones de las aplicaciones que tú elijas (nombre de la aplicación, título y, si lo activas, el cuerpo del mensaje) únicamente para convertirlo en voz y mostrarlo en el historial.</p>
+    <p><strong class="text-primary">Historial local:</strong> las notificaciones leídas (aplicación, título, texto y hora) se guardan en una base de datos <strong class="text-skin-primary">local en tu dispositivo</strong> para mostrarte el historial, y puedes borrarlo desde la Aplicación.</p>
+    <p><strong class="text-primary">Estado del teléfono:</strong> la Aplicación usa el permiso de estado del teléfono únicamente para detectar si hay una llamada en curso y no leer notificaciones durante ella. No accede a números ni a registros de llamadas.</p>
     <p>Puedes activar o desactivar la lectura del cuerpo de las notificaciones y elegir qué aplicaciones se leen. Puedes revocar el permiso en cualquier momento desde los ajustes de Android.</p>
     <p>El Proveedor del Servicio <strong class="text-red-400">NO</strong> envía el contenido de tus notificaciones a servidores propios. La Aplicación no requiere crear una cuenta ni recopila información precisa sobre la ubicación de tu dispositivo. Sin embargo, sí utiliza servicios de terceros que recopilan datos técnicos y de uso, descritos en la sección "Servicios de Terceros".</p>
   </section>
@@ -24,6 +26,7 @@ const effectiveDate = "2026-10-15";
     <h2 class="text-lg sm:text-xl font-bold text-skin-primary tracking-tight mb-3 mt-8">Servicios de Terceros</h2>
     <p>La Aplicación integra servicios de terceros que pueden recopilar información. Estos terceros tienen sus propias políticas de privacidad:</p>
     <ul class="list-disc pl-5 sm:pl-6 space-y-1.5">
+      <li><strong class="text-skin-primary">Google Play Store:</strong> al buscar aplicaciones para añadirlas a tu lista, la Aplicación envía el texto de la búsqueda a Google Play y descarga los iconos de las aplicaciones desde sus servidores, por lo que Google puede recibir tu dirección IP.</li>
       <li><strong class="text-skin-primary">Google Play Services:</strong> proporciona funciones básicas de la plataforma Android y de los servicios de Google.</li>
       <li><strong class="text-skin-primary">Firebase Crashlytics y Analytics (Google):</strong> reportan errores y miden el uso de la Aplicación de forma agregada. Pueden recopilar informes de fallos, modelo de dispositivo, versión del sistema operativo, versión de la Aplicación e identificadores de instalación.</li>
       <li><strong class="text-skin-primary">Google AdMob:</strong> muestra anuncios. Puede recopilar el identificador de publicidad, la dirección IP e información del dispositivo para mostrar y medir anuncios, incluidos anuncios personalizados cuando lo permitas.</li>
