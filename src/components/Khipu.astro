@@ -1,0 +1,88 @@
+---
+const appName = "Khipu";
+const packageName = "com.emprendecoders.khipu";
+const developerName = "Emprendecoders";
+const contactEmail = "contacto@emprendecoders.com";
+const effectiveDate = "2026-11-06";
+const h2 = "text-lg sm:text-xl font-bold text-skin-primary tracking-tight mb-3 mt-8";
+const a = "text-primary hover:underline";
+---
+
+<div class="mb-10 sm:mb-12">
+  <h1 class="text-2xl sm:text-3xl font-extrabold text-skin-primary tracking-tight mb-2">Política de Privacidad</h1>
+  <p class="text-skin-muted text-xs sm:text-sm">Aplicación: <strong class="text-skin-primary">{appName}</strong> ({packageName})</p>
+</div>
+
+<p>Esta política de privacidad aplica a la aplicación <strong>{appName}</strong> (paquete <strong>{packageName}</strong>, en adelante, la "Aplicación") para Android, creada por <strong>{developerName}</strong> (en adelante, el "Proveedor del Servicio"). Explica qué datos trata la Aplicación, para qué, y con quién se comparten. La Aplicación no requiere crear una cuenta.</p>
+
+<section>
+  <h2 class={h2}>Datos que se guardan en tu dispositivo</h2>
+  <p>Tus <strong class="text-skin-primary">eventos y tareas</strong> (título, fechas, categoría, prioridad, notas, lugar y repeticiones) se guardan en una base de datos <strong class="text-skin-primary">local en tu dispositivo</strong>. El Proveedor del Servicio no los recibe ni los almacena en servidores propios.</p>
+  <p>Tus ajustes (proveedor de IA, URL base, modelo) se guardan localmente. Tu <strong class="text-skin-primary">clave de API</strong> se guarda cifrada con una clave del Android Keystore no exportable. Los ajustes y la clave se excluyen de las copias de seguridad de Android.</p>
+</section>
+
+<section>
+  <h2 class={h2}>Dictado por voz y procesamiento con IA</h2>
+  <p><strong class="text-primary">Micrófono:</strong> para dictar, la Aplicación usa el permiso de micrófono y el reconocimiento de voz de Android (<code>SpeechRecognizer</code>). El reconocimiento lo realiza el servicio de voz instalado en tu dispositivo (normalmente Google), que se rige por su propia política. La Aplicación no guarda grabaciones de audio.</p>
+  <p><strong class="text-primary">Proveedor de IA que tú eliges:</strong> el texto dictado o escrito, junto con la fecha, hora, zona horaria e idioma actuales, se envía al proveedor de IA configurado en Ajustes (por defecto <em>Ollama</em>; también <em>OpenAI</em> u otro servicio compatible, o un servidor propio) para clasificarlo como evento o tarea. Se envía junto con tu clave de API. El Proveedor del Servicio no opera ni recibe esos datos. Al configurar un proveedor, sus prácticas de privacidad se aplican a ese texto; consúltalas antes de usarlo. Si usas un modelo local, el texto no sale de tu red.</p>
+  <p>Con "Cargar modelos" la Aplicación consulta la lista de modelos de ese proveedor, enviando tu clave de API.</p>
+</section>
+
+<section>
+  <h2 class={h2}>Calendario (opcional)</h2>
+  <p>Si activas la sincronización, la Aplicación solicita los permisos de lectura y escritura del calendario para crear y actualizar tus eventos en el calendario de Android que elijas. Se envían título, notas y lugar a ese calendario; si es un calendario compartido (por ejemplo de Google), otras personas podrán verlos. Es opcional y puedes desactivarla o revocar el permiso en cualquier momento.</p>
+</section>
+
+<section>
+  <h2 class={h2}>Notificaciones, alarmas y resumen diario</h2>
+  <p>La Aplicación usa permisos de notificaciones, alarmas exactas e inicio del sistema para mostrar recordatorios (15 minutos antes de un evento y a la hora de cada tarea), el resumen diario y para reprogramarlos tras reiniciar el dispositivo. Todo ocurre en tu dispositivo. Si activas la lectura en voz alta, se usa el motor de texto a voz de Android.</p>
+</section>
+
+<section>
+  <h2 class={h2}>Servicios de Terceros</h2>
+  <ul class="list-disc pl-5 sm:pl-6 space-y-1.5">
+    <li><strong class="text-skin-primary">Google AdMob:</strong> muestra un anuncio de banner en la pantalla principal. Puede recopilar el identificador de publicidad, la dirección IP, información del dispositivo y datos de interacción con anuncios para mostrarlos y medirlos, incluidos anuncios personalizados cuando lo permitas. Tus eventos, tareas y dictados nunca se comparten con los anuncios.</li>
+    <li><strong class="text-skin-primary">Google User Messaging Platform (UMP):</strong> gestiona tu consentimiento de anuncios cuando la ley lo exige.</li>
+    <li><strong class="text-skin-primary">Proveedor de IA elegido por ti</strong> (Ollama, OpenAI u otro): ver sección "Dictado por voz y procesamiento con IA".</li>
+    <li><strong class="text-skin-primary">Servicio de reconocimiento de voz y calendario de Android</strong> (Google u otro fabricante), según tu dispositivo.</li>
+  </ul>
+  <p>Más información: <a href="https://policies.google.com/privacy" class={a} target="_blank" rel="noopener noreferrer">Política de Privacidad de Google</a>, <a href="https://support.google.com/admob/answer/6128543" class={a} target="_blank" rel="noopener noreferrer">AdMob</a>, <a href="https://ollama.com/privacy" class={a} target="_blank" rel="noopener noreferrer">Ollama</a>, <a href="https://openai.com/policies/privacy-policy" class={a} target="_blank" rel="noopener noreferrer">OpenAI</a>.</p>
+  <p>Fuera de lo anterior, el Proveedor del Servicio no vende ni comparte tu información personal, salvo que la ley lo exija. Los datos se transmiten mediante conexiones cifradas (HTTPS) cuando el proveedor las admite.</p>
+</section>
+
+<section>
+  <h2 class={h2}>Publicidad y Consentimiento</h2>
+  <p>Cuando la ley lo exige (por ejemplo, en el Espacio Económico Europeo y el Reino Unido), la Aplicación solicita tu consentimiento mediante UMP al abrirla. Puedes cambiar tu elección en <strong class="text-skin-primary">Ajustes &gt; Opciones de privacidad</strong> (visible cuando aplica) y restablecer tu identificador de publicidad en los ajustes de Android.</p>
+</section>
+
+<section>
+  <h2 class={h2}>Control y Eliminación de Datos</h2>
+  <ul class="list-disc pl-5 sm:pl-6 space-y-1.5">
+    <li>Elimina eventos y tareas desde la Aplicación.</li>
+    <li>Borra tu clave de API desde Ajustes.</li>
+    <li>Revoca permisos (micrófono, calendario, notificaciones, alarmas) desde los ajustes de Android.</li>
+    <li>Borra todos los datos locales limpiando el almacenamiento o desinstalando la Aplicación.</li>
+    <li>Para datos en tu proveedor de IA o calendario, usa los controles de ese servicio.</li>
+  </ul>
+  <p>Como el Proveedor del Servicio no almacena tus datos, no puede eliminarlos por ti; para cualquier consulta escribe a <a href={`mailto:${contactEmail}`} class={a}>{contactEmail}</a>.</p>
+</section>
+
+<section>
+  <h2 class={h2}>Privacidad de los Niños</h2>
+  <p>La Aplicación no se dirige a menores de 13 años y no recopila a sabiendas información personal de ellos. Si eres padre o tutor y tienes alguna preocupación, escribe a <a href={`mailto:${contactEmail}`} class={a}>{contactEmail}</a>.</p>
+</section>
+
+<section>
+  <h2 class={h2}>Seguridad</h2>
+  <p>Aplicamos medidas razonables: base de datos local, clave de API cifrada con Android Keystore y comunicaciones HTTPS. Te recomendamos proteger tu dispositivo con PIN o biometría.</p>
+</section>
+
+<section>
+  <h2 class={h2}>Cambios en esta Política de Privacidad</h2>
+  <p>Podemos actualizar esta política; los cambios se publicarán en esta página. Efectiva a partir del <strong class="text-skin-primary">{effectiveDate}</strong>. El uso continuo de la Aplicación implica la aceptación de los cambios.</p>
+</section>
+
+<section class="!mt-10 sm:!mt-12 pt-6 sm:pt-8 border-t border-skin">
+  <h2 class="text-lg sm:text-xl font-bold text-skin-primary tracking-tight mb-3">Contáctanos</h2>
+  <p>Si tienes preguntas sobre privacidad, escríbenos a <a href={`mailto:${contactEmail}`} class={a}>{contactEmail}</a>.</p>
+</section>

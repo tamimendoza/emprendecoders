@@ -1,0 +1,112 @@
+---
+import Layout from '@src/layouts/Layout.astro';
+import Navbar from '@src/components/layout/Navbar.astro';
+import Footer from '@src/components/layout/Footer.astro';
+import ScrollReveal from '@src/components/layout/ScrollReveal.astro';
+
+const metaTitle = 'Khipu — Agenda y tareas por voz para Android | Emprendecoders';
+const metaDesc = 'Khipu crea tus eventos y tareas con solo dictarlos. Recordatorios, resumen diario hablado y sincronización opcional con Google Calendar.';
+
+const features = [
+  { title: 'Captura por voz', desc: 'Dicta desde la app, un widget o el mosaico de Ajustes rápidos, sin abrir nada más.' },
+  { title: 'Entiende lo que dices', desc: 'Distingue eventos de tareas, con categoría, prioridad y repeticiones.' },
+  { title: 'Recordatorios', desc: 'Aviso antes de cada evento, a la hora de cada tarea y un resumen diario hablado.' },
+  { title: 'Tu motor de IA', desc: 'Usa tu propio proveedor y clave de API, o un modelo local con Ollama.' },
+];
+---
+
+<Layout title={metaTitle} description={metaDesc} brand="khipu">
+  <Navbar>
+    <a slot="brand" href="/app/khipu" class="flex items-center gap-2.5 text-sm sm:text-[15px] font-bold text-skin-primary">
+      <img src="/khipu/logo.webp" alt="" width="24" height="24" class="rounded-md" />
+      Khipu
+    </a>
+    <a slot="nav-links" href="/app/privacidad/khipu" class="px-4 py-2 text-sm font-medium text-skin-secondary hover:text-skin-primary transition-colors rounded-lg hover:bg-skin-surface">
+      Privacidad
+    </a>
+    <a slot="cta" href="#download" class="px-4 sm:px-5 py-2 text-xs sm:text-sm font-bold bg-primary hover:bg-primary/90 text-white rounded-full transition-all shadow-glow hover:-translate-y-0.5">
+      Descargar
+    </a>
+    <a slot="mobile" href="/app/privacidad/khipu" class="block px-4 py-3 text-sm font-medium text-skin-secondary hover:text-skin-primary hover:bg-skin-surface rounded-xl transition-colors">
+      Privacidad
+    </a>
+    <a slot="mobile" href="#download" class="block px-4 py-3 text-sm font-bold text-center bg-primary hover:bg-primary/90 text-white rounded-xl transition-colors">
+      Descargar
+    </a>
+  </Navbar>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden px-4 sm:px-6 pt-32 pb-24 sm:pt-44 sm:pb-32">
+    <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+      <div class="glow w-[520px] h-[520px] bg-primary top-[-260px] right-[-160px] opacity-30"></div>
+    </div>
+    <div class="relative mx-auto max-w-content flex flex-col-reverse md:flex-row md:items-center md:justify-between gap-14">
+      <div class="max-w-xl">
+        <p class="text-xs font-medium tracking-[0.2em] uppercase text-accent mb-6">Agenda por voz · Android</p>
+        <h1 class="text-[clamp(2.25rem,_6vw,_4rem)] font-light leading-[1.05] tracking-tight text-skin-primary">
+          Dilo en voz alta.<br /><span class="text-gradient font-semibold">Khipu</span> hace el resto.
+        </h1>
+        <p class="mt-6 text-base text-skin-secondary leading-relaxed max-w-md">
+          «Reunión con Ana el viernes a las 10». Eventos y tareas creados al instante, sin teclear.
+        </p>
+        <a href="#download" class="mt-10 inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-primary hover:bg-primary/90 text-white text-sm font-semibold transition-all hover:-translate-y-0.5">
+          Descargar gratis
+          <span aria-hidden="true">→</span>
+        </a>
+      </div>
+      <img src="/khipu/logo-hero.webp" alt="Logo de Khipu" width="512" height="512" class="w-40 h-40 md:w-60 md:h-60 rounded-[2.25rem] shadow-card shrink-0 self-start md:self-center" />
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="px-4 sm:px-6 pb-24 sm:pb-32" aria-label="Características">
+    <ol class="mx-auto max-w-content border-t border-skin">
+      {features.map((f, n) => (
+        <li>
+          <ScrollReveal>
+            <div class="grid md:grid-cols-[5rem_1fr_1.4fr] gap-2 md:gap-8 py-7 sm:py-9 border-b border-skin items-baseline">
+              <span class="text-xs font-medium tracking-[0.2em] text-accent">{String(n + 1).padStart(2, '0')}</span>
+              <h2 class="text-lg sm:text-xl font-medium text-skin-primary">{f.title}</h2>
+              <p class="text-sm sm:text-base text-skin-secondary leading-relaxed">{f.desc}</p>
+            </div>
+          </ScrollReveal>
+        </li>
+      ))}
+    </ol>
+  </section>
+
+  <!-- Download -->
+  <section id="download" class="px-4 sm:px-6 pb-28 sm:pb-36 text-center">
+    <div class="mx-auto max-w-xl flex flex-col items-center gap-8">
+      <ScrollReveal>
+        <h2 class="text-[clamp(1.75rem,_4vw,_2.5rem)] font-light tracking-tight text-skin-primary">
+          Tu agenda, <span class="text-gradient font-semibold">a tu voz</span>
+        </h2>
+      </ScrollReveal>
+      <ScrollReveal>
+        <a
+          href="https://play.google.com/store/apps/details?id=com.emprendecoders.khipu&hl=es"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-3 px-6 py-3 rounded-full border border-skin hover:border-primary text-skin-primary transition-all hover:-translate-y-0.5"
+        >
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" class="text-accent" aria-hidden="true">
+            <path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.807 1.626a1 1 0 0 1 0 1.732l-2.807 1.626L15.206 12l2.492-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/>
+          </svg>
+          <span class="text-sm font-semibold">Disponible en Google Play</span>
+        </a>
+      </ScrollReveal>
+    </div>
+  </section>
+
+  <Footer copyright="Emprendecoders. Todos los derechos reservados.">
+    <a slot="links" href="/app/privacidad/khipu" class="text-xs sm:text-sm text-skin-secondary hover:text-primary transition-colors">Privacidad</a>
+    <a slot="links" href="/app/terminos/khipu" class="text-xs sm:text-sm text-skin-secondary hover:text-primary transition-colors">Términos</a>
+    <a slot="links" href="mailto:contacto@emprendecoders.com" class="text-xs sm:text-sm text-skin-secondary hover:text-primary transition-colors">Contacto</a>
+  </Footer>
+</Layout>
+
+<script>
+  import { observeReveal } from '@src/utils/observer';
+  document.addEventListener('DOMContentLoaded', () => observeReveal());
+</script>

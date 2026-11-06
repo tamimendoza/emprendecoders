@@ -6,7 +6,7 @@ export interface Props {
   description?: string;
   ogImage?: string;
   theme?: 'dark' | 'light';
-  brand?: 'emprendecoders' | 'many';
+  brand?: 'emprendecoders' | 'many' | 'khipu';
 }
 
 const {
@@ -21,7 +21,7 @@ const {
   theme = 'dark',
 } = Astro.props;
 
-const faviconHref = brand === 'many' ? '/many-icon.png' : '/favicon-index.png';
+const faviconHref = brand === 'many' ? '/many-icon.png' : brand === 'khipu' ? '/khipu/logo.webp' : '/favicon-index.png';
 
 const siteURL = Astro.site ?? Astro.url.origin;
 const canonicalURL = new URL(Astro.url.pathname, siteURL);
@@ -29,7 +29,7 @@ const resolvedOgImage = new URL(ogImage, siteURL).href;
 ---
 
 <!doctype html>
-<html lang="es" class={'dark' + (brand === 'many' ? ' many' : '')}>
+<html lang="es" class={'dark' + (brand === 'many' ? ' many' : brand === 'khipu' ? ' khipu' : '')}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
