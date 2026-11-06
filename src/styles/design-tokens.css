@@ -111,6 +111,26 @@ html.many.light {
   --color-accent-subtle: rgba(47, 176, 130, 0.06);
 }
 
+/* ---- KHIPU THEME (override) ---- */
+html.khipu {
+  --color-primary-rgb: 67 56 202;
+  --color-primary: #4338CA;
+  --color-primary-dark: #3730A3;
+  --color-primary-light: #6D63E0;
+  --color-primary-subtle: rgba(67, 56, 202, 0.12);
+
+  --color-accent-rgb: 255 138 61;
+  --color-accent: #FF8A3D;
+  --color-accent-dark: #E57426;
+  --color-accent-light: #FFB07A;
+  --color-accent-subtle: rgba(255, 138, 61, 0.12);
+}
+
+html.khipu.light {
+  --color-primary-subtle: rgba(67, 56, 202, 0.06);
+  --color-accent-subtle: rgba(255, 138, 61, 0.06);
+}
+
 /* ---- GLOBAL BASE ---- */
 *,
 *::before,
@@ -229,6 +249,18 @@ html.many.dark .text-primary {
 
 html.many.dark .text-gradient {
   background: linear-gradient(135deg, #C9B0F2, #5CC9A0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Khipu (dark): the brand indigo is too dark for text on dark backgrounds */
+html.khipu.dark .text-primary {
+  color: #A9A3F5;
+}
+
+html.khipu.dark .text-gradient {
+  background: linear-gradient(135deg, #A9A3F5, #FF8A3D);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

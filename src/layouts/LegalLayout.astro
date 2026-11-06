@@ -6,7 +6,7 @@ export interface Props {
   description?: string;
   backHref?: string;
   backLabel?: string;
-  brand?: 'emprendecoders' | 'many';
+  brand?: 'emprendecoders' | 'many' | 'khipu';
 }
 
 const { title, description, backHref, backLabel = '← Volver', brand = 'emprendecoders' } = Astro.props;
@@ -16,7 +16,12 @@ const { title, description, backHref, backLabel = '← Volver', brand = 'emprend
   <nav class="fixed top-0 left-0 right-0 z-50 border-b border-skin bg-skin-base" aria-label="Navegación">
     <div class="mx-auto flex max-w-content items-center justify-between px-4 sm:px-6 h-14 sm:h-16">
       {
-        brand === 'many' ? (
+        brand === 'khipu' ? (
+          <a href="/app/khipu" class="flex items-center gap-2.5 text-sm sm:text-[15px] font-bold text-skin-primary" aria-label="Khipu - Inicio">
+            <img src="/khipu/logo.webp" alt="" width="24" height="24" class="rounded-md" />
+            Khipu
+          </a>
+        ) : brand === 'many' ? (
           <a href="/app/many" class="flex items-center gap-2.5 text-sm sm:text-[15px] font-bold text-skin-primary" aria-label="Many - Inicio">
             <img src="/many-logo.webp" alt="" width="24" height="24" class="object-contain" />
             Many
